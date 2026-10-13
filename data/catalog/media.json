@@ -1,0 +1,20 @@
+[
+  {
+    "id": "demo-sintel",
+    "provider": "url",
+    "format": "mp4",
+    "src": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+    "sizeBytes": null,
+    "durationSeconds": 52,
+    "createdAt": "2026-10-13T00:00:00.000Z"
+  },
+  {
+    "id": "demo-mux-hls",
+    "provider": "url",
+    "format": "hls",
+    "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "sizeBytes": null,
+    "durationSeconds": 598,
+    "createdAt": "2026-10-13T00:00:00.000Z"
+  }
+]
