@@ -36,3 +36,5 @@ Thumbs.db
 
 # logs locais de build/verificação
 *.log
+
+.vercel

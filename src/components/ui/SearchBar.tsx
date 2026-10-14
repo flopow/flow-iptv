@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { SearchIcon } from "@/components/ui/icons";
 
 interface SearchBarProps {

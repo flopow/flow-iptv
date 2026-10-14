@@ -1,0 +1,4 @@
+# Mídia local e trabalho do importador — nunca sobe para a Vercel
+.import-work/
+public/media/
+*.log
