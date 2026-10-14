@@ -641,8 +641,120 @@ async function syncVideosToGithub() {
   log(`\n✔ ${count} vídeos sincronizados para o GitHub.`);
 }
 
+// ── Dublagem PT: substitui o áudio pela síntese pt-BR ───────
+async function dubAllToPortuguese() {
+  const { dubVideoToPortuguese } = await import("./dub.js");
+  const shorts = await readJsonSafe("shorts.json", []);
+  const media = await readJsonSafe("media.json", []);
+  const mediaById = new Map(media.map((m) => [m.id, m]));
+  const byId = new Map(shorts.map((s) => [s.id, s]));
+  const mp4Dir = path.join(WORK_DIR, "mp4");
+  const files = (await readdir(mp4Dir).catch(() => [])).filter((f) => f.endsWith(".mp4"));
+  const outDir = path.join(WORK_DIR, "dubbed");
+  await mkdir(outDir, { recursive: true });
+
+  let count = 0;
+  for (const file of files) {
+    const match = /^(.+)-ep(\d+)\.mp4$/.exec(file);
+    if (!match) continue;
+    const [, slug, epRaw] = match;
+    const epId = `${slug}-ep${Number(epRaw)}`;
+    const episode = byId.get(slug)?.episodes?.find((e) => e.id === epId);
+    if (!episode) continue;
+    const outPath = path.join(outDir, file);
+    try {
+      const alreadyLocal = await stat(outPath).catch(() => null);
+      if (alreadyLocal) {
+        log(`  = já dublado (local): ${epId}`);
+      } else {
+        log(`  dub ${epId}…`);
+        // Legenda PT: baixa do GitHub (publicada antes); sem legenda, gera.
+        let vttPt = null;
+        const vttApi = `legendas/${slug}/${slug}-ep${epRaw}.pt.vtt`;
+        const vttExists = await ghFetch("GET", apiUrl(vttApi));
+        if (vttExists) {
+          const raw = await fetchText(rawUrl(vttApi));
+          vttPt = raw;
+        }
+        if (!vttPt) {
+          log(`    ! sem legenda PT publicada — gera…`);
+          const generated = await generateSubtitles(path.join(mp4Dir, file), slug, Number(epRaw));
+          const raw = await fetchText(generated);
+          vttPt = raw;
+        }
+        await dubVideoToPortuguese(path.join(mp4Dir, file), vttPt, outPath, FFMPEG);
+      }
+      // Publica (upload idempotente por SHA — não re-envia idêntico).
+      const bytes = (await stat(outPath)).size;
+      const url = await uploadFile(
+        `videos/${slug}/${file}`,
+        await readFile(outPath),
+        `Episódio ${epRaw} de ${slug} — dublado em português`,
+      );
+      const existing = mediaById.get(epId);
+      if (existing) {
+        existing.sizeBytes = bytes;
+        existing.durationSeconds = await probeDuration(outPath);
+        existing.dubbed = true;
+      }
+      count++;
+      log(`  ↑ publicado: ${file} (${(bytes / 1024 / 1024).toFixed(1)} MB)`);
+    } catch (err) {
+      log(`  ✗ ${epId}: ${err.message}`);
+    }
+  }
+
+  const mediaJson = JSON.stringify([...mediaById.values()], null, 2);
+  await writeFile(path.join(DATA_DIR, "media.json"), mediaJson);
+  await uploadFile("catalog/media.json", Buffer.from(mediaJson), "Mídia dublada em português");
+  log(`\n✔ ${count} episódios dublados em português.`);
+}
+
+// ── Restaurar originais: substitui os dublados pelos MP4s originais ──
+async function restoreOriginals() {
+  const shorts = await readJsonSafe("shorts.json", []);
+  const media = await readJsonSafe("media.json", []);
+  const mediaById = new Map(media.map((m) => [m.id, m]));
+  const mp4Dir = path.join(WORK_DIR, "mp4");
+  const files = (await readdir(mp4Dir).catch(() => [])).filter((f) => f.endsWith(".mp4"));
+  let count = 0;
+  for (const file of files) {
+    const match = /^(.+)-ep(\d+)\.mp4$/.exec(file);
+    if (!match) continue;
+    const [, slug, epRaw] = match;
+    const epId = `${slug}-ep${Number(epRaw)}`;
+    const localMp4 = path.join(mp4Dir, file);
+    const bytes = (await stat(localMp4)).size;
+    log(`  restore ${epId}…`);
+    await uploadFile(
+      `videos/${slug}/${file}`,
+      await readFile(localMp4),
+      `Restaura vídeo original de ${slug} (${epRaw})`,
+    );
+    const existing = mediaById.get(epId);
+    if (existing) {
+      existing.sizeBytes = bytes;
+      existing.durationSeconds = await probeDuration(localMp4);
+      delete existing.dubbed;
+    }
+    count++;
+  }
+  const mediaJson = JSON.stringify([...mediaById.values()], null, 2);
+  await writeFile(path.join(DATA_DIR, "media.json"), mediaJson);
+  await uploadFile("catalog/media.json", Buffer.from(mediaJson), "Vídeos originais restaurados");
+  log(`\n✔ ${count} vídeos originais restaurados.`);
+}
+
 async function main() {
   await mkdir(WORK_DIR, { recursive: true });
+  if (args.includes("--restore-original")) {
+    await restoreOriginals();
+    return;
+  }
+  if (args.includes("--dub-pt")) {
+    await dubAllToPortuguese();
+    return;
+  }
   if (args.includes("--sync-github")) {
     await syncVideosToGithub();
     return;
