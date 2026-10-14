@@ -53,6 +53,7 @@ const episodeSchema = z.object({
   durationMinutes: z.number().int().nonnegative().nullable(),
   thumbUrl: nullableUrl,
   mediaFileId: z.string().nullable(),
+  subtitleUrl: nullableUrl.optional(),
 });
 
 const seasonSchema = z.object({
@@ -74,6 +75,7 @@ const shortEpisodeSchema = z.object({
   durationSeconds: z.number().int().nonnegative().nullable(),
   thumbUrl: nullableUrl,
   mediaFileId: z.string().nullable(),
+  subtitleUrl: nullableUrl.optional(),
 });
 
 const shortBaseSchema = filmBaseSchema

@@ -19,6 +19,7 @@ type PlayerConfig = {
   vertical: boolean;
   nextHref: string | null;
   nextLabel: string | null;
+  subtitleUrl: string | null;
   backHref: string;
 };
 
@@ -44,6 +45,7 @@ async function resolveConfig(
       vertical: false,
       nextHref: null,
       nextLabel: null,
+      subtitleUrl: null,
       backHref: `/filmes/${film.id}`,
     };
   }
@@ -63,6 +65,7 @@ async function resolveConfig(
       vertical: false,
       nextHref: neighbors.next ? `/player/serie/${serie.id}?ep=${neighbors.next.id}` : null,
       nextLabel: neighbors.next?.label ?? null,
+      subtitleUrl: current.subtitleUrl ?? null,
       backHref: `/series/${serie.id}`,
     };
   }
@@ -81,6 +84,7 @@ async function resolveConfig(
     vertical: true,
     nextHref: neighbors.next ? `/player/drama/${short.id}?ep=${neighbors.next.id}` : null,
     nextLabel: neighbors.next?.label ?? null,
+    subtitleUrl: current.subtitleUrl ?? null,
     backHref: `/dramas/${short.id}`,
   };
 }
@@ -118,6 +122,7 @@ export default async function PlayerPage({ params, searchParams }: PlayerPagePro
         vertical={config.vertical}
         nextHref={config.nextHref}
         nextLabel={config.nextLabel}
+        subtitleUrl={config.subtitleUrl}
       />
 
       <div className="mt-4 text-center sm:text-left">

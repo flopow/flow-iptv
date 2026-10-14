@@ -48,6 +48,7 @@ export interface Episode {
   durationMinutes: number | null;
   thumbUrl: string | null;
   mediaFileId: string | null;
+  subtitleUrl?: string | null;
 }
 
 export interface Season {
@@ -81,6 +82,7 @@ export interface ShortEpisode {
   durationSeconds: number | null;
   thumbUrl: string | null;
   mediaFileId: string | null;
+  subtitleUrl?: string | null;
 }
 
 export interface ShortDrama {

@@ -25,7 +25,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import { execFile } from "node:child_process";
-import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 
@@ -59,6 +59,9 @@ const TOKEN = process.env.GITHUB_TOKEN ?? (await ghToken());
 const FFMPEG = process.env.FFMPEG ?? "ffmpeg";
 const FFPROBE = process.env.FFPROBE ?? FFMPEG.replace(/ffmpeg\.exe$/i, "ffprobe.exe");
 const RCLONE = process.env.RCLONE ?? "rclone";
+const WHISPER = process.env.WHISPER ?? "main";
+const WHISPER_MODEL = process.env.WHISPER_MODEL ?? "";
+const MYMEMORY_EMAIL = process.env.MYMEMORY_EMAIL ?? "traducao@flowiptv.local";
 
 function argValue(argv, name) {
   const i = argv.indexOf(name);
@@ -245,6 +248,54 @@ function driveStreamUrl(fileId) {
   return `https://drive.usercontent.google.com/download?id=${fileId}`;
 }
 
+// ── Legendas em português ───────────────────────────────────
+// O áudio dos vods é o original (inglês); o português é entregue
+// como legenda gerada: Whisper transcreve → MyMemory traduz →
+// VTT PT sobe para o GitHub (CORS permite <track> no player).
+async function translateText(text) {
+  const email = MYMEMORY_EMAIL ? `&de=${encodeURIComponent(MYMEMORY_EMAIL)}` : "";
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|pt${email}`;
+  const res = await fetch(url, { headers: { "user-agent": "flow-iptv-importer/0.1" } });
+  if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
+  const json = await res.json();
+  const translated = json?.responseData?.translatedText;
+  if (!translated || json.responseStatus !== 200) {
+    throw new Error(`MyMemory: ${json.responseStatus} ${json.responseDetails ?? "sem resposta"}`);
+  }
+  return translated;
+}
+
+async function generateSubtitles(mp4Path, slug, epNumber) {
+  if (!WHISPER_MODEL) throw new Error("WHISPER_MODEL não definido (modelo ggml do whisper)");
+  const wavPath = path.join(WORK_DIR, "wav", `${slug}-ep${epNumber}.wav`);
+  await mkdir(path.dirname(wavPath), { recursive: true });
+  await execFileP(FFMPEG, ["-y", "-hide_banner", "-loglevel", "error", "-i", mp4Path, "-vn", "-acodec", "pcm_s16le", "-ar", "16000", "-ac", "1", wavPath], { timeout: 300_000 });
+  await execFileP(WHISPER, ["-m", WHISPER_MODEL, "-f", wavPath, "-ovtt", "-t", "4"], { timeout: 900_000 });
+  const rawVtt = await readFile(`${wavPath}.vtt`, "utf8");
+
+  const out = [];
+  for (const line of rawVtt.split(/\r?\n/)) {
+    if (line.includes("-->") || line.trim() === "" || line.trim() === "WEBVTT") {
+      out.push(line);
+      continue;
+    }
+    const text = line.trim();
+    if (!text) continue;
+    let translated = text;
+    try {
+      translated = await translateText(text);
+      await new Promise((r) => setTimeout(r, 350)); // throttle da MyMemory
+    } catch (err) {
+      log(`    ! tradução: ${err.message} — mantém original`);
+    }
+    out.push(` ${translated}`);
+  }
+
+  const vttPt = `${out.join("\n").trim()}\n`;
+  const apiPath = `legendas/${slug}/${slug}-ep${epNumber}.pt.vtt`;
+  return uploadFile(apiPath, Buffer.from(vttPt), `Legenda PT do episódio ${epNumber} de ${slug}`);
+}
+
 // ── Importação de um drama ──────────────────────────────────
 async function importDrama(slug, listIndex) {
   const serieUrl = `${SITE_ROOT}/serie/${slug}`;
@@ -317,6 +368,13 @@ async function importDrama(slug, listIndex) {
           uploadedBytes += bytes;
         }
         const durationSeconds = await probeDuration(localMp4);
+        let subtitleUrl = null;
+        try {
+          log(`    legenda pt…`);
+          subtitleUrl = await generateSubtitles(localMp4, slug, n);
+        } catch (err) {
+          log(`    ! legenda falhou: ${err.message} — segue sem legenda`);
+        }
         episodes.push({
           id: mediaId,
           number: n,
@@ -324,6 +382,7 @@ async function importDrama(slug, listIndex) {
           durationSeconds,
           thumbUrl: null,
           mediaFileId: mediaId,
+          subtitleUrl,
         });
         mediaEntries.push({
           id: mediaId,
@@ -410,8 +469,46 @@ async function dramaList() {
 const mediaEntries = [];
 let log = (msg) => console.log(msg);
 
+// ── Só legendas: cobre os episódios já baixados (sem novo upload de vídeo) ──
+async function legendasOnly() {
+  const shorts = await readJsonSafe("shorts.json", []);
+  const mp4Dir = path.join(WORK_DIR, "mp4");
+  const files = await readdir(mp4Dir).catch(() => []);
+  let count = 0;
+  for (const file of files.filter((f) => f.endsWith(".mp4"))) {
+    const match = /^(.+)-ep(\d+)\.mp4$/.exec(file);
+    if (!match) continue;
+    const [, slug, epRaw] = match;
+    const epNumber = Number(epRaw);
+    const epId = `${slug}-ep${epNumber}`;
+    const episode = shorts
+      .find((s) => s.id === slug)
+      ?.episodes?.find((e) => e.id === epId);
+    if (!episode) continue;
+    if (episode.subtitleUrl) {
+      log(`  = legenda já existe: ${epId}`);
+      continue;
+    }
+    log(`  legenda de ${epId}…`);
+    try {
+      episode.subtitleUrl = await generateSubtitles(path.join(mp4Dir, file), slug, epNumber);
+      count++;
+    } catch (err) {
+      log(`  ✗ ${epId}: ${err.message}`);
+    }
+  }
+  const shortsJson = JSON.stringify(shorts, null, 2);
+  await writeFile(path.join(DATA_DIR, "shorts.json"), shortsJson);
+  await uploadFile("catalog/shorts.json", Buffer.from(shortsJson), "Atualiza legendas dos dramas");
+  log(`\n✔ ${count} legendas PT geradas e publicadas.`);
+}
+
 async function main() {
   await mkdir(WORK_DIR, { recursive: true });
+  if (args.includes("--legendas-only")) {
+    await legendasOnly();
+    return;
+  }
   if (backend === "drive") {
     await execFileP(RCLONE, ["mkdir", "gdrive:flow-iptv"], { timeout: 60_000 }).catch(() => {});
     log("Compartilhando pasta flow-iptv no Drive (qualquer pessoa com o link)…");

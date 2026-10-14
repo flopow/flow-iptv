@@ -13,6 +13,7 @@ interface PlayerProps {
   vertical?: boolean;
   nextHref?: string | null;
   nextLabel?: string | null;
+  subtitleUrl?: string | null;
 }
 
 function resumeKey(src: string): string {
@@ -21,7 +22,16 @@ function resumeKey(src: string): string {
 
 // Player único: MP4 nativo, HLS via hls.js, continuação local
 // (localStorage até o histórico em nuvem chegar na Etapa 6/7).
-export function Player({ src, poster, title, vertical = false, nextHref, nextLabel }: PlayerProps) {
+// Legenda: <track> em PT ativada por padrão quando disponível.
+export function Player({
+  src,
+  poster,
+  title,
+  vertical = false,
+  nextHref,
+  nextLabel,
+  subtitleUrl,
+}: PlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [error, setError] = useState<string | null>(null);
   const [ended, setEnded] = useState(false);
@@ -109,7 +119,17 @@ export function Player({ src, poster, title, vertical = false, nextHref, nextLab
           poster={poster ?? undefined}
           title={title}
           className="h-full w-full object-contain"
-        />
+        >
+          {subtitleUrl ? (
+            <track
+              kind="captions"
+              src={subtitleUrl}
+              srcLang="pt"
+              label="Português"
+              default
+            />
+          ) : null}
+        </video>
 
         {error ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ink/85 px-6 text-center backdrop-blur">
