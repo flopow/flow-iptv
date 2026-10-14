@@ -52,7 +52,8 @@ for (const slug of baixadas) {
   const local = infos.get(slug);
   if (!local) continue;
   const mp4s = (await readdir(path.join(BAIXADOS, local.pasta))).filter((f) => f.endsWith(".mp4"));
-  if (local.info.totalEps > 0 && mp4s.length === local.info.totalEps) pendentes.push(slug);
+  const esperado = local.info.totalEps || mp4s.length;
+  if (mp4s.length > 0 && mp4s.length === esperado) pendentes.push(slug);
 }
 console.log(`${pendentes.length} séries para publicar.`);
 
