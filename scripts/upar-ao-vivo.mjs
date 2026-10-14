@@ -10,7 +10,7 @@ const execFileP = promisify(execFile);
 const RCLONE = process.env.RCLONE ?? "rclone";
 const BAIXADOS = path.resolve("baixados");
 const SLEEP = Number(process.env.INTERVALO ?? 60_000);
-const MAX_GB = 14.5;
+const MAX_GB = Number(process.env.MAX_GB ?? 190);
 
 const enviadas = await readFile(path.resolve("data/enviadas.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
 const set = new Set(enviadas);
