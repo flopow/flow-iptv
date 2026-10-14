@@ -590,8 +590,63 @@ async function publishImported() {
   log(`\n✔ ${eps} episódios publicados (${novosDramas} dramas criados). Site atualizado.`);
 }
 
+// ── Sincronizar vídeos para o GitHub (streaming estável) ───
+// O drive.usercontent não toca de forma estável no navegador (serve
+// página de player com sessão). Os MP4s (≤100 MB) sobem também para
+// o GitHub: raw.githubusercontent tem CORS * e Range — o <video> toca
+// em qualquer navegador. O Drive permanece como backup.
+async function syncVideosToGithub() {
+  const shorts = await readJsonSafe("shorts.json", []);
+  const media = await readJsonSafe("media.json", []);
+  const mediaById = new Map(media.map((m) => [m.id, m]));
+  const byId = new Map(shorts.map((s) => [s.id, s]));
+  const mp4Dir = path.join(WORK_DIR, "mp4");
+  const files = (await readdir(mp4Dir).catch(() => [])).filter((f) => f.endsWith(".mp4"));
+
+  let count = 0;
+  for (const file of files) {
+    const match = /^(.+)-ep(\d+)\.mp4$/.exec(file);
+    if (!match) continue;
+    const [, slug, epRaw] = match;
+    const epId = `${slug}-ep${Number(epRaw)}`;
+    const short = byId.get(slug);
+    const episode = short?.episodes.find((e) => e.id === epId);
+    if (!episode) continue;
+    const current = mediaById.get(epId)?.src ?? "";
+    if (current.includes("raw.githubusercontent.com")) continue; // já no GitHub
+
+    const localMp4 = path.join(mp4Dir, file);
+    const bytes = (await stat(localMp4)).size;
+    if (bytes > MAX_FILE_BYTES) {
+      log(`  ! ${file} > 100 MB — mantém Drive (não cabe no GitHub)`);
+      continue;
+    }
+    log(`  ↑ ${file} → GitHub…`);
+    const url = await uploadFile(`videos/${slug}/${file}`, await readFile(localMp4), `Vídeo de ${slug} (${epRaw})`);
+    const existing = mediaById.get(epId);
+    if (existing) existing.src = url;
+    else mediaById.set(epId, {
+      id: epId, provider: "url", format: "mp4", src: url,
+      sizeBytes: bytes, durationSeconds: null, createdAt: new Date().toISOString(),
+    });
+    count++;
+  }
+
+  const shortsJson = JSON.stringify([...byId.values()], null, 2);
+  const mediaJson = JSON.stringify([...mediaById.values()], null, 2);
+  await writeFile(path.join(DATA_DIR, "shorts.json"), shortsJson);
+  await writeFile(path.join(DATA_DIR, "media.json"), mediaJson);
+  await uploadFile("catalog/shorts.json", Buffer.from(shortsJson), "Vídeos no GitHub (streaming estável)");
+  await uploadFile("catalog/media.json", Buffer.from(mediaJson), "Vídeos no GitHub (streaming estável)");
+  log(`\n✔ ${count} vídeos sincronizados para o GitHub.`);
+}
+
 async function main() {
   await mkdir(WORK_DIR, { recursive: true });
+  if (args.includes("--sync-github")) {
+    await syncVideosToGithub();
+    return;
+  }
   if (args.includes("--publish-only")) {
     await publishImported();
     return;

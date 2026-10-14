@@ -1,0 +1,22 @@
+# Deploy automático na Vercel a cada push na main.
+# O token (VERCEL_TOKEN) é um secret do repositório; .vercel/project.json
+# aponta para o projeto Vercel existente.
+name: Deploy Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: npm ci
+      - name: Deploy to Vercel (production)
+        run: npx vercel deploy --prod --yes --token "${{ secrets.VERCEL_TOKEN }}"
