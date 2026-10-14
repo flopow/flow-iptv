@@ -15,8 +15,8 @@
 //   DESTINO=C:/caminho (padrão: ./baixados)
 // ─────────────────────────────────────────────────────────────
 
-import { execFile, spawn } from "node:child_process";
-import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { mkdir, readFile, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { createInterface } from "node:readline";
 import { promisify } from "node:util";
@@ -30,39 +30,51 @@ const ALLOWED_HOSTS = new Set(["v-mps.crazymaplestudios.com"]);
 const rl = createInterface({ input: process.stdin, output: process.stdout });
 const pergunta = (q) => new Promise((r) => rl.question(q, r));
 
-async function duracaoMs(m3u8) {
-  try {
-    const { stdout } = await execFileP(FFMPEG.replace(/ffmpeg\.exe$/i, "ffprobe.exe"), [
-      "-v", "error", "-show_entries", "format=duration",
-      "-of", "default=noprint_wrappers=1:nokey=1", m3u8,
-    ], { timeout: 60_000 });
-    return Math.round(Number(stdout.trim()) * 1000);
-  } catch {
-    return null;
-  }
-}
-
-// Baixa o HLS mostrando o progresso em % no próprio episódio.
+// Baixa o HLS em PARALELO (vários segmentos ao mesmo tempo = usa toda
+// a banda) e junta com ffmpeg. Mostra o progresso em %.
 async function hlsToMp4(m3u8, out, label) {
-  const totalMs = await duracaoMs(m3u8);
-  await new Promise((resolve, reject) => {
-    const proc = spawn(FFMPEG, ["-y", "-hide_banner", "-loglevel", "error", "-i", m3u8, "-c", "copy", "-movflags", "+faststart", "-progress", "pipe:1", out]);
-    let erro = "";
-    proc.stderr.on("data", (d) => { erro += d.toString(); });
-    const lines = createInterface({ input: proc.stdout });
-    lines.on("line", (line) => {
-      const m = /out_time_ms=(\d+)/.exec(line);
-      if (m && totalMs) {
-        const pct = Math.min(100, Math.round(Number(m[1]) / 1000 / totalMs * 100));
-        process.stdout.write(`\r  ${label}: ${pct}%`);
+  const res = await fetch(m3u8, { headers: { "user-agent": "flow-iptv-downloader/0.1" } });
+  if (!res.ok) throw new Error(`playlist ${res.status}`);
+  const text = await res.text();
+  const segs = text.split(/\r?\n/).filter((l) => l && !l.startsWith("#"));
+  if (segs.length === 0) throw new Error("playlist sem segmentos");
+
+  const dir = path.join(path.dirname(out), "_seg");
+  await mkdir(dir, { recursive: true });
+  const tasks = segs.map((s, i) => ({ url: new URL(s.trim(), m3u8).toString(), file: path.join(dir, `s${i}.ts`) }));
+
+  let done = 0;
+  let next = 0;
+  const CONC = 12;
+  const workers = [];
+  for (let w = 0; w < Math.min(CONC, tasks.length); w++) {
+    workers.push((async () => {
+      while (next < tasks.length) {
+        const t = tasks[next++];
+        let ok = false;
+        for (let a = 0; a < 3 && !ok; a++) {
+          try {
+            const r = await fetch(t.url, { headers: { "user-agent": "flow-iptv-downloader/0.1" } });
+            if (!r.ok) throw new Error(String(r.status));
+            await writeFile(t.file, Buffer.from(await r.arrayBuffer()));
+            ok = true;
+          } catch {
+            await new Promise((r) => setTimeout(r, 1500 * (a + 1)));
+          }
+        }
+        if (!ok) throw new Error(`segmento ${next} falhou`);
+        done++;
+        process.stdout.write(`\r  ${label}: ${Math.round((done / segs.length) * 100)}%`);
       }
-    });
-    proc.on("close", (code) => {
-      if (code !== 0) reject(new Error(erro.trim().split("\n").pop() || `ffmpeg exit ${code}`));
-      else resolve();
-    });
-  });
+    })());
+  }
+  await Promise.all(workers);
   process.stdout.write("\r");
+
+  const listFile = path.join(dir, "list.txt");
+  await writeFile(listFile, tasks.map((t) => `file '${t.file.replaceAll("'", "'\\''")}'`).join("\n"));
+  await execFileP(FFMPEG, ["-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", listFile, "-c", "copy", "-movflags", "+faststart", out], { timeout: 600_000 });
+  await rm(dir, { recursive: true, force: true });
 }
 
 async function fetchText(url) {
