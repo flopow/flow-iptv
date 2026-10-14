@@ -77,11 +77,12 @@ async function baixarSerie(slug, indice, total) {
   const dir = path.join(DESTINO, nome);
   await mkdir(dir, { recursive: true });
 
-  // Capa (pôster) na pasta
-  const srcset = /<img[^>]+srcset="([^"]+)"/.exec(html)?.[1];
-  const urls = srcset ? [...srcset.matchAll(/https?:\/\/[^\s"']+/g)].map((x) => x[0]) : [];
-  if (urls.length > 0) {
-    const capa = await fetch(urls[0].replaceAll("&amp;", "&"));
+  // Capa (pôster) na pasta — do JSON-LD da série (o 1º <img> pode ser
+  // um card de recomendado, como o usuário apontou)
+  const tvImage = tv?.image ?? /<meta property="og:image" content="([^"]+)"/.exec(html)?.[1];
+  if (tvImage) {
+    const capaUrl = String(tvImage).replaceAll("&amp;", "&").replace(/format,jpg/, "format,webp");
+    const capa = await fetch(capaUrl, { headers: { "user-agent": "flow-iptv-downloader/0.1" } });
     if (capa.ok) {
       await writeFile(path.join(dir, "capa.webp"), Buffer.from(await capa.arrayBuffer()));
       console.log(`  capa salva: ${path.join(dir, "capa.webp")}`);
