@@ -518,9 +518,9 @@ async function publishImported() {
   let eps = 0;
   let novosDramas = 0;
   for (const entry of entries) {
-    const match = /^([^/]+)\/([^/]+)-ep(\d+)\.mp4$/.exec(entry.Path);
+    const match = /^([^/]+)\/(?:[^/]*-)?ep-?(\d+)\.mp4$/.exec(entry.Path);
     if (!match) continue;
-    const [, slug, , epRaw] = match;
+    const [, slug, epRaw] = match;
     const epNumber = Number(epRaw);
     const epId = `${slug}-ep${epNumber}`;
     const localMp4 = path.join(WORK_DIR, "mp4", `${epId}.mp4`);

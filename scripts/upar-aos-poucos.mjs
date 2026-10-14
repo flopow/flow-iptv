@@ -13,6 +13,8 @@ const BAIXADOS = path.resolve("baixados");
 
 const enviadas = await readFile(path.resolve("data/enviadas.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
 const set = new Set(enviadas);
+const baixadas = await readFile(path.resolve("data/baixadas.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
+const completas = new Set(baixadas);
 
 const pastas = (await readdir(BAIXADOS)).filter((p) => !p.startsWith("."));
 console.log(`${pastas.length} séries baixadas no PC; ${set.size} já enviadas ao Drive.`);
@@ -22,18 +24,22 @@ for (const nome of pastas) {
   const info = await readFile(path.join(pasta, "info.json"), "utf8").then((t) => JSON.parse(t)).catch(() => ({}));
   const slug = info.slug ?? nome.toLowerCase().replace(/[^a-z0-9-]/gi, "-");
   if (set.has(slug)) continue;
+  if (!completas.has(slug)) {
+    console.log(`⏭ ${nome}: ainda baixando (não marcada como completa) — pula`);
+    continue;
+  }
 
   // Guard de espaço do Drive
   const { stdout } = await execFileP(RCLONE, ["size", "gdrive:flow-iptv"], { timeout: 120_000 });
   const usadoGB = Number(/([\d.]+) GiB/.exec(stdout)?.[1] ?? 0);
-  if (usadoGB >= 14.5) {
+  if (usadoGB >= 195) {
     console.log(`\n⚠ Drive cheio (${usadoGB.toFixed(2)} GiB). Pendentes: ${pastas.filter((p) => !set.has(p)).length} séries.`);
     break;
   }
 
   console.log(`\n=== ENVIANDO: ${nome} (Drive ${usadoGB.toFixed(2)} GiB) ===`);
   try {
-    await execFileP(RCLONE, ["copy", pasta, `gdrive:flow-iptv/videos/${slug}`], { timeout: 3600_000 });
+    await execFileP(RCLONE, ["copy", pasta, `gdrive:flow-iptv/videos/${slug}`, "--transfers", "8", "--checkers", "16", "--stats", "5s"], { timeout: 3600_000 });
     enviadas.push(slug);
     await writeFile(path.resolve("data/enviadas.json"), JSON.stringify(enviadas, null, 2));
     console.log(`✔ enviada: ${nome} (${enviadas.length} no Drive)`);
