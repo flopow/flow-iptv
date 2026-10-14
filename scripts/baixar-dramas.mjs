@@ -134,9 +134,15 @@ async function main() {
       catch (err) { console.log(`  ✗ ${slugs[i]}: ${err.message}`); }
     }
   } else {
-    const i = Number(escolha) - 1;
-    if (i < 0 || i >= lista.length) { console.log("Número inválido."); process.exit(1); }
-    await baixarSerie(await slugDe(lista[i].url), 1, 1);
+    const n = Number(escolha);
+    if (!Number.isNaN(n)) {
+      const i = n - 1;
+      if (i < 0 || i >= lista.length) { console.log("Número inválido."); process.exit(1); }
+      await baixarSerie(await slugDe(lista[i].url), 1, 1);
+    } else {
+      // Slug ou URL direto (--serie=so-mais-uma-vez-...)
+      await baixarSerie(await slugDe(escolha), 1, 1);
+    }
   }
   rl.close();
   console.log("\n✔ Concluído! Veja a pasta baixados/");
