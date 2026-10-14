@@ -16,12 +16,21 @@ const enviadas = await readFile(path.resolve("data/enviadas.json"), "utf8").then
 const set = new Set(enviadas);
 
 async function contaEpsDoSite(slug) {
-  try {
-    const html = await fetch(`https://dramavideoshow.com/pt/serie/${slug}`, { headers: { "user-agent": "flow-iptv-ao-vivo/0.1" } }).then((r) => r.text());
-    return new Set([...html.matchAll(/\/serie\/[^"]+?\/episodio-(\d+)/g)].map((m) => Number(m[1]))).size;
-  } catch {
-    return null;
+  for (let attempt = 0; attempt < 6; attempt++) {
+    try {
+      const res = await fetch(`https://dramavideoshow.com/pt/serie/${slug}`, { headers: { "user-agent": "flow-iptv-ao-vivo/0.1" } });
+      if (res.status === 503 || res.status === 429) {
+        await new Promise((r) => setTimeout(r, 20_000 * (attempt + 1)));
+        continue;
+      }
+      if (!res.ok) return null;
+      const html = await res.text();
+      return new Set([...html.matchAll(/\/serie\/[^"]+?\/episodio-(\d+)/g)].map((m) => Number(m[1]))).size;
+    } catch {
+      await new Promise((r) => setTimeout(r, 15_000));
+    }
   }
+  return null;
 }
 
 console.log(`Envio ao vivo iniciado — monitorando ${BAIXADOS}`);
@@ -45,8 +54,15 @@ while (true) {
     if (set.has(slug)) continue;
 
     const epsBaixados = (await readdir(pasta)).filter((f) => f.endsWith(".mp4")).length;
-    const epsTotal = await contaEpsDoSite(slug);
-    if (epsTotal === null) continue;
+    // Total de eps: usa o info.json (salvo no download) — não depende do site
+    let epsTotal = info.totalEps ?? null;
+    if (epsTotal === null) {
+      epsTotal = await contaEpsDoSite(slug);
+    }
+    if (epsTotal === null) {
+      console.log(`⏳ ${nome}: total desconhecido — tentando de novo depois`);
+      continue;
+    }
     if (epsBaixados < epsTotal) {
       console.log(`⏳ ${nome}: ${epsBaixados}/${epsTotal} — aguardando completar`);
       continue;

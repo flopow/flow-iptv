@@ -131,12 +131,11 @@ async function baixarSerie(slug, indice, total) {
       console.log(`  capa salva: ${path.join(dir, "capa.webp")}`);
     }
   }
+  const eps = [...new Set([...html.matchAll(/\/serie\/[^"]+?\/episodio-(\d+)/g)].map((m) => Number(m[1])))].sort((a, b) => a - b);
   await writeFile(
     path.join(dir, "info.json"),
-    JSON.stringify({ slug, titulo: nome, sinopse: tv?.description ?? "" }, null, 2),
+    JSON.stringify({ slug, titulo: nome, sinopse: tv?.description ?? "", totalEps: eps.length }, null, 2),
   );
-
-  const eps = [...new Set([...html.matchAll(/\/serie\/[^"]+?\/episodio-(\d+)/g)].map((m) => Number(m[1])))].sort((a, b) => a - b);
   console.log(`  ${eps.length} episódios encontrados`);
   let ok = 0;
   for (const n of eps) {
