@@ -297,7 +297,7 @@ async function generateSubtitles(mp4Path, slug, epNumber) {
 }
 
 // ── Importação de um drama ──────────────────────────────────
-async function importDrama(slug, listIndex) {
+async function importDrama(slug, listIndex, skipVideos = imagesOnly) {
   const serieUrl = `${SITE_ROOT}/serie/${slug}`;
   log(`\n[${listIndex}] ${slug}`);
   const html = await fetchText(serieUrl);
@@ -319,7 +319,7 @@ async function importDrama(slug, listIndex) {
   )].sort((a, b) => a - b);
 
   const episodes = [];
-  if (!imagesOnly) {
+  if (!skipVideos) {
     for (const n of epNumbers.slice(0, maxEpisodes)) {
       const epUrl = `${serieUrl}/episodio-${n}`;
       try {
@@ -503,8 +503,99 @@ async function legendasOnly() {
   log(`\n✔ ${count} legendas PT geradas e publicadas.`);
 }
 
+// ── Publicar o que já está upado (sem novo download/upload) ──
+// Registra no catálogo todos os episódios já existentes no Drive,
+// com duração (probe local) e legenda PT já publicada (se houver).
+async function publishImported() {
+  const shorts = await readJsonSafe("shorts.json", []);
+  const media = await readJsonSafe("media.json", []);
+  const mediaById = new Map(media.map((m) => [m.id, m]));
+  const byId = new Map(shorts.map((s) => [s.id, s]));
+
+  const { stdout } = await execFileP(RCLONE, ["lsjson", "--recursive", "gdrive:flow-iptv/videos"], { timeout: 300_000 });
+  const entries = JSON.parse(stdout).filter((e) => e.Path.endsWith(".mp4"));
+
+  let eps = 0;
+  let novosDramas = 0;
+  for (const entry of entries) {
+    const match = /^([^/]+)\/([^/]+)-ep(\d+)\.mp4$/.exec(entry.Path);
+    if (!match) continue;
+    const [, slug, , epRaw] = match;
+    const epNumber = Number(epRaw);
+    const epId = `${slug}-ep${epNumber}`;
+    const localMp4 = path.join(WORK_DIR, "mp4", `${epId}.mp4`);
+
+    let short = byId.get(slug);
+    if (!short) {
+      log(`  criando drama ${slug}…`);
+      try {
+        short = await importDrama(slug, 0, true);
+      } catch (err) {
+        log(`  ✗ página de ${slug} falhou: ${err.message} — segue`);
+        continue;
+      }
+      short.episodes = [];
+      byId.set(slug, short);
+      novosDramas++;
+    }
+
+    const existing = short.episodes.find((e) => e.id === epId);
+    const mediaSrc = mediaById.get(epId)?.src ?? "";
+    if (existing?.mediaFileId && mediaSrc.includes("drive.usercontent.google.com")) {
+      continue; // já registrado apontando para o Drive
+    }
+    // Substitui qualquer registro que aponte para outro lugar (ex.: GitHub de teste)
+    // pelo arquivo do Google Drive.
+    if (!existing) {
+      short.episodes.push({
+        id: epId,
+        number: epNumber,
+        title: `Episódio ${epNumber}`,
+        durationSeconds: null,
+        thumbUrl: null,
+        mediaFileId: epId,
+        subtitleUrl: null,
+      });
+    }
+    const durationSeconds = await probeDuration(localMp4).catch(() => null);
+    // legenda já publicada? (o job pode ter gerado antes)
+    const vttApi = `legendas/${slug}/${slug}-ep${epNumber}.pt.vtt`;
+    const vttExists = await ghFetch("GET", apiUrl(vttApi));
+    const subtitleUrl = vttExists ? rawUrl(vttApi) : null;
+    if (existing) existing.mediaFileId = epId;
+    const ep = short.episodes.find((e) => e.id === epId);
+    if (ep) {
+      ep.durationSeconds = durationSeconds ?? ep.durationSeconds;
+      ep.subtitleUrl = subtitleUrl ?? ep.subtitleUrl;
+    }
+    mediaById.set(epId, {
+      id: epId,
+      provider: "url",
+      format: "mp4",
+      src: driveStreamUrl(entry.ID),
+      sizeBytes: entry.Size,
+      durationSeconds,
+      createdAt: new Date().toISOString(),
+    });
+    eps++;
+    log(`  + ${epId} (${(entry.Size / 1024 / 1024).toFixed(1)} MB)`);
+  }
+
+  const shortsJson = JSON.stringify([...byId.values()], null, 2);
+  const mediaJson = JSON.stringify([...mediaById.values()], null, 2);
+  await writeFile(path.join(DATA_DIR, "shorts.json"), shortsJson);
+  await writeFile(path.join(DATA_DIR, "media.json"), mediaJson);
+  await uploadFile("catalog/shorts.json", Buffer.from(shortsJson), "Publica episódios já upados");
+  await uploadFile("catalog/media.json", Buffer.from(mediaJson), "Publica mídia já upada");
+  log(`\n✔ ${eps} episódios publicados (${novosDramas} dramas criados). Site atualizado.`);
+}
+
 async function main() {
   await mkdir(WORK_DIR, { recursive: true });
+  if (args.includes("--publish-only")) {
+    await publishImported();
+    return;
+  }
   if (args.includes("--legendas-only")) {
     await legendasOnly();
     return;

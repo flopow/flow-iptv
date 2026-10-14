@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  outputFileTracingIncludes: {
+    // O adaptador JSON lê data/catalog/*.json via fs em runtime;
+    // garante que os arquivos entrem no bundle serverless (Vercel).
+    "/**": ["data/catalog/*.json"],
+  },
   images: {
     remotePatterns: [
       // Imagens servidas pelo GitHub (raw.githubusercontent.com) quando o
