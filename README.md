@@ -94,6 +94,24 @@ GITHUB_MEDIA_PATH=public
 
 > O GitHub **não** é servidor de vídeo. Vídeos grandes ficam no provider de mídia.
 
+## Importação de dramas (site autorizado → GitHub → site)
+
+Fluxo automatizado: lista os dramas, baixa capas/sinopses, re-empacota cada
+episódio de HLS para MP4 (`ffmpeg -c copy`, sem re-encode) e sobe tudo para o
+repositório de mídia no GitHub (dedupe por SHA). O catálogo passa a apontar
+para `raw.githubusercontent.com` — o site exibe capas e toca os episódios
+direto de lá.
+
+```bash
+gh auth login                       # uma vez
+FFMPEG=C:/caminho/ffmpeg.exe node scripts/import-dramasite.mjs --limit 5
+FFMPEG=C:/caminho/ffmpeg.exe node scripts/import-dramasite.mjs --drama <slug> --max-episodes 3
+```
+
+Limites: arquivos > 100 MB não sobem (limite do GitHub) — ficam com a URL
+externa original e o log avisa. Para crescer além disso, troque para
+`MEDIA_PROVIDER=r2` (Cloudflare R2: 10 GB grátis, egress zero).
+
 ## Mídia local (desenvolvimento)
 
 Coloque vídeos em `public/media/` (ou defina `MEDIA_ROOT`), registre um `MediaFile` no

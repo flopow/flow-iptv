@@ -47,9 +47,18 @@ const limit = argValue(args, "--limit") ? Number(argValue(args, "--limit")) : In
 const startIdx = argValue(args, "--start") ? Number(argValue(args, "--start")) : 0;
 const onlyDrama = argValue(args, "--drama");
 const maxEpisodes = argValue(args, "--max-episodes") ? Number(argValue(args, "--max-episodes")) : Infinity;
+const maxTotalMb = argValue(args, "--max-total-mb") ? Number(argValue(args, "--max-total-mb")) : 1200;
+const backend = argValue(args, "--backend") ?? "github"; // "github" | "drive"
+const imagesOnly = args.includes("--images-only"); // só capas/banners/metadados
+const useAll = args.includes("--all"); // todos os dramas do sitemap (não só a home)
+
+let uploadedBytes = 0;
+let guardHit = false;
 
 const TOKEN = process.env.GITHUB_TOKEN ?? (await ghToken());
 const FFMPEG = process.env.FFMPEG ?? "ffmpeg";
+const FFPROBE = process.env.FFPROBE ?? FFMPEG.replace(/ffmpeg\.exe$/i, "ffprobe.exe");
+const RCLONE = process.env.RCLONE ?? "rclone";
 
 function argValue(argv, name) {
   const i = argv.indexOf(name);
@@ -68,7 +77,7 @@ async function ghToken() {
 // ── GitHub API (oficial) ─────────────────────────────────────
 let remaining = Infinity;
 
-async function ghFetch(method, url, body) {
+async function ghFetchRaw(method, url, body) {
   const res = await fetch(url, {
     method,
     headers: {
@@ -81,20 +90,42 @@ async function ghFetch(method, url, body) {
   });
   const rl = res.headers.get("x-ratelimit-remaining");
   if (rl) remaining = Number(rl);
+  return res;
+}
 
-  if (res.status === 401) throw new Error("GitHub: token inválido ou revogado (401).");
-  if (res.status === 403) {
-    const reset = res.headers.get("x-ratelimit-reset");
-    throw new Error(
-      `GitHub: permissão negada ou rate limit (403). Reset em ${reset ? new Date(Number(reset) * 1000).toISOString() : "?"}.`,
-    );
+// Erros 5xx e falhas de rede são transitórios: tenta de novo com backoff.
+async function ghFetch(method, url, body) {
+  let last;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    if (attempt > 0) {
+      await new Promise((r) => setTimeout(r, 1500 * attempt));
+      log(`  (retry ${attempt}/3 após erro transitório)`);
+    }
+    try {
+      const res = await ghFetchRaw(method, url, body);
+      if (res.status === 401) throw new Error("GitHub: token inválido ou revogado (401).");
+      if (res.status === 403) {
+        const reset = res.headers.get("x-ratelimit-reset");
+        throw new Error(
+          `GitHub: permissão negada ou rate limit (403). Reset em ${reset ? new Date(Number(reset) * 1000).toISOString() : "?"}.`,
+        );
+      }
+      if (res.status === 404) return null;
+      if (res.status >= 500) {
+        last = new Error(`GitHub: ${res.status} (transitório)`);
+        continue;
+      }
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`GitHub: ${res.status} ${url} — ${text.slice(0, 200)}`);
+      }
+      return res.status === 204 ? null : res.json();
+    } catch (err) {
+      last = err;
+      if (!/transitório/.test(err.message)) throw err;
+    }
   }
-  if (res.status === 404) return null;
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`GitHub: ${res.status} ${url} — ${text.slice(0, 200)}`);
-  }
-  return res.status === 204 ? null : res.json();
+  throw last;
 }
 
 function apiUrl(apiPath) {
@@ -150,16 +181,12 @@ function slugFromUrl(url) {
 
 function firstOfSet(srcset, minW) {
   if (!srcset) return null;
-  const entries = srcset.split(",").map((e) => e.trim()).filter(Boolean);
-  let pick = entries[0];
-  for (const e of entries) {
-    const w = Number(/(\d+)w/.exec(e)?.[1] ?? 0);
-    if (w >= minW) {
-      pick = e;
-      break;
-    }
-  }
-  return pick.split(/\s/)[0];
+  // URLs do srcset nunca têm espaços (o "260w" vem separado por espaço);
+  // vírgulas dentro da query (resize,w_260/quality,q_78) são parte da URL.
+  const urls = [...srcset.matchAll(/https?:\/\/[^\s"']+/g)].map((m) => m[0]).filter(Boolean);
+  if (urls.length === 0) return null;
+  const withW = urls.map((u) => ({ u, w: Number(/(?:^|[^a-z])w_(\d+)/i.exec(u)?.[1] ?? 0) }));
+  return (withW.find((e) => e.w >= minW) ?? withW[0]).u;
 }
 
 // O OSS (Aliyun) aceita re-formatar na query; pede webp quando possível.
@@ -172,6 +199,45 @@ async function hlsToMp4(m3u8Url, outPath) {
   const args = ["-y", "-hide_banner", "-loglevel", "error", "-i", m3u8Url, "-c", "copy", "-movflags", "+faststart", outPath];
   await execFileP(FFMPEG, args, { timeout: 600_000 });
   return (await stat(outPath)).size;
+}
+
+async function probeDuration(mp4Path) {
+  try {
+    const { stdout } = await execFileP(FFPROBE, [
+      "-v", "error", "-show_entries", "format=duration",
+      "-of", "default=noprint_wrappers=1:nokey=1", mp4Path,
+    ], { timeout: 60_000 });
+    return Math.round(Number(stdout.trim()));
+  } catch {
+    return null;
+  }
+}
+
+// ── Google Drive (via rclone) ───────────────────────────────
+// Vídeos grandes vão para o Drive do operador (15–100 GB); o site
+// reproduz via drive.usercontent.google.com (streaming direto, sem
+// expor nada do sistema do site de origem).
+async function driveList(dirPath) {
+  const { stdout } = await execFileP(RCLONE, ["lsjson", `gdrive:${dirPath}`], { timeout: 120_000 });
+  return JSON.parse(stdout);
+}
+
+async function uploadVideoDrive(localPath, drivePath) {
+  const dir = drivePath.slice(0, drivePath.lastIndexOf("/"));
+  const name = drivePath.slice(drivePath.lastIndexOf("/") + 1);
+  const existing = (await driveList(dir)).find((f) => f.Name === name);
+  if (existing) {
+    log(`  = já existe no Drive: ${drivePath}`);
+    return existing.ID;
+  }
+  await execFileP(RCLONE, ["copyto", localPath, `gdrive:${drivePath}`], { timeout: 900_000 });
+  const uploaded = (await driveList(dir)).find((f) => f.Name === name);
+  if (!uploaded) throw new Error("Upload no Drive concluído, mas ID não localizado");
+  return uploaded.ID;
+}
+
+function driveStreamUrl(fileId) {
+  return `https://drive.usercontent.google.com/download?id=${fileId}`;
 }
 
 // ── Importação de um drama ──────────────────────────────────
@@ -197,66 +263,76 @@ async function importDrama(slug, listIndex) {
   )].sort((a, b) => a - b);
 
   const episodes = [];
-  for (const n of epNumbers.slice(0, maxEpisodes)) {
-    const epUrl = `${serieUrl}/episodio-${n}`;
-    log(`  episódio ${n}…`);
-    const epHtml = await fetchText(epUrl);
-    const m3u8 = /https?:\/\/[^"'\s]+?\.m3u8[^"'\s]*/.exec(epHtml)?.[0] ?? null;
-    if (!m3u8) {
-      log(`    ! sem HLS na página — pulando`);
-      continue;
+  if (!imagesOnly) {
+    for (const n of epNumbers.slice(0, maxEpisodes)) {
+      const epUrl = `${serieUrl}/episodio-${n}`;
+      try {
+        log(`  episódio ${n}…`);
+        const epHtml = await fetchText(epUrl);
+        const m3u8 = /https?:\/\/[^"'\s]+?\.m3u8[^"'\s]*/.exec(epHtml)?.[0] ?? null;
+        if (!m3u8) {
+          log(`    ! sem HLS na página — pulando`);
+          continue;
+        }
+        const host = new URL(m3u8).hostname;
+        if (!ALLOWED_VIDEO_HOSTS.has(host)) {
+          log(`    ! host de vídeo não autorizado (${host}) — pulando`);
+          continue;
+        }
+        const mediaId = `${slug}-ep${n}`;
+        const localMp4 = path.join(WORK_DIR, "mp4", `${mediaId}.mp4`);
+        let bytes;
+        try {
+          bytes = (await stat(localMp4)).size;
+          log(`    mp4 local já existe (${(bytes / 1024 / 1024).toFixed(1)} MB) — reusando`);
+        } catch {
+          await mkdir(path.dirname(localMp4), { recursive: true });
+          bytes = await hlsToMp4(m3u8, localMp4);
+          log(`    mp4: ${(bytes / 1024 / 1024).toFixed(1)} MB`);
+        }
+        if (bytes > MAX_FILE_BYTES && backend === "github") {
+          log(`    ! ${(bytes / 1024 / 1024).toFixed(1)} MB > 100 MB — não cabe no GitHub; mude para --backend drive`);
+          continue;
+        }
+        if (backend === "github" && uploadedBytes + bytes > maxTotalMb * 1024 * 1024) {
+          if (!guardHit) {
+            log(`  ! LIMITE ${maxTotalMb} MB atingido — vídeos seguintes ficam "Em breve"; capas/metadados continuam. Use --backend drive para expandir.`);
+            guardHit = true;
+          }
+          continue;
+        }
+        const mp4Path = `videos/${slug}/${slug}-ep${n}.mp4`;
+        const content = await readFile(localMp4);
+        let url;
+        if (backend === "drive") {
+          const fileId = await uploadVideoDrive(localMp4, `flow-iptv/${mp4Path}`);
+          url = driveStreamUrl(fileId);
+        } else {
+          url = await uploadFile(mp4Path, content, `Adiciona episódio ${n} de ${name}`);
+          uploadedBytes += bytes;
+        }
+        const durationSeconds = await probeDuration(localMp4);
+        episodes.push({
+          id: mediaId,
+          number: n,
+          title: `Episódio ${n}`,
+          durationSeconds,
+          thumbUrl: null,
+          mediaFileId: mediaId,
+        });
+        mediaEntries.push({
+          id: mediaId,
+          provider: "url",
+          format: "mp4",
+          src: url,
+          sizeBytes: bytes,
+          durationSeconds,
+          createdAt: new Date().toISOString(),
+        });
+      } catch (err) {
+        log(`    ✗ episódio ${n} falhou: ${err.message} — segue para o próximo`);
+      }
     }
-    const host = new URL(m3u8).hostname;
-    if (!ALLOWED_VIDEO_HOSTS.has(host)) {
-      log(`    ! host de vídeo não autorizado (${host}) — pulando`);
-      continue;
-    }
-    const mediaId = `${slug}-ep${n}`;
-    const localMp4 = path.join(WORK_DIR, "mp4", `${mediaId}.mp4`);
-    await mkdir(path.dirname(localMp4), { recursive: true });
-    const bytes = await hlsToMp4(m3u8, localMp4);
-    log(`    mp4: ${(bytes / 1024 / 1024).toFixed(1)} MB`);
-    if (bytes > MAX_FILE_BYTES) {
-      log(`    ! ${bytes / 1024 / 1024} MB > 100 MB — não sobe; mantém URL externa`);
-      episodes.push({
-        id: mediaId,
-        number: n,
-        title: `Episódio ${n}`,
-        durationSeconds: null,
-        thumbUrl: null,
-        mediaFileId: mediaId,
-      });
-      mediaEntries.push({
-        id: mediaId,
-        provider: "url",
-        format: "hls",
-        src: m3u8,
-        sizeBytes: bytes,
-        durationSeconds: null,
-        createdAt: new Date().toISOString(),
-      });
-      continue;
-    }
-    const mp4Path = `videos/${slug}/${slug}-ep${n}.mp4`;
-    const content = await readFile(localMp4);
-    const url = await uploadFile(mp4Path, content, `Adiciona episódio ${n} de ${name}`);
-    episodes.push({
-      id: mediaId,
-      number: n,
-      title: `Episódio ${n}`,
-      durationSeconds: null,
-      thumbUrl: null,
-      mediaFileId: mediaId,
-    });
-    mediaEntries.push({
-      id: mediaId,
-      provider: "url",
-      format: "mp4",
-      src: url,
-      sizeBytes: bytes,
-      durationSeconds: null,
-      createdAt: new Date().toISOString(),
-    });
   }
 
   if (episodes.length === 0) {
@@ -267,7 +343,7 @@ async function importDrama(slug, listIndex) {
   const posterRaw = await (async () => {
     if (!posterUrl) return null;
     try {
-      const res = await fetch(posterUrl);
+      const res = await fetch(posterUrl, { headers: { "user-agent": "flow-iptv-importer/0.1" } });
       if (!res.ok) return null;
       const buf = Buffer.from(await res.arrayBuffer());
       return uploadFile(`posters/${slug}.webp`, buf, `Capa de ${name}`);
@@ -278,7 +354,7 @@ async function importDrama(slug, listIndex) {
   const backdropRaw = await (async () => {
     if (!backdropUrl) return null;
     try {
-      const res = await fetch(toWebp(backdropUrl));
+      const res = await fetch(toWebp(backdropUrl), { headers: { "user-agent": "flow-iptv-importer/0.1" } });
       if (!res.ok) return null;
       const buf = Buffer.from(await res.arrayBuffer());
       return uploadFile(`backdrops/${slug}.webp`, buf, `Fundo de ${name}`);
@@ -307,6 +383,13 @@ async function importDrama(slug, listIndex) {
 // ── Lista de dramas ─────────────────────────────────────────
 async function dramaList() {
   if (onlyDrama) return [{ url: `${SITE_ROOT}/serie/${onlyDrama}`, name: onlyDrama }];
+  if (useAll) {
+    const html = await fetchText(`${SITE_ROOT}/sitemap`);
+    const slugs = [...new Set(
+      [...html.matchAll(/\/pt\/serie\/([a-z0-9-]+)/g)].map((m) => m[1]),
+    )];
+    return slugs.map((slug) => ({ url: `${SITE_ROOT}/serie/${slug}`, name: slug }));
+  }
   const html = await fetchText(`${SITE_ROOT}/`);
   const itemList = jsonLdBlocks(html).find((b) => b["@type"] === "ItemList");
   const items = (itemList?.itemListElement ?? []).map((e) => e.url).filter(Boolean);
@@ -324,16 +407,32 @@ let log = (msg) => console.log(msg);
 
 async function main() {
   await mkdir(WORK_DIR, { recursive: true });
+  if (backend === "drive") {
+    await execFileP(RCLONE, ["mkdir", "gdrive:flow-iptv"], { timeout: 60_000 }).catch(() => {});
+    log("Compartilhando pasta flow-iptv no Drive (qualquer pessoa com o link)…");
+    await execFileP(RCLONE, ["link", "gdrive:flow-iptv"], { timeout: 120_000 }).catch((err) =>
+      log(`  ! não foi possível compartilhar a pasta: ${err.message}`),
+    );
+  }
   const list = await dramaList();
   log(`Total de dramas no catálogo do site: ${list.length}`);
   const batch = list.slice(startIdx, startIdx + limit);
+
+  // Preserva episódios já importados quando rodamos só capas/metadados.
+  const existingShorts = await readJsonSafe("shorts.json", []);
+  const existingById = new Map(existingShorts.map((s) => [s.id, s]));
 
   const shorts = [];
   for (let i = 0; i < batch.length; i++) {
     const slug = slugFromUrl(batch[i].url);
     if (!slug) continue;
     try {
-      shorts.push(await importDrama(slug, startIdx + i + 1));
+      const entry = await importDrama(slug, startIdx + i + 1);
+      if (imagesOnly) {
+        const prev = existingById.get(entry.id);
+        if (prev && prev.episodes?.length) entry.episodes = prev.episodes;
+      }
+      shorts.push(entry);
     } catch (err) {
       log(`  ✗ erro em ${slug}: ${err.message}`);
     }

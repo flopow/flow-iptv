@@ -2,7 +2,7 @@
   {
     "id": "o-projeto-turbo",
     "title": "O Projeto Turbo",
-    "synopsis": "Uma equipe de engenharia corre contra o tempo para entregar um motor revolucionário antes que a concorrência o copie. Demo: vídeo público de teste (trailer de Sintel, W3C), usado apenas para validar o player. Substitua por conteúdo autorizado.",
+    "synopsis": "Uma equipe de engenharia corre contra o tempo para entregar um motor revolucionário antes que a concorrência o copie.",
     "posterUrl": null,
     "backdropUrl": null,
     "year": 2024,
@@ -11,7 +11,7 @@
     "ageRating": "14",
     "language": "pt-BR",
     "subtitles": ["pt-BR", "en"],
-    "mediaFileId": "demo-sintel",
+    "mediaFileId": null,
     "status": "published",
     "featured": true,
     "createdAt": "2026-10-10T12:00:00.000Z"

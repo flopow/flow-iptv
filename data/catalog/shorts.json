@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2",
+    "title": "A Irmã do Bilionário Contra-Ataca",
+    "synopsis": "A herdeira trilionária Catherine, grávida de nove meses, decide viajar na classe econômica para o casamento do seu irmão caçula, William. Ela não esperava cruzar com uma mãe terrível, Linda, e seu filho mimado, Tommy, que juntos não só a expulsam do próprio assento, mas quase derrubam o avião no processo. No hospital, Chloe, a noiva de William, encontra Catherine, e a primeira coisa que faz é dar um tapa na cara dela...",
+    "posterUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/posters/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2.webp",
+    "backdropUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/backdrops/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2.webp",
+    "year": null,
+    "genres": [
+      "Fingindo de bobo"
+    ],
+    "ageRating": null,
+    "language": "pt-BR",
+    "status": "published",
+    "featured": false,
+    "createdAt": "2026-10-14T00:30:22.891Z",
+    "episodes": [
+      {
+        "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1",
+        "number": 1,
+        "title": "Episódio 1",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1"
+      },
+      {
+        "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2",
+        "number": 2,
+        "title": "Episódio 2",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2"
+      }
+    ]
+  }
+]

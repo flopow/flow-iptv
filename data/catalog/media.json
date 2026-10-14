@@ -1,29 +1,20 @@
 [
   {
-    "id": "demo-sintel",
-    "provider": "url",
-    "format": "mp4",
-    "src": "https://media.w3.org/2010/05/sintel/trailer.mp4",
-    "sizeBytes": null,
-    "durationSeconds": 52,
-    "createdAt": "2026-10-13T00:00:00.000Z"
-  },
-  {
-    "id": "demo-mux-hls",
-    "provider": "url",
-    "format": "hls",
-    "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "sizeBytes": null,
-    "durationSeconds": 598,
-    "createdAt": "2026-10-13T00:00:00.000Z"
-  },
-  {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1.mp4",
     "sizeBytes": 31023654,
     "durationSeconds": null,
-    "createdAt": "2026-10-14T00:17:59.119Z"
+    "createdAt": "2026-10-14T00:30:08.740Z"
+  },
+  {
+    "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2",
+    "provider": "url",
+    "format": "mp4",
+    "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2.mp4",
+    "sizeBytes": 27652931,
+    "durationSeconds": null,
+    "createdAt": "2026-10-14T00:30:19.742Z"
   }
 ]

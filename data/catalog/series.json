@@ -2,7 +2,7 @@
   {
     "id": "a-escada",
     "title": "A Escada",
-    "synopsis": "Uma família herda um prédio antigo e descobre que o elevador para em um andar que não existe no projeto. Demo: o episódio 1 usa stream HLS público de teste (Mux), apenas para validar o player.",
+    "synopsis": "Uma família herda um prédio antigo e descobre que o elevador para em um andar que não existe no projeto.",
     "posterUrl": null,
     "backdropUrl": null,
     "year": 2025,
@@ -27,7 +27,7 @@
             "synopsis": "A família assina a compra e, na primeira noite, ouve o elevador parar em um andar a mais.",
             "durationMinutes": 42,
             "thumbUrl": null,
-            "mediaFileId": "demo-mux-hls"
+            "mediaFileId": null
           },
           {
             "id": "a-escada-t1e2",

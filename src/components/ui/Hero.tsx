@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { PlayIcon } from "@/components/ui/icons";
@@ -29,20 +30,45 @@ function MetaBadges({ item }: { item: Film | Series | ShortDrama }) {
   );
 }
 
-// Banner de destaque: painel gradiente azul, sem imagem falsa.
-// Usa conteúdo real do catálogo (título/sinopse/metadados).
+// Banner de destaque: usa a imagem real do catálogo (backdrop do GitHub)
+// quando existe; sem imagem, um gradiente azul limpo. Nunca finge capa.
 export function Hero({ item, title, detailHref, playHref }: HeroProps) {
+  const hasBackdrop = Boolean(item.backdropUrl);
+
   return (
     <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-accent-strong to-hero px-6 py-10 text-white shadow-lg sm:px-12 sm:py-16">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-20"
-          aria-hidden
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 15% 20%, rgba(255,255,255,.35), transparent 40%), radial-gradient(circle at 85% 80%, rgba(255,255,255,.25), transparent 45%)",
-          }}
-        />
+      <div
+        className={`relative overflow-hidden rounded-3xl px-6 py-10 text-white shadow-lg sm:px-12 sm:py-16 ${
+          hasBackdrop ? "" : "bg-gradient-to-br from-accent via-accent-strong to-hero"
+        }`}
+      >
+        {hasBackdrop && item.backdropUrl ? (
+          <>
+            <div className="absolute inset-0">
+              <Image
+                src={item.backdropUrl}
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+              {/* Overlays para legibilidade nos dois temas */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+          </>
+        ) : (
+          <div
+            className="pointer-events-none absolute inset-0 opacity-20"
+            aria-hidden
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 15% 20%, rgba(255,255,255,.35), transparent 40%), radial-gradient(circle at 85% 80%, rgba(255,255,255,.25), transparent 45%)",
+            }}
+          />
+        )}
+
         <div className="relative max-w-2xl">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden />
