@@ -7,7 +7,13 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense",
+      "natal",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -593,7 +599,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -1155,7 +1164,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -1893,7 +1903,12 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense",
+      "natal"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -2451,7 +2466,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -3153,7 +3170,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "natal"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -3918,7 +3937,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -4530,7 +4552,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "natal"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -5178,7 +5203,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -5835,7 +5862,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -6654,7 +6685,12 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense",
+      "natal"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -7311,7 +7347,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -8094,7 +8131,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -8652,7 +8691,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -9201,7 +9242,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -9984,7 +10026,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -10650,7 +10695,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -11127,7 +11175,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -11757,7 +11808,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -12387,7 +12442,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -13071,7 +13130,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -13647,7 +13708,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -14223,7 +14286,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -14880,7 +14945,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -15600,7 +15667,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -16239,7 +16309,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -16770,7 +16842,7 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -17355,7 +17427,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -18066,7 +18141,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -18732,7 +18808,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -19434,7 +19514,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -20190,7 +20274,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -20919,7 +21004,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -21603,7 +21689,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -22224,7 +22312,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -22962,7 +23054,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -23430,7 +23526,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -24051,7 +24150,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -24735,7 +24838,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -25563,7 +25669,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -26310,7 +26419,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -27003,7 +27115,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -27786,7 +27901,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "familia",
+      "vinganca"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -28434,7 +28550,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -29028,7 +29146,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -29775,7 +29896,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -30441,7 +30565,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -31008,7 +31135,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -31863,7 +31992,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -32286,7 +32419,12 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense",
+      "natal"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -32934,7 +33072,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -33546,7 +33687,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -34293,7 +34436,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -34680,7 +34826,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -35382,7 +35530,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -35814,7 +35964,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -36372,7 +36524,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -36849,7 +37005,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -37380,7 +37539,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -37929,7 +38089,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -38568,7 +38731,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -39270,7 +39434,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -39765,7 +39930,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -40503,7 +40670,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "vinganca",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -41043,7 +41212,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -41682,7 +41853,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -42420,7 +42593,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -43113,7 +43287,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -43761,7 +43938,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -44490,7 +44669,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "familia",
+      "nobreza",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -45318,7 +45500,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -46236,7 +46422,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -46875,7 +47064,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -47550,7 +47742,12 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -48180,7 +48377,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -48828,7 +49028,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -49611,7 +49815,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -50349,7 +50555,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -51051,7 +51259,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -51555,7 +51766,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -52392,7 +52607,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -53130,7 +53346,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -53886,7 +54103,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -54705,7 +54926,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -55299,7 +55524,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -56046,7 +56275,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -56730,7 +56960,12 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -57414,7 +57649,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -58098,7 +58336,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -58620,7 +58860,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -59268,7 +59512,11 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "vinganca",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -59970,7 +60218,9 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -60825,7 +61075,8 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "familia",
+      "drama-forte"
     ],
     "ageRating": null,
     "language": "pt-BR",
@@ -61410,7 +61661,10 @@
     "backdropUrl": null,
     "year": null,
     "genres": [
-      "drama"
+      "romance",
+      "familia",
+      "nobreza",
+      "suspense"
     ],
     "ageRating": null,
     "language": "pt-BR",

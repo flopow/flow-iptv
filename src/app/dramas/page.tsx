@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { PosterCard } from "@/components/ui/PosterCard";
 import { SearchBar } from "@/components/ui/SearchBar";
@@ -6,8 +7,18 @@ import { getCatalog } from "@/lib/catalog";
 
 export const metadata: Metadata = { title: "Dramas Curtos" };
 
+const CATEGORIAS: { id: string; nome: string }[] = [
+  { id: "romance", nome: "Romance" },
+  { id: "familia", nome: "Família" },
+  { id: "vinganca", nome: "Vingança" },
+  { id: "nobreza", nome: "Nobreza & Poder" },
+  { id: "suspense", nome: "Suspense" },
+  { id: "natal", nome: "Natal" },
+  { id: "drama-forte", nome: "Drama Intenso" },
+];
+
 interface DramasPageProps {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string; cat?: string }>;
 }
 
 export default async function DramasPage({ searchParams }: DramasPageProps) {
@@ -15,7 +26,12 @@ export default async function DramasPage({ searchParams }: DramasPageProps) {
   const catalog = await getCatalog();
   const shorts = await catalog.listShorts();
   const q = (sp.q ?? "").trim().toLowerCase();
-  const filtered = q ? shorts.filter((s) => s.title.toLowerCase().includes(q)) : shorts;
+  const cat = (sp.cat ?? "").trim();
+  const filtered = shorts.filter((s) => {
+    if (q && !s.title.toLowerCase().includes(q)) return false;
+    if (cat && !(s.genres ?? []).includes(cat)) return false;
+    return true;
+  });
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
@@ -27,6 +43,28 @@ export default async function DramasPage({ searchParams }: DramasPageProps) {
         </p>
         <SearchBar defaultValue={sp.q ?? ""} className="mt-4 max-w-md" />
       </header>
+
+      <nav className="mb-8 flex flex-wrap gap-2" aria-label="Categorias de dramas">
+        <Link
+          href="/dramas"
+          className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
+            !cat ? "border-accent bg-accent-soft text-accent-strong" : "border-line bg-surface text-foreground hover:border-accent-line"
+          }`}
+        >
+          Todos
+        </Link>
+        {CATEGORIAS.map((c) => (
+          <Link
+            key={c.id}
+            href={`/dramas?cat=${c.id}${q ? `&q=${encodeURIComponent(q)}` : ""}`}
+            className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
+              cat === c.id ? "border-accent bg-accent-soft text-accent-strong" : "border-line bg-surface text-foreground hover:border-accent-line"
+            }`}
+          >
+            {c.nome}
+          </Link>
+        ))}
+      </nav>
 
       {filtered.length === 0 ? (
         <div className="rounded-2xl border border-line bg-surface py-20 text-center">
