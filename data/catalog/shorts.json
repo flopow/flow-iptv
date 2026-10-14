@@ -59961,5 +59961,2030 @@
         "subtitleUrl": null
       }
     ]
+  },
+  {
+    "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb",
+    "title": "Ligada à Honra",
+    "synopsis": "Aria, filha de Rocco Scuderi e criada sob a rígida proteção do pai mafioso, vê seu futuro ser decidido por um acordo entre organizações. O casamento com Luca Vitiello, herdeiro da máfia de Nova York, não nasce de escolha ou afeto: é uma negociação que liga a jovem ao homem conhecido por sua frieza, crueldade e fama de Playboy. Aos 18 anos, Aria precisa encarar um papel imposto enquanto tenta entender o que esse pacto significará para sua vida. Quando Luca aparece diante dela coberto de sangue, a cerimônia deixa de parecer apenas uma obrigação familiar. A presença ameaçadora do noivo transforma o primeiro encontro em um teste para Aria, dividida entre a autoridade de Rocco e o perigo representado por Luca. Entre desconfiança, tensão e um casamento arranjado, a história acompanha o choque de duas vontades e os primeiros passos de uma relação marcada por poder, medo e atração.",
+    "posterUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/posters/ligada-a-honra-6909cdd03e49c5c3b60f7acb.webp",
+    "backdropUrl": null,
+    "year": null,
+    "genres": [
+      "drama"
+    ],
+    "ageRating": null,
+    "language": "pt-BR",
+    "status": "published",
+    "featured": false,
+    "createdAt": "2026-10-14T23:19:23.200Z",
+    "episodes": [
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep1",
+        "number": 1,
+        "title": "Episódio 1",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep1",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep2",
+        "number": 2,
+        "title": "Episódio 2",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep2",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep3",
+        "number": 3,
+        "title": "Episódio 3",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep3",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep4",
+        "number": 4,
+        "title": "Episódio 4",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep4",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep5",
+        "number": 5,
+        "title": "Episódio 5",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep5",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep6",
+        "number": 6,
+        "title": "Episódio 6",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep6",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep7",
+        "number": 7,
+        "title": "Episódio 7",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep7",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep8",
+        "number": 8,
+        "title": "Episódio 8",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep8",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep9",
+        "number": 9,
+        "title": "Episódio 9",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep9",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep10",
+        "number": 10,
+        "title": "Episódio 10",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep10",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep11",
+        "number": 11,
+        "title": "Episódio 11",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep11",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep12",
+        "number": 12,
+        "title": "Episódio 12",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep12",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep13",
+        "number": 13,
+        "title": "Episódio 13",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep13",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep14",
+        "number": 14,
+        "title": "Episódio 14",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep14",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep15",
+        "number": 15,
+        "title": "Episódio 15",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep15",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep16",
+        "number": 16,
+        "title": "Episódio 16",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep16",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep17",
+        "number": 17,
+        "title": "Episódio 17",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep17",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep18",
+        "number": 18,
+        "title": "Episódio 18",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep18",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep19",
+        "number": 19,
+        "title": "Episódio 19",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep19",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep20",
+        "number": 20,
+        "title": "Episódio 20",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep20",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep21",
+        "number": 21,
+        "title": "Episódio 21",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep21",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep22",
+        "number": 22,
+        "title": "Episódio 22",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep22",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep23",
+        "number": 23,
+        "title": "Episódio 23",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep23",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep24",
+        "number": 24,
+        "title": "Episódio 24",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep24",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep25",
+        "number": 25,
+        "title": "Episódio 25",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep25",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep26",
+        "number": 26,
+        "title": "Episódio 26",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep26",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep27",
+        "number": 27,
+        "title": "Episódio 27",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep27",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep28",
+        "number": 28,
+        "title": "Episódio 28",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep28",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep29",
+        "number": 29,
+        "title": "Episódio 29",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep29",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep30",
+        "number": 30,
+        "title": "Episódio 30",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep30",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep31",
+        "number": 31,
+        "title": "Episódio 31",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep31",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep32",
+        "number": 32,
+        "title": "Episódio 32",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep32",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep33",
+        "number": 33,
+        "title": "Episódio 33",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep33",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep34",
+        "number": 34,
+        "title": "Episódio 34",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep34",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep35",
+        "number": 35,
+        "title": "Episódio 35",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep35",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep36",
+        "number": 36,
+        "title": "Episódio 36",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep36",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep37",
+        "number": 37,
+        "title": "Episódio 37",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep37",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep38",
+        "number": 38,
+        "title": "Episódio 38",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep38",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep39",
+        "number": 39,
+        "title": "Episódio 39",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep39",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep40",
+        "number": 40,
+        "title": "Episódio 40",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep40",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep41",
+        "number": 41,
+        "title": "Episódio 41",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep41",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep42",
+        "number": 42,
+        "title": "Episódio 42",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep42",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep43",
+        "number": 43,
+        "title": "Episódio 43",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep43",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep44",
+        "number": 44,
+        "title": "Episódio 44",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep44",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep45",
+        "number": 45,
+        "title": "Episódio 45",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep45",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep46",
+        "number": 46,
+        "title": "Episódio 46",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep46",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep47",
+        "number": 47,
+        "title": "Episódio 47",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep47",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep48",
+        "number": 48,
+        "title": "Episódio 48",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep48",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep49",
+        "number": 49,
+        "title": "Episódio 49",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep49",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep50",
+        "number": 50,
+        "title": "Episódio 50",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep50",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep51",
+        "number": 51,
+        "title": "Episódio 51",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep51",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep52",
+        "number": 52,
+        "title": "Episódio 52",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep52",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep53",
+        "number": 53,
+        "title": "Episódio 53",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep53",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep54",
+        "number": 54,
+        "title": "Episódio 54",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep54",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep55",
+        "number": 55,
+        "title": "Episódio 55",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep55",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep56",
+        "number": 56,
+        "title": "Episódio 56",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep56",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep57",
+        "number": 57,
+        "title": "Episódio 57",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep57",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep58",
+        "number": 58,
+        "title": "Episódio 58",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep58",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep59",
+        "number": 59,
+        "title": "Episódio 59",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep59",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep60",
+        "number": 60,
+        "title": "Episódio 60",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep60",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep61",
+        "number": 61,
+        "title": "Episódio 61",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep61",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep62",
+        "number": 62,
+        "title": "Episódio 62",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep62",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep63",
+        "number": 63,
+        "title": "Episódio 63",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep63",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep64",
+        "number": 64,
+        "title": "Episódio 64",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep64",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep65",
+        "number": 65,
+        "title": "Episódio 65",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep65",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep66",
+        "number": 66,
+        "title": "Episódio 66",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep66",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep67",
+        "number": 67,
+        "title": "Episódio 67",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep67",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep68",
+        "number": 68,
+        "title": "Episódio 68",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep68",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep69",
+        "number": 69,
+        "title": "Episódio 69",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep69",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep70",
+        "number": 70,
+        "title": "Episódio 70",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep70",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep71",
+        "number": 71,
+        "title": "Episódio 71",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep71",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep72",
+        "number": 72,
+        "title": "Episódio 72",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep72",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep73",
+        "number": 73,
+        "title": "Episódio 73",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep73",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep74",
+        "number": 74,
+        "title": "Episódio 74",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep74",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep75",
+        "number": 75,
+        "title": "Episódio 75",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep75",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep76",
+        "number": 76,
+        "title": "Episódio 76",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep76",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep77",
+        "number": 77,
+        "title": "Episódio 77",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep77",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep78",
+        "number": 78,
+        "title": "Episódio 78",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep78",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep79",
+        "number": 79,
+        "title": "Episódio 79",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep79",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep80",
+        "number": 80,
+        "title": "Episódio 80",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep80",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep81",
+        "number": 81,
+        "title": "Episódio 81",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep81",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep82",
+        "number": 82,
+        "title": "Episódio 82",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep82",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep83",
+        "number": 83,
+        "title": "Episódio 83",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep83",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep84",
+        "number": 84,
+        "title": "Episódio 84",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep84",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep85",
+        "number": 85,
+        "title": "Episódio 85",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep85",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep86",
+        "number": 86,
+        "title": "Episódio 86",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep86",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep87",
+        "number": 87,
+        "title": "Episódio 87",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep87",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep88",
+        "number": 88,
+        "title": "Episódio 88",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep88",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep89",
+        "number": 89,
+        "title": "Episódio 89",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep89",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep90",
+        "number": 90,
+        "title": "Episódio 90",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep90",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep91",
+        "number": 91,
+        "title": "Episódio 91",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep91",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep92",
+        "number": 92,
+        "title": "Episódio 92",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep92",
+        "subtitleUrl": null
+      },
+      {
+        "id": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep93",
+        "number": 93,
+        "title": "Episódio 93",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "ligada-a-honra-6909cdd03e49c5c3b60f7acb-ep93",
+        "subtitleUrl": null
+      }
+    ]
+  },
+  {
+    "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb",
+    "title": "Sniper Americano A Última Rodada",
+    "synopsis": "Carl Oliver atinge o recorde mundial de abate a longa distância e, logo depois, some. A morte de Lewis, que o salvou, o marca profundamente. Sem receber a Medalha de Honra, ele abandona a vida pública e assume outra identidade como técnico de manutenção em um estande de tiro. Ali, convive com o desprezo do capitão Albert, que não faz ideia de quem ele é. Quando o estande enfrenta uma aquisição hostil, Carl precisa decidir se continua escondido ou se age para proteger Jane, a proprietária, e sua filha Rebecca. A decisão o obriga a revelar suas habilidades lendárias, atraindo atenção indesejada para seu passado. A trama acompanha esse conflito entre manter o disfarce e enfrentar as consequências de voltar a atirar.",
+    "posterUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/posters/sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb.webp",
+    "backdropUrl": null,
+    "year": null,
+    "genres": [
+      "drama"
+    ],
+    "ageRating": null,
+    "language": "pt-BR",
+    "status": "published",
+    "featured": false,
+    "createdAt": "2026-10-14T23:20:21.329Z",
+    "episodes": [
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep1",
+        "number": 1,
+        "title": "Episódio 1",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep1",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep2",
+        "number": 2,
+        "title": "Episódio 2",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep2",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep3",
+        "number": 3,
+        "title": "Episódio 3",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep3",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep4",
+        "number": 4,
+        "title": "Episódio 4",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep4",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep5",
+        "number": 5,
+        "title": "Episódio 5",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep5",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep6",
+        "number": 6,
+        "title": "Episódio 6",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep6",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep7",
+        "number": 7,
+        "title": "Episódio 7",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep7",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep8",
+        "number": 8,
+        "title": "Episódio 8",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep8",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep9",
+        "number": 9,
+        "title": "Episódio 9",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep9",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep10",
+        "number": 10,
+        "title": "Episódio 10",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep10",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep11",
+        "number": 11,
+        "title": "Episódio 11",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep11",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep12",
+        "number": 12,
+        "title": "Episódio 12",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep12",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep13",
+        "number": 13,
+        "title": "Episódio 13",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep13",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep14",
+        "number": 14,
+        "title": "Episódio 14",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep14",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep15",
+        "number": 15,
+        "title": "Episódio 15",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep15",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep16",
+        "number": 16,
+        "title": "Episódio 16",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep16",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep17",
+        "number": 17,
+        "title": "Episódio 17",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep17",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep18",
+        "number": 18,
+        "title": "Episódio 18",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep18",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep19",
+        "number": 19,
+        "title": "Episódio 19",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep19",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep20",
+        "number": 20,
+        "title": "Episódio 20",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep20",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep21",
+        "number": 21,
+        "title": "Episódio 21",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep21",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep22",
+        "number": 22,
+        "title": "Episódio 22",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep22",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep23",
+        "number": 23,
+        "title": "Episódio 23",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep23",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep24",
+        "number": 24,
+        "title": "Episódio 24",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep24",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep25",
+        "number": 25,
+        "title": "Episódio 25",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep25",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep26",
+        "number": 26,
+        "title": "Episódio 26",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep26",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep27",
+        "number": 27,
+        "title": "Episódio 27",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep27",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep28",
+        "number": 28,
+        "title": "Episódio 28",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep28",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep29",
+        "number": 29,
+        "title": "Episódio 29",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep29",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep30",
+        "number": 30,
+        "title": "Episódio 30",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep30",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep31",
+        "number": 31,
+        "title": "Episódio 31",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep31",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep32",
+        "number": 32,
+        "title": "Episódio 32",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep32",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep33",
+        "number": 33,
+        "title": "Episódio 33",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep33",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep34",
+        "number": 34,
+        "title": "Episódio 34",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep34",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep35",
+        "number": 35,
+        "title": "Episódio 35",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep35",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep36",
+        "number": 36,
+        "title": "Episódio 36",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep36",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep37",
+        "number": 37,
+        "title": "Episódio 37",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep37",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep38",
+        "number": 38,
+        "title": "Episódio 38",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep38",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep39",
+        "number": 39,
+        "title": "Episódio 39",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep39",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep40",
+        "number": 40,
+        "title": "Episódio 40",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep40",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep41",
+        "number": 41,
+        "title": "Episódio 41",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep41",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep42",
+        "number": 42,
+        "title": "Episódio 42",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep42",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep43",
+        "number": 43,
+        "title": "Episódio 43",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep43",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep44",
+        "number": 44,
+        "title": "Episódio 44",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep44",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep45",
+        "number": 45,
+        "title": "Episódio 45",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep45",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep46",
+        "number": 46,
+        "title": "Episódio 46",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep46",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep47",
+        "number": 47,
+        "title": "Episódio 47",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep47",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep48",
+        "number": 48,
+        "title": "Episódio 48",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep48",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep49",
+        "number": 49,
+        "title": "Episódio 49",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep49",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep50",
+        "number": 50,
+        "title": "Episódio 50",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep50",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep51",
+        "number": 51,
+        "title": "Episódio 51",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep51",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep52",
+        "number": 52,
+        "title": "Episódio 52",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep52",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep53",
+        "number": 53,
+        "title": "Episódio 53",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep53",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep54",
+        "number": 54,
+        "title": "Episódio 54",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep54",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep55",
+        "number": 55,
+        "title": "Episódio 55",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep55",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep56",
+        "number": 56,
+        "title": "Episódio 56",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep56",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep57",
+        "number": 57,
+        "title": "Episódio 57",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep57",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep58",
+        "number": 58,
+        "title": "Episódio 58",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep58",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep59",
+        "number": 59,
+        "title": "Episódio 59",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep59",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep60",
+        "number": 60,
+        "title": "Episódio 60",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep60",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep61",
+        "number": 61,
+        "title": "Episódio 61",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep61",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep62",
+        "number": 62,
+        "title": "Episódio 62",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep62",
+        "subtitleUrl": null
+      },
+      {
+        "id": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep63",
+        "number": 63,
+        "title": "Episódio 63",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb-ep63",
+        "subtitleUrl": null
+      }
+    ]
+  },
+  {
+    "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483",
+    "title": "O Médico Chefe é o Papai do meu Bebê",
+    "synopsis": "Molly é uma interna de medicina que tenta conseguir dinheiro para o tratamento do pai ao aceitar vender seu sangue a um homem suspeito. Quando percebe o perigo, ela foge e acaba diante do carro de Graham, que recusava o convite de uma garota rica. O médico nota que Molly se parece com a jovem que o salvou anos antes, depois de ele ser sequestrado e abandonado para morrer. Sem outra saída, Molly retorna e pede sua ajuda. Um mês depois, a situação ganha consequências inesperadas: Molly descobre que espera um filho de Graham, agora seu chefe. Enquanto os dois lidam com a proximidade no ambiente de trabalho e com esse vínculo repentino, o segredo desperta a oposição de familiares ciumentos dela e de alguém ligado ao passado de Graham. Cercados por interferências, eles precisam decidir se conseguirão enfrentar a pressão e compreender o que sentem.",
+    "posterUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/posters/o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483.webp",
+    "backdropUrl": null,
+    "year": null,
+    "genres": [
+      "drama"
+    ],
+    "ageRating": null,
+    "language": "pt-BR",
+    "status": "published",
+    "featured": false,
+    "createdAt": "2026-10-14T23:21:44.071Z",
+    "episodes": [
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep1",
+        "number": 1,
+        "title": "Episódio 1",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep1",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep2",
+        "number": 2,
+        "title": "Episódio 2",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep2",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep3",
+        "number": 3,
+        "title": "Episódio 3",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep3",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep4",
+        "number": 4,
+        "title": "Episódio 4",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep4",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep5",
+        "number": 5,
+        "title": "Episódio 5",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep5",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep6",
+        "number": 6,
+        "title": "Episódio 6",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep6",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep7",
+        "number": 7,
+        "title": "Episódio 7",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep7",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep8",
+        "number": 8,
+        "title": "Episódio 8",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep8",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep9",
+        "number": 9,
+        "title": "Episódio 9",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep9",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep10",
+        "number": 10,
+        "title": "Episódio 10",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep10",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep11",
+        "number": 11,
+        "title": "Episódio 11",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep11",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep12",
+        "number": 12,
+        "title": "Episódio 12",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep12",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep13",
+        "number": 13,
+        "title": "Episódio 13",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep13",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep14",
+        "number": 14,
+        "title": "Episódio 14",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep14",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep15",
+        "number": 15,
+        "title": "Episódio 15",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep15",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep16",
+        "number": 16,
+        "title": "Episódio 16",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep16",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep17",
+        "number": 17,
+        "title": "Episódio 17",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep17",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep18",
+        "number": 18,
+        "title": "Episódio 18",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep18",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep19",
+        "number": 19,
+        "title": "Episódio 19",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep19",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep20",
+        "number": 20,
+        "title": "Episódio 20",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep20",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep21",
+        "number": 21,
+        "title": "Episódio 21",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep21",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep22",
+        "number": 22,
+        "title": "Episódio 22",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep22",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep23",
+        "number": 23,
+        "title": "Episódio 23",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep23",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep24",
+        "number": 24,
+        "title": "Episódio 24",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep24",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep25",
+        "number": 25,
+        "title": "Episódio 25",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep25",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep26",
+        "number": 26,
+        "title": "Episódio 26",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep26",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep27",
+        "number": 27,
+        "title": "Episódio 27",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep27",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep28",
+        "number": 28,
+        "title": "Episódio 28",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep28",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep29",
+        "number": 29,
+        "title": "Episódio 29",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep29",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep30",
+        "number": 30,
+        "title": "Episódio 30",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep30",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep31",
+        "number": 31,
+        "title": "Episódio 31",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep31",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep32",
+        "number": 32,
+        "title": "Episódio 32",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep32",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep33",
+        "number": 33,
+        "title": "Episódio 33",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep33",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep34",
+        "number": 34,
+        "title": "Episódio 34",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep34",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep35",
+        "number": 35,
+        "title": "Episódio 35",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep35",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep36",
+        "number": 36,
+        "title": "Episódio 36",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep36",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep37",
+        "number": 37,
+        "title": "Episódio 37",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep37",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep38",
+        "number": 38,
+        "title": "Episódio 38",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep38",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep39",
+        "number": 39,
+        "title": "Episódio 39",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep39",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep40",
+        "number": 40,
+        "title": "Episódio 40",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep40",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep41",
+        "number": 41,
+        "title": "Episódio 41",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep41",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep42",
+        "number": 42,
+        "title": "Episódio 42",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep42",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep43",
+        "number": 43,
+        "title": "Episódio 43",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep43",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep44",
+        "number": 44,
+        "title": "Episódio 44",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep44",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep45",
+        "number": 45,
+        "title": "Episódio 45",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep45",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep46",
+        "number": 46,
+        "title": "Episódio 46",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep46",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep47",
+        "number": 47,
+        "title": "Episódio 47",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep47",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep48",
+        "number": 48,
+        "title": "Episódio 48",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep48",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep49",
+        "number": 49,
+        "title": "Episódio 49",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep49",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep50",
+        "number": 50,
+        "title": "Episódio 50",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep50",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep51",
+        "number": 51,
+        "title": "Episódio 51",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep51",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep52",
+        "number": 52,
+        "title": "Episódio 52",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep52",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep53",
+        "number": 53,
+        "title": "Episódio 53",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep53",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep54",
+        "number": 54,
+        "title": "Episódio 54",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep54",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep55",
+        "number": 55,
+        "title": "Episódio 55",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep55",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep56",
+        "number": 56,
+        "title": "Episódio 56",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep56",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep57",
+        "number": 57,
+        "title": "Episódio 57",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep57",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep58",
+        "number": 58,
+        "title": "Episódio 58",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep58",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep59",
+        "number": 59,
+        "title": "Episódio 59",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep59",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep60",
+        "number": 60,
+        "title": "Episódio 60",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep60",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep61",
+        "number": 61,
+        "title": "Episódio 61",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep61",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep62",
+        "number": 62,
+        "title": "Episódio 62",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep62",
+        "subtitleUrl": null
+      },
+      {
+        "id": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep63",
+        "number": 63,
+        "title": "Episódio 63",
+        "durationSeconds": null,
+        "thumbUrl": null,
+        "mediaFileId": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483-ep63",
+        "subtitleUrl": null
+      }
+    ]
   }
 ]
