@@ -82,10 +82,14 @@ admin informa arquivo local ou URL autorizada
 - URLs externas: validação de domínio autorizado, sem SSRF.
 - Vídeos grandes nunca vão para o GitHub nem para o banco.
 - **Importador de dramas** (`scripts/import-dramasite.mjs`): baixa capas/banners/
-  sinopses/episódios (áudio do idioma da página `/pt`, dublagem verificada por VOD
-  distinto por idioma), sobe capas e metadados para o GitHub e episódios MP4 para o
+  sinopses/episódios (o áudio dos vods é o original — inglês; o "português" do site
+  é interface), sobe capas e metadados para o GitHub e episódios MP4 para o
   Google Drive (pasta `flow-iptv`, compartilhada "qualquer pessoa com o link",
   streaming com Range). Dedupe por SHA/nome+tamanho — re-executar é idempotente.
+- **Legendas PT automáticas**: Whisper transcreve o áudio de cada episódio →
+  MyMemory traduz para português → VTT PT publicado no GitHub (`legendas/`, CORS
+  permite `<track>`) → o player exibe legenda PT ativada por padrão.
+  Modo `--legendas-only` cobre episódios já baixados sem novo upload de vídeo.
 
 ## 6. Player (v1)
 

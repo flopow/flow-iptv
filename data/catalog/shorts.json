@@ -21,7 +21,8 @@
         "title": "Episódio 1",
         "durationSeconds": null,
         "thumbUrl": null,
-        "mediaFileId": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1"
+        "mediaFileId": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1",
+        "subtitleUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/legendas/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1.pt.vtt"
       },
       {
         "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2",
@@ -29,7 +30,8 @@
         "title": "Episódio 2",
         "durationSeconds": null,
         "thumbUrl": null,
-        "mediaFileId": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2"
+        "mediaFileId": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2",
+        "subtitleUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/legendas/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2.pt.vtt"
       }
     ]
   }
