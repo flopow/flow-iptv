@@ -1,9 +1,15 @@
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────────────────────
-   FLOW IPTV — tema claro: fundo branco, detalhes azuis,
-   texto e superfícies em cinza escuro.
+   FLOW IPTV — temas
+   Claro (padrão): fundo branco, detalhes azuis, texto cinza escuro.
+   Escuro (opcional): fundo azul-ardósia profundo, texto claro,
+   acentos azuis vivos. Alternado por classe `.dark` no <html>,
+   com memória em localStorage e preferência do sistema como padrão.
    ───────────────────────────────────────────────────────────── */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: #ffffff;
   --color-surface: #f8fafc; /* slate-50  */
@@ -17,6 +23,25 @@
   --color-accent-strong: #1d4ed8; /* blue-700 */
   --color-accent-soft: #eff6ff; /* blue-50  */
   --color-accent-line: #bfdbfe; /* blue-200 */
+
+  /* Cores que não mudam entre temas (hero e player permanecem escuros) */
+  --color-hero: #0f172a;
+  --color-player: #020617;
+}
+
+.dark {
+  --color-background: #0b1220;
+  --color-surface: #101a2c;
+  --color-surface-strong: #182338;
+  --color-foreground: #e2e8f0; /* slate-200 */
+  --color-ink: #f1f5f9; /* slate-100 */
+  --color-muted: #94a3b8; /* slate-400 */
+  --color-line: #1e293b; /* slate-800 */
+
+  --color-accent: #3b82f6; /* blue-500 */
+  --color-accent-strong: #60a5fa; /* blue-400 */
+  --color-accent-soft: #172554; /* blue-950 */
+  --color-accent-line: #1e3a8a; /* blue-900 */
 }
 
 @utility no-scrollbar {
@@ -43,6 +68,9 @@ body {
     Arial,
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 ::selection {

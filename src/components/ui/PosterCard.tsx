@@ -63,7 +63,7 @@ export function PosterCard({
           <PosterFallback title={title} aspect={aspect} />
         )}
         {badge ? (
-          <span className="absolute right-2 top-2 rounded-md bg-ink/80 px-1.5 py-0.5 text-[11px] font-bold text-white">
+          <span className="absolute right-2 top-2 rounded-md bg-black/70 px-1.5 py-0.5 text-[11px] font-bold text-white">
             {badge}
           </span>
         ) : null}

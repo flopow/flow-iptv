@@ -97,7 +97,7 @@ export function Player({ src, poster, title, vertical = false, nextHref, nextLab
   return (
     <div className="w-full">
       <div
-        className={`relative w-full overflow-hidden rounded-2xl bg-ink shadow-lg ${
+        className={`relative w-full overflow-hidden rounded-2xl bg-player shadow-lg ${
           vertical ? "mx-auto aspect-[9/16] max-h-[75vh]" : "aspect-video"
         }`}
       >

@@ -34,7 +34,7 @@ function MetaBadges({ item }: { item: Film | Series | ShortDrama }) {
 export function Hero({ item, title, detailHref, playHref }: HeroProps) {
   return (
     <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-accent-strong to-ink px-6 py-10 text-white shadow-lg sm:px-12 sm:py-16">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-accent-strong to-hero px-6 py-10 text-white shadow-lg sm:px-12 sm:py-16">
         <div
           className="pointer-events-none absolute inset-0 opacity-20"
           aria-hidden

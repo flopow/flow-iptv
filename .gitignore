@@ -20,6 +20,9 @@ next-env.d.ts
 /public/media/*.mkv
 /public/media/*.m3u8
 
+# trabalho temporário do importador de mídia
+/.import-work/
+
 # logs / sistema
 npm-debug.log*
 yarn-debug.log*
