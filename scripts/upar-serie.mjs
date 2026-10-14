@@ -48,7 +48,7 @@ const shorts = [{
   id: slug,
   title: titulo,
   synopsis: sinopse,
-  posterUrl: rawUrl(`posters/${slug}.webp`),
+  posterUrl: `${rawUrl(`posters/${slug}.webp`)}?v=2`,
   backdropUrl: null,
   year: null,
   genres: ["drama"],
