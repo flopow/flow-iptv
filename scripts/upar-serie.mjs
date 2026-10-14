@@ -39,14 +39,19 @@ async function upload(p, content, msg) {
 const files = (await readdir(pasta)).filter((f) => f.endsWith(".mp4")).sort((a, b) => Number(/ep-(\d+)/.exec(a)?.[1]) - Number(/ep-(\d+)/.exec(b)?.[1]));
 console.log(`${files.length} episódios em ${pasta}`);
 
+// Título/sinopse reais (info.json salvo pela ferramenta de download)
+const info = await readFile(path.join(pasta, "info.json"), "utf8").then((t) => JSON.parse(t)).catch(() => ({}));
+const titulo = info.titulo ?? slug;
+const sinopse = info.sinopse ?? "Série importada do catálogo autorizado (dramavideoshow.com/pt).";
+
 const shorts = [{
   id: slug,
-  title: "Só Mais Uma Vez",
-  synopsis: "Série importada do catálogo autorizado (dramavideoshow.com/pt) — áudio em português.",
+  title: titulo,
+  synopsis: sinopse,
   posterUrl: rawUrl(`posters/${slug}.webp`),
   backdropUrl: null,
   year: null,
-  genres: ["drama", "romance"],
+  genres: ["drama"],
   ageRating: null,
   language: "pt-BR",
   status: "published",
@@ -56,25 +61,55 @@ const shorts = [{
 }];
 const media = [];
 
+let githubFalhou = false;
 for (const f of files) {
   const n = Number(/ep-(\d+)/.exec(f)?.[1]);
   const id = `${slug}-ep${n}`;
   const buf = await readFile(path.join(pasta, f));
-  await upload(`videos/${slug}/${id}.mp4`, buf, `Episódio ${n} de ${slug}`);
+  try {
+    await upload(`videos/${slug}/${id}.mp4`, buf, `Episódio ${n} de ${slug}`);
+  } catch (err) {
+    console.log(`  ! GitHub falhou (${err.message}) — mantém no Drive`);
+    githubFalhou = true;
+  }
   shorts[0].episodes.push({ id, number: n, title: `Episódio ${n}`, durationSeconds: null, thumbUrl: null, mediaFileId: id });
   media.push({ id, provider: "url", format: "mp4", src: rawUrl(`videos/${slug}/${id}.mp4`), sizeBytes: buf.length, durationSeconds: null, createdAt: new Date().toISOString() });
 }
 
-// Capa
+// Capa (tolerante)
 const capa = await readFile(path.join(pasta, "capa.webp")).catch(() => null);
-if (capa) await upload(`posters/${slug}.webp`, capa, `Capa de ${slug}`);
+if (capa) {
+  try { await upload(`posters/${slug}.webp`, capa, `Capa de ${slug}`); }
+  catch (err) { console.log(`  ! capa GitHub falhou: ${err.message}`); githubFalhou = true; }
+}
+
+// Google Drive (pedido do usuário) — SEMPRE
+console.log("→ copiando para o Google Drive…");
+await execFileP(RCLONE, ["copy", pasta, `gdrive:flow-iptv/videos/${slug}`], { timeout: 3600_000 });
+
+if (githubFalhou) {
+  // Série ficou só no Drive (armazenada) — registra p/ renderizar quando houver espaço.
+  const armazenadas = await readFile(path.resolve("data/armazenadas.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
+  if (!armazenadas.includes(slug)) {
+    armazenadas.push(slug);
+    await writeFile(path.resolve("data/armazenadas.json"), JSON.stringify(armazenadas, null, 2));
+  }
+  console.log(`ℹ ${slug} armazenada no Drive apenas (GitHub cheio). Renderização depois.`);
+  process.exit(0);
+}
 
 await writeFile(path.join(DATA_DIR, "shorts.json"), JSON.stringify(shorts, null, 2));
 await writeFile(path.join(DATA_DIR, "media.json"), JSON.stringify(media, null, 2));
-await upload("catalog/shorts.json", Buffer.from(JSON.stringify(shorts, null, 2)), "Catálogo de Só Mais Uma Vez");
-await upload("catalog/media.json", Buffer.from(JSON.stringify(media, null, 2)), "Mídia de Só Mais Uma Vez");
 
-// Google Drive (pedido do usuário)
-console.log("→ copiando para o Google Drive…");
-await execFileP(RCLONE, ["copy", pasta, `gdrive:flow-iptv/videos/${slug}`], { timeout: 3600_000 });
+// Merge com catálogo existente (acumula várias séries)
+const shortsExistentes = await readFile(path.join(DATA_DIR, "shorts.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
+const mediaExistentes = await readFile(path.join(DATA_DIR, "media.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
+const porId = new Map(shortsExistentes.map((s) => [s.id, s]));
+porId.set(shorts[0].id, shorts[0]);
+const mediaPorId = new Map(mediaExistentes.map((m) => [m.id, m]));
+for (const m of media) mediaPorId.set(m.id, m);
+await writeFile(path.join(DATA_DIR, "shorts.json"), JSON.stringify([...porId.values()], null, 2));
+await writeFile(path.join(DATA_DIR, "media.json"), JSON.stringify([...mediaPorId.values()], null, 2));
+await upload("catalog/shorts.json", Buffer.from(JSON.stringify([...porId.values()], null, 2)), "Catálogo de séries");
+await upload("catalog/media.json", Buffer.from(JSON.stringify([...mediaPorId.values()], null, 2)), "Mídia de séries");
 console.log(`✔ pronto: ${files.length} eps no GitHub + Drive; catálogo local atualizado.`);

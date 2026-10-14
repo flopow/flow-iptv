@@ -1,0 +1,2943 @@
+{
+  "total": 249,
+  "erros": 1,
+  "porBadge": {
+    "Dublado": 244,
+    "Tendências": 100,
+    "Popular": 145,
+    "Brasileiro": 57
+  },
+  "dubladasOuTendencias": [
+    {
+      "slug": "a-vida-secreta-do-meu-marido-bilionario-68196320aeae6784260a959a",
+      "nome": "A vida secreta do meu marido bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "encontrei-um-marido-bilionario-e-sem-teto-para-o-natal-68fb6ee49ee974cad9089071",
+      "nome": "Encontrei Um Marido Bilionário E Sem-Teto Para o Natal",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "ligada-a-honra-6909cdd03e49c5c3b60f7acb",
+      "nome": "Ligada à Honra",
+      "badges": [
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "herdeira-verdadeira-vs-rainha-falsa-68244444037102ef490ad4cf",
+      "nome": "Herdeira Verdadeira vs. Rainha Falsa",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "apaixonada-por-um-fazendeiro-e-pai-solteiro-6967318861547287d102dc3c",
+      "nome": "Apaixonada por um fazendeiro e pai solteiro",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "de-repente-casados-69cbfd9ef33f725abf0c2d62",
+      "nome": "De Repente, Casados",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "baba-ex-presidiaria-e-pai-solteiro-bilionario-68ad77cd31a3898c0102f51b",
+      "nome": "Babá Ex-presidiária e Pai Solteiro Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "casamento-blindado-um-contrato-de-natal-68edc0f21f13be21d902d6bb",
+      "nome": "Casamento Blindado: Um Contrato de Natal",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "so-mais-uma-vez-69a87f1b2cad6296f40ff7b6",
+      "nome": "Só Mais Uma Vez",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "encontrei-um-marido-multimilionario-sem-teto-para-o-natal-678869a6107e8442220c846e",
+      "nome": "Encontrei um Marido Multimilionário Sem-teto para o Natal",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "como-domar-um-coroa-690bf955604a47100b0d1e1c",
+      "nome": "Como domar um coroa",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "sniper-americano-a-ultima-rodada-693a61fbc7e864b3d60dbfeb",
+      "nome": "Sniper Americano: A Última Rodada",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-vida-dupla-do-meu-marido-bilionario-66cdad1123554cb85a08cfdd",
+      "nome": "A vida dupla do meu marido bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "o-medico-chefe-e-o-papai-do-meu-bebe-68634a7300072d3a4203a483",
+      "nome": "O Médico Chefe é o Papai do meu Bebê",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "substituta-acidental-para-alfa-671f23a96510ab569702c75f",
+      "nome": "Substituta Acidental para Alfa",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "tive-um-bebe-sem-voce-68ff17c15286a9d78e0bc267",
+      "nome": "Tive um Bebê Sem Você",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-virgem-e-o-bilionario-671f239428abc0dc300fcea3",
+      "nome": "A Virgem e o Bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "rejeitada-pelos-cinco-amada-pelo-principe-6a1659a83d9b42e61f053d4a",
+      "nome": "Rejeitada pelos Cinco, Amada pelo Príncipe",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-herdeira-foi-trocada-ao-nascer-691abc07ee481633d60af651",
+      "nome": "A Herdeira foi Trocada ao Nascer?",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "minha-irma-e-a-rainha-guerreira-69708e6cee1647118706101f",
+      "nome": "Minha Irmã é a Rainha Guerreira",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "casei-me-com-o-mafioso-que-salvei-69eb2ff86df2b6f27b081cb3",
+      "nome": "Casei-me com o Mafioso que Salvei",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "como-conquistar-um-coroa-692e7f805799a4d7090ef601",
+      "nome": "Como Conquistar um Coroa",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "saia-da-frente-eu-sou-o-chefe-final-6806fecae9cf9e95ba020a25",
+      "nome": "Saia da frente! Eu sou o chefe final!",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "minha-visao-de-raio-x-ve-bem-atraves-de-voce-6a4dbeeb3e58d2e18a050a37",
+      "nome": "Minha Visão de Raio-X Vê Bem Através de Você",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-segredo-sujo-de-meu-meio-irmao-683fb06632c98f394e0d8ff5",
+      "nome": "O Segredo Sujo de Meu Meio-irmão",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "como-conquistar-um-raposa-prateada-6806fc62a63b7b52670546d2",
+      "nome": "Como Conquistar um Raposa Prateada",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-garoto-de-programa-que-conheci-em-paris-69def041459e82fcad0f70b9",
+      "nome": "O Garoto de Programa que Conheci em Paris",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "de-volta-ao-jogo-6861f88d224dc8b5790edc2c",
+      "nome": "De Volta Ao Jogo",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-adoravel-esposa-do-sr-monteiro-69c5dd2160b76d39c70e8e94",
+      "nome": "A Adorável Esposa do Sr. Monteiro",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "mae-solteira-em-fuga-segura-em-seus-bracos-69fd919ec081ca9dd2070e9a",
+      "nome": "Mãe solteira em fuga, segura em seus braços",
+      "badges": [
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "nao-sintam-minha-falta-quando-eu-me-for-687f00cf8fdd333a050d0c7a",
+      "nome": "Não Sintam Minha Falta Quando Eu Me For",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "renascer-para-amar-o-sr-perfeito-68c7bea0c3063ac9560ec271",
+      "nome": "Renascer para Amar o Sr. Perfeito",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "pegou-um-bilionario-para-ser-meu-marido-66cdaceae873484ab501a6df",
+      "nome": "Pegou um bilionário para ser meu marido",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-alfa-rei-e-sua-noiva-virgem-683fb13e24cff6b16b0688cc",
+      "nome": "O Alfa Rei e sua Noiva Virgem",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-quarterback-perdido-retorna-6981b1531af90d53ce06ac68",
+      "nome": "O Quarterback Perdido Retorna",
+      "badges": [
+        "Brasileiro",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "abra-seus-olhos-meu-marido-bilionario-689c5e69ab9c2858cb011f53",
+      "nome": "Abra Seus Olhos, Meu Marido Bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "casada-por-acidente-com-o-alfa-68edc1134ce21789860a14f8",
+      "nome": "Casada por Acidente com o Alfa",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "querido-irmao-voce-me-amou-tarde-demais-69b7d91914e87e3a440fae90",
+      "nome": "Querido irmão, você me amou tarde demais",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "olha-o-que-voce-me-fez-fazer-68d39d65ac03e8c4a00100ed",
+      "nome": "Olha o que você me fez fazer",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-companheira-amaldicoada-do-alfa-683582770ae287118c07fc5f",
+      "nome": "A Companheira Amaldiçoada do Alfa",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "voce-pertence-a-mim-69b2f90f4f3ab8ba32093435",
+      "nome": "Você Pertence A Mim",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-amor-e-uma-danca-perigosa-6940cedcaae90fa706016ea6",
+      "nome": "O amor é uma dança perigosa",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-genio-da-lampada-sob-contrato-6a3e44a2b021ccfc320876b3",
+      "nome": "O Gênio da Lâmpada Sob Contrato",
+      "badges": [
+        "Novo",
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "rei-da-prisao-disfarcado-69e21baf275ce05ecb020493",
+      "nome": "Rei da Prisão Disfarçado",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-retorno-da-herdeira-683ffee29b8e646b3101c3f6",
+      "nome": "O Retorno da Herdeira",
+      "badges": [
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "rejeitando-as-cinco-destinadas-6aa24c69f809ab1b1c09af69",
+      "nome": "Rejeitando as Cinco Destinadas",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-herdeira-supera-o-seu-marido-6807002c2b865fc7c40cc21a",
+      "nome": "A Herdeira Supera o Seu Marido",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-pai-do-meu-bebe-e-mortal-6996f691a47647c71c036d08",
+      "nome": "O Pai Do Meu Bebê é Mortal",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "beije-me-uma-ultima-vez-67073385194061d4d50c6f65",
+      "nome": "Beije-me Uma Última Vez",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "reivindicada-pelo-irmao-alfa-do-meu-ex-68ff17bf5286a9d78e0bc263",
+      "nome": "Reivindicada pelo Irmão Alfa do meu Ex",
+      "badges": [
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "destinada-a-encontrar-voce-69e21bb3275ce05ecb02049f",
+      "nome": "Destinada a Encontrar Você",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Novo",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "a-vida-dupla-do-meu-marido-bilionario-6772125e23c1461311005918",
+      "nome": "A vida dupla do meu marido bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "a-herdeira-que-bloqueou-o-marido-69def0bc0fafae910e0e583e",
+      "nome": "A Herdeira Que Bloqueou O Marido",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "mamae-nao-chore-papai-esta-arrependido-67e251a55be2846cd8015418",
+      "nome": "Mamãe, não chore, papai está arrependido",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "a-substituta-virgem-do-bilionario-683579e031817cad3f02620f",
+      "nome": "A Substituta Virgem do Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "sr-silva-voce-escolheu-a-pessoa-errada-686b850076f045114a06a9da",
+      "nome": "Sr. Silva, você escolheu a pessoa errada",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "saia-da-frente-eu-sou-o-rei-do-capital-69708d24cd4d604dfd018ef0",
+      "nome": "Saia da frente, eu sou o Rei do Capital",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "como-largar-um-astro-do-hoquei-684fc6f77fb7a06ee70a7a3a",
+      "nome": "Como Largar um Astro do Hóquei",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "ligados-pela-honra-69d8612ad6461266e80b7a17",
+      "nome": "Ligados Pela Honra",
+      "badges": [
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "na-cama-com-meu-cunhado-6a991e7e08f7af65b80e4ebe",
+      "nome": "Na Cama com Meu Cunhado",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Tendências"
+      ]
+    },
+    {
+      "slug": "dinheiro-armas-e-um-feliz-natal-67e251cafb515ec66c011a78",
+      "nome": "Dinheiro, Armas e um Feliz Natal",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "baba-ex-presidiaria-e-pai-solteiro-bilionario-6aa7f9b1d2dee4cc8b0a6520",
+      "nome": "Babá Ex-Presidiária e Pai Solteiro Bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "domando-meus-bullies-69672ff7da53753fd70a6f7d",
+      "nome": "Domando meus Bullies",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-acerto-de-contas-levanta-voo-687ef15884c6bff6e80a6807",
+      "nome": "O Acerto de Contas Levanta Voo",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-retorno-do-atacante-perdido-69def09f9d0ecfeef30371ad",
+      "nome": "O Retorno do Atacante Perdido",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "pegou-um-bilionario-para-ser-meu-marido-65cfe24062b46d388b092079",
+      "nome": "Pegou um bilionário para ser meu marido",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "um-herdeiro-para-o-bilionario-69b2f9939fc4c6abf8053072",
+      "nome": "Um Herdeiro Para o Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "noivas-marcadas-pelo-fogo-6a4dbc227360f92a2d084410",
+      "nome": "Noivas Marcadas Pelo Fogo",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "destinada-ao-meu-alfa-proibido-69def0dab3b20dc7cb0ee0de",
+      "nome": "Destinada Ao Meu Alfa Proibido",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meu-amor-secreto-e-o-seu-irmao-69df7d892fef04c36a0366c3",
+      "nome": "Meu Amor Secreto É o Seu Irmão",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "zero-a-alfa-o-retorno-do-rei-lobo-6a684ba772e6986f630523af",
+      "nome": "Zero a Alfa: O Retorno do Rei Lobo",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-mensagem-errada-para-o-inimigo-6a28d5940d500ddee9035084",
+      "nome": "A Mensagem Errada Para o Inimigo",
+      "badges": [
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "dispensaste-um-genio-tecnologico-6806ff602efc4a6ad704356f",
+      "nome": "Dispensaste um Gênio Tecnológico",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "render-se-ao-meu-professor-67b2aba0227b95e1ff0e0738",
+      "nome": "Render-se ao meu Professor",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-barganha-do-bebe-do-bilionario-66964908a7fad95f31092408",
+      "nome": "A Barganha do Bebê do Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "apaixonada-pelo-melhor-amigo-do-meu-irmao-6835795c50f225eb030df16c",
+      "nome": "Apaixonada Pelo Melhor Amigo do Meu Irmão?!",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "segredos-da-gravidez-meu-marido-e-perigoso-e-irresistivel-68196adecee99bff4f0c6b89",
+      "nome": "Segredos da Gravidez: Meu Marido é Perigoso e Irresistível",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "a-prometida-do-principe-vampiro-6996f73ab89aa5f94308d86c",
+      "nome": "A prometida do príncipe vampiro",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "jantar-humilhacao-e-vinganca-69aa72c6cda47d49740c9c4b",
+      "nome": "Jantar, Humilhação e Vingança",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "apaixonando-me-pelo-pai-mafioso-do-meu-ex-67eca53930e07dc503043482",
+      "nome": "Apaixonando-me pelo pai mafioso do meu ex",
+      "badges": [
+        "Popular",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "rainha-alfa-traida-ressurge-das-cinzas-694d0bf58a056633e50c44a6",
+      "nome": "Rainha Alfa Traída Ressurge das Cinzas",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "seu-marido-e-meu-69e9d9bcae32abe972004755",
+      "nome": "Seu Marido é Meu",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "troquei-meu-ex-pelo-tio-bilionario-dele-69e9d9baae32abe97200474f",
+      "nome": "Troquei Meu Ex pelo Tio Bilionário Dele",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "saudades-depois-do-adeus-68ad77184393e4ae910f8459",
+      "nome": "Saudades Depois do Adeus",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "destinado-ao-alfa-6656782448fea9922e011bd8",
+      "nome": "Destinado ao Alfa",
+      "badges": [
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-mascara-do-bilionario-66b9f16f315e168c7b0b55d7",
+      "nome": "A Máscara do Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-retorno-da-herdeira-perdida-66b9f0d010d8e264c30fa772",
+      "nome": "O Retorno da Herdeira Perdida",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "casados-num-piscar-de-olhos-e-totalmente-mimados-6853e5109e5284236d015dc6",
+      "nome": "Casados num Piscar de Olhos e Totalmente Mimados",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "sequestrada-pelo-diabo-6805f016bb1ea9eaed08ae7b",
+      "nome": "Sequestrada pelo Diabo",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "pegue-tudo-de-mim-683555e83faf19070b02fc88",
+      "nome": "Pegue Tudo de Mim",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-valquiria-e-o-divorcio-com-o-deus-da-guerra-6a5df8b833c1ff4680081c81",
+      "nome": "A Valquíria e o Divórcio com o Deus da Guerra",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-extraordinaria-mae-do-bilionario-6a4f2671a1439b5ca50d09fc",
+      "nome": "A Extraordinária Mãe do Bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "memoria-perdida-a-vinganca-da-ceo-6853e4b30494222d500cd648",
+      "nome": "Memória Perdida: A Vingança da CEO",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "acompanhando-o-medico-bilionario-implacavel-689950f8e8d4d64a25005fe9",
+      "nome": "Acompanhando o médico bilionário implacável",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-traicao-da-noiva-o-inferno-de-dante-6a42343d0a4c032682026d8e",
+      "nome": "A Traição da Noiva, O Inferno de Dante",
+      "badges": [
+        "Novo",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "quebrando-o-gelo-66b1958e10fc3f68d60b2f5c",
+      "nome": "Quebrando o Gelo",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-herdeira-pos-o-marido-na-lista-negra-6807009ee2ec2c8e280dfd75",
+      "nome": "A Herdeira Pôs o Marido na Lista Negra",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-renegada-luna-e-a-rainha-alfa-6a03e58a18d92be0550d5f9e",
+      "nome": "A Renegada Luna é a Rainha Alfa",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "casando-com-o-herdeiro-e-seu-bebe-686b825f36a993048206566c",
+      "nome": "Casando com o Herdeiro e Seu Bebê",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "eu-dei-a-minha-esposa-uma-arma-com-borlas-vermelhas-6853eebe8dc94317b80944f0",
+      "nome": "Eu Dei à Minha Esposa uma Arma com Borlas Vermelhas",
+      "badges": [
+        "Novo",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-rei-mendigo-retorna-6a3b747be2a61401bd06b723",
+      "nome": "O Rei Mendigo Retorna",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "voce-tem-um-homem-669f27a7498b772e1a037ba6",
+      "nome": "Você Tem um Homem",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "com-licenca-eu-sou-o-big-boss-6882eb7e87aa31db0407a25a",
+      "nome": "Com licença, eu sou o Big Boss",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-dote-que-desfez-o-amor-68196cd1773401a4ce08070b",
+      "nome": "O Dote Que Desfez o Amor",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "soberano-dos-ermos-6a91385bbc3d69257c078375",
+      "nome": "Soberano dos Ermos",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "eu-te-amo-mais-do-que-a-vida-68d0fa824d9b8391d3088cbe",
+      "nome": "Eu te amo mais do que a vida",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "as-gemeas-e-o-magnata-683fff3a642daf9ad50e3f50",
+      "nome": "As Gêmeas e o Magnata",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "escandalo-69e9d9c0ae32abe97200475d",
+      "nome": "Escândalo",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meu-ex-marido-bombeiro-arde-em-arrependimento-6806fdcf871c3b354309e534",
+      "nome": "Meu Ex-marido Bombeiro Arde em Arrependimento",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-vida-dupla-da-herdeira-bilionaria-69def0f842ab14f57a04d558",
+      "nome": "A Vida Dupla Da Herdeira Bilionária",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "amor-apos-o-renascimento-mimada-pelo-tio-do-meu-marido-6853e35575685f58d400707e",
+      "nome": "Amor Após o Renascimento: Mimada pelo Tio do Meu Marido",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "a-diva-do-microfone-69e21bac611da81c9e0fab39",
+      "nome": "A Diva do Microfone",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "atuando-de-verdade-ele-se-apaixonou-primeiro-6a38a0c7dcdfa08a830cc952",
+      "nome": "Atuando de Verdade: Ele se Apaixonou Primeiro",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-vinganca-da-esposa-ceo-6836adfe8d3cf19d21097398",
+      "nome": "A Vingança da Esposa CEO",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "eu-comando-o-harem-dos-ermos-6a8c3b2adb670706480599d2",
+      "nome": "Eu Comando o Harém dos Ermos",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "trigemeos-accidentais-com-o-bilionario-6835559f3742f5643408d844",
+      "nome": "Trigêmeos Accidentais com o Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "brilhei-na-festa-do-divorcio-685e57436af99dedea03dd59",
+      "nome": "Brilhei na Festa do Divórcio",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "doce-casamento-repentino-6846bb1af63f1b40c20e3bbb",
+      "nome": "Doce Casamento Repentino",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meu-marido-secreto-e-meu-chefe-66bb21ed8a271cd3740c39ff",
+      "nome": "Meu marido secreto é meu chefe",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "aluguei-um-marido-bilionario-para-o-natal-69521bb633246e7126061622",
+      "nome": "Aluguei um marido bilionário para o Natal",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "ops-troquei-de-noivo-na-noite-de-nupcias-69894d55ac75cb9bd6019bcc",
+      "nome": "Ops! Troquei de Noivo na Noite de Núpcias",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "operacao-encontre-meu-bebe-6853dc1b7de4244cbb015185",
+      "nome": "Operação: Encontre Meu Bebê",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "minha-noiva-mendiga-e-uma-lenda-da-culinaria-6a8c3af61696c5ff9f04892f",
+      "nome": "Minha Noiva Mendiga é Uma Lenda da Culinária",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "fadado-ao-meu-vampiro-proibido-66316bd6dea4787bd50cce03",
+      "nome": "Fadado ao Meu Vampiro Proibido",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meus-irmaos-imploram-por-perdao-mas-eu-sou-a-rainha-do-dragao-6a376a68a3347641b50f2289",
+      "nome": "Meus Irmãos Imploram por Perdão, Mas Eu Sou a Rainha do Dragão!",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "de-caso-com-o-chefe-682c1f67ecb0d7ca860905c4",
+      "nome": "De Caso com o Chefe",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "de-garota-do-campo-a-noiva-do-ceo-6879e8edbe32f79e84006929",
+      "nome": "De Garota do Campo a Noiva do CEO",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Novo",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "encantado-com-o-ceo-67161511947dd3e2a6065ba0",
+      "nome": "Encantado com o CEO",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "ligada-pelo-amor-6a166377c040bd96890c71c1",
+      "nome": "Ligada Pelo Amor",
+      "badges": [
+        "Popular",
+        "Brasileiro",
+        "Tendências",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meu-chefe-e-meu-doador-de-esperma-secreto-680eea7d9107472fd50e3dbe",
+      "nome": "Meu Chefe é Meu Doador de Esperma Secreto",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "reparando-um-amor-destruido-6836b123baf9d50e0f0b6bfc",
+      "nome": "Reparando um Amor Destruído",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "finja-ate-me-amar-6716153d97a0351a0a02f52c",
+      "nome": "Finja Até Me Amar",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências"
+      ]
+    },
+    {
+      "slug": "divorciada-dedicada-e-dominante-6964a621f05063744e0b6990",
+      "nome": "Divorciada, Dedicada e Dominante",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "beije-me-99-vezes-por-dia-67fe1a3e236e571ba20f4401",
+      "nome": "Beije-me 99 vezes por dia",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "papai-eu-sou-sua-estrela-da-sorte-69e9d9b8ae32abe97200474b",
+      "nome": "Papai, eu sou sua estrela da sorte!",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "minha-mae-a-campea-de-boxe-6836add08084b9cdd1078257",
+      "nome": "Minha Mãe, a Campeã de Boxe",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "conquistei-um-bilionario-para-ser-meu-marido-683fff16b6a025e134069f8e",
+      "nome": "Conquistei um bilionario para ser meu marido",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "nao-era-a-noiva-que-ele-queria-6a2a5324cb476b63c60300ef",
+      "nome": "Não Era a Noiva que Ele Queria",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "renascer-meu-inferno-agora-e-seu-6a4f26446ab3dbebcb08bc15",
+      "nome": "Renascer: Meu Inferno Agora é Seu",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "voce-nao-pode-parar-minha-super-visao-de-raio-x-6a9e8e7c598656220b02d446",
+      "nome": "Você Não Pode Parar Minha Super Visão de Raio-X",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "uma-noite-so-para-sempre-6853e41102fc73f6500b39cf",
+      "nome": "Uma Noite Só... Para Sempre",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "nao-mexa-com-esse-mendigo-6aafc0dbbddfa1af7407a761",
+      "nome": "Não Mexa com Esse Mendigo!",
+      "badges": [
+        "Novo",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "vendida-ao-senhor-da-guerra-nascida-para-o-ceu-6a798b3df2864cd860052d03",
+      "nome": "Vendida ao Senhor da Guerra, Nascida Para o Céu",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "amor-ao-primeiro-voo-6853d5c831c20a6d6c08ba6b",
+      "nome": "Amor ao Primeiro Voo",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "diga-para-eu-nao-te-amar-69e21bb1275ce05ecb020499",
+      "nome": "Diga para eu não te amar",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-guarda-costas-invisivel-69ce3ef0dcdd4ee0ab030ef4",
+      "nome": "O Guarda-Costas Invisível",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "ele-chega-de-ser-bonzinho-6999c28fca499949fd019b41",
+      "nome": "Ele Chega de Ser Bonzinho",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "quando-a-neblina-levanta-me-ame-6853ec9fd31e3df8b001a9b4",
+      "nome": "Quando a Neblina Levanta, Me Ame",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "obcecado-por-sua-noiva-silenciosa-685e044c2e51bcef22078134",
+      "nome": "Obcecado por sua noiva silenciosa",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "quebrando-o-acordo-com-o-bad-boy-do-hoquei-68ff17c35286a9d78e0bc26b",
+      "nome": "Quebrando o acordo com o Bad Boy do Hóquei",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "tio-william-diga-sim-67b29b067d337cf4930211e6",
+      "nome": "Tio William, Diga &#39;Sim&#39;!",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-rainha-loba-alfa-retorna-6806fd92aa8b04739704feb1",
+      "nome": "A Rainha Loba Alfa Retorna",
+      "badges": [
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "destinada-ao-alfa-proibido-649b6f44d113de5e85033dbd",
+      "nome": "Destinada ao Alfa Proibido",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "casado-a-primeira-vista-67651cd50abc6601eb05f19a",
+      "nome": "Casado à Primeira Vista",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-primeiro-amor-do-quarterback-68357a95dfac83b9d70b114c",
+      "nome": "O Primeiro Amor do Quarterback",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências"
+      ]
+    },
+    {
+      "slug": "gravida-e-mimada-pelo-bilionario-67e0c67f11276a4cd60a757b",
+      "nome": "Grávida e Mimada pelo Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "respirar-69bbaec796f32cc6890f89c4",
+      "nome": "Respirar",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "renascida-para-ver-a-ruina-dos-craques-do-futebol-69f45ba44c228e807b083841",
+      "nome": "Renascida para Ver a Ruína dos Craques do Futebol",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Novo",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-segredo-da-herdeira-surda-683fc0e542aaa4a3c201afc0",
+      "nome": "O Segredo da Herdeira Surda",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "beijos-falsos-com-o-amigo-do-meu-ex-6a509068933b130b2d060039",
+      "nome": "Beijos Falsos com o Amigo do Meu Ex",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "baba-para-o-meu-valentao-gostosao-69e9d9c5ae32abe972004769",
+      "nome": "Babá para o Meu Valentão Gostosão",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meu-chefe-da-mafia-revestido-de-acucar-66d8615afa36f0a09c0d9fdc",
+      "nome": "Meu chefe da máfia revestido de açúcar",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "a-rainha-da-cozinha-uma-receita-para-o-divorcio-69e9d9bab8ba29f1140e415d",
+      "nome": "A rainha da cozinha: Uma receita para o divórcio",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "quando-parei-de-te-salvar-69a50b179f7bca62b30426f9",
+      "nome": "Quando Parei de Te Salvar",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "casado-a-primeira-vista-65b82c158ea0b124be0192c6",
+      "nome": "Casado à primeira vista",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-retorno-do-carrasco-69bb5d584dd2966ae40c8648",
+      "nome": "O Retorno do Carrasco",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "marido-malvado-por-favor-acorde-6447443df6aca843ce0ae8ea",
+      "nome": "Marido Malvado, Por Favor, Acorde",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "minha-irma-roubou-meu-homem-684255810636ac2a540c0371",
+      "nome": "Minha irmã Roubou Meu Homem",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "minha-ex-mulher-floresce-apos-divorcio-6853c3cdbe3c0da035060397",
+      "nome": "Minha ex-mulher floresce após divórcio",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "reivindicada-pelo-alfa-que-eu-odeio-67c549f4100d6f35b406a327",
+      "nome": "Reivindicada pelo Alfa que Eu Odeio",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "beijada-por-garras-e-presas-69b2718b04c57e77330292a2",
+      "nome": "Beijada por garras e presas",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "acordando-gravida-663020530446c7a97506c3b5",
+      "nome": "Acordando grávida",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-princesa-alfa-se-foi-para-sempre-6a992121c571881e920d349f",
+      "nome": "A Princesa Alfa se Foi Para Sempre",
+      "badges": [
+        "Dublado",
+        "Tendências",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "meu-noivo-meu-guarda-costas-69dcd73b278ade00dd085988",
+      "nome": "Meu Noivo, Meu Guarda-Costas",
+      "badges": [
+        "Novo",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-luna-do-alfa-e-seu-beta-6a4234762728250c4e0420c7",
+      "nome": "A Luna do Alfa e Seu Beta",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "nero-homen-da-mafia-6a5df91fe6a564f1630c3c83",
+      "nome": "NERO: Homen da Máfia",
+      "badges": [
+        "Dublado",
+        "Tendências",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "combustivel-para-o-nosso-fogo-meu-meio-irmao-piloto-680eeea1b8f70328f80b6ccc",
+      "nome": "Combustível para o Nosso Fogo: Meu Meio-Irmão Piloto",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "de-caso-com-o-chefe-64474bb1a7476038d06b040c",
+      "nome": "De Caso Com O Chefe",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "fingi-amar-acabei-obcecado-69c2099693bf2166110188c4",
+      "nome": "Fingi Amar, Acabei Obcecado",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "divorciada-e-desejada-meu-trio-de-pretendentes-de-elite-6853ef676c64f29713012eb7",
+      "nome": "Divorciada e Desejada! Meu Trio de Pretendentes de Elite",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-deusa-mendiga-e-seu-golpe-bilionario-6a8bf37d98e1eeef9e09f26b",
+      "nome": "A Deusa Mendiga e Seu Golpe Bilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-segredo-do-meu-casamento-bilionario-673449f4648b0d573c0677fd",
+      "nome": "O Segredo do meu Casamento Bilionário",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-capitao-do-hoquei-que-me-odeia-6a291f9c53df79f3880404c1",
+      "nome": "O Capitão do Hoquéi que Me Odeia",
+      "badges": [
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "a-noiva-muda-do-alfa-amaldicoado-67f3440a2dc8c4880a0c4a12",
+      "nome": "A Noiva Muda do Alfa Amaldiçoado",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "tarde-demais-para-voltar-6a8c02eb39688c99fd03fc33",
+      "nome": "Tarde Demais Para Voltar",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "era-uma-vez-um-rompimento-69e21bb7275ce05ecb0204a7",
+      "nome": "Era Uma Vez Um Rompimento",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "jogando-de-acordo-com-as-regras-do-multimilionario-670c866480afec5e950b4dd6",
+      "nome": "Jogando De Acordo com as Regras do Multimilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "a-pequena-docura-dos-bilionarios-69859830a6169dbc440df743",
+      "nome": "A Pequena Doçura dos Bilionários",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "seduzida-pelo-meio-irmao-bad-boy-6ab10219267e01b25d04c855",
+      "nome": "Seduzida pelo Meio-Irmão Bad Boy",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-familia-que-me-condenou-agora-me-quer-de-volta-6a4f26ad2fd3ad7cac0d2807",
+      "nome": "A Família que me Condenou Agora me Quer de Volta",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "estou-gravida-vamos-terminar-67bc1a9c2e3827da9c0c0b04",
+      "nome": "Estou Grávida, Vamos Terminar!",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "mimos-da-esposa-rica-como-conquistar-um-marido-frio-69b7729868d13c8fba02c6bf",
+      "nome": "Mimos da Esposa Rica: Como Conquistar um Marido Frio",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "apaixonada-pelo-alfa-67847b4f78242cc6b70acfc3",
+      "nome": "Apaixonada pelo Alfa",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-casamento-secreto-da-enfermeira-6743eb1227a8c5ef7a07cdcb",
+      "nome": "O Casamento Secreto da Enfermeira",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-alfa-e-a-baba-luna-6a9fd9c1f2269823c606e83a",
+      "nome": "O Alfa e a Babá Luna",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "lista-de-desejos-da-virgem-67612b00662e02cadc0d2089",
+      "nome": "Lista de Desejos da Virgem",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-vinganca-de-renata-6853e3baa312da0b53087118",
+      "nome": "A Vingança de Renata",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "quando-o-para-sempre-ruiu-6a5df72de6077c272f0f550e",
+      "nome": "Quando o para sempre ruiu",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "seu-unico-amor-671b0b5b4c2513f2b1097c8e",
+      "nome": "Seu Único Amor",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "domando-o-leao-bilionario-nas-bicicletas-6631694f2d777e01ac04eaf2",
+      "nome": "Domando o Leão: Bilionário nas Bicicletas",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "lindinha-6805ef2410b12097a805a9c6",
+      "nome": "Lindinha",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "me-divorciei-no-dia-do-nascimento-do-meu-filho-6853dba1249cb0b078051251",
+      "nome": "Me Divorciei no Dia do Nascimento do Meu Filho",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "ceo-a-senhora-tem-um-filho-secreto-6638bc6d9aaac84dd500b41f",
+      "nome": "CEO, a Senhora tem um Filho Secreto!",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-obsessao-secreta-do-ceo-milionario-67a2ccaaa9176d7c5501b5a7",
+      "nome": "A Obsessão Secreta Do CEO Milionário",
+      "badges": [
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "as-regras-da-protecao-o-guarda-costas-que-odeio-6835557adab47da985047255",
+      "nome": "As Regras da Proteção: O Guarda-Costas que Odeio",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "nos-vamos-amar-novamente-69b98f9b11cb6d3cf60c37f4",
+      "nome": "Nós Vamos Amar Novamente",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "minha-vida-de-bilionario-roubada-6720786f9d5bdfcb080fbd49",
+      "nome": "Minha Vida de Bilionário Roubada",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Novo",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "ele-nao-e-um-filho-reserva-69a822d57f9061704706116b",
+      "nome": "Ele Não é Um Filho Reserva",
+      "badges": [
+        "Popular",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "unidos-pelo-casamento-libertos-pelo-amor-6882ed7194f49c0b750dfec2",
+      "nome": "Unidos pelo Casamento, Libertos pelo Amor",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-cura-do-general-6853c4ccc3007d076909b9c0",
+      "nome": "A Cura do General",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-lendario-pai-retorna-6853d53eb046c4461a099834",
+      "nome": "O Lendário Pai Retorna",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "esse-mendigo-nao-e-para-brincadeira-69ae24f74309f58a8e02cf1b",
+      "nome": "Esse Mendigo Não É Para Brincadeira",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "amor-titanico-apos-o-renascimento-6853d4866c66ee7ac80126ee",
+      "nome": "Amor Titânico Após o Renascimento",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "seduzindo-o-sr-larsen-69312ca8f4595c76860d8971",
+      "nome": "Seduzindo o Sr. Larsen",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "casamento-falso-com-meu-ceo-multimilionario-6768c459c2dc6913740c4774",
+      "nome": "Casamento Falso com meu CEO Multimilionário",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "presa-na-zona-de-amizade-69e21bb9275ce05ecb0204ad",
+      "nome": "Presa Na Zona de Amizade",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "mamae-nao-chore-690bfa790a71d7df310e2bcd",
+      "nome": "Mamãe, não chore",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Novo"
+      ]
+    },
+    {
+      "slug": "depois-do-cancer-me-torno-uma-diva-67344a082bad1ede8903f7ca",
+      "nome": "Depois do Câncer, Me Torno uma Diva",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "nunca-se-divorcie-de-uma-herdeira-bilionaria-secreta-6529906e2dc5b4eb390ef353",
+      "nome": "Nunca se divorcie de uma herdeira bilionária secreta",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "a-mulher-comeca-a-guerra-6899506a0b4d2347da0f9122",
+      "nome": "A mulher começa a guerra",
+      "badges": [
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "seu-irmao-perdido-no-espaco-69b27131d253b2daeb04e129",
+      "nome": "Seu Irmão Perdido no Espaço",
+      "badges": [
+        "Brasileiro",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "bom-com-as-mao-67e0c6611e8d3e9fec0220db",
+      "nome": "Bom com as mão",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "dando-aulas-para-o-meu-rival-69e9d9c5ae32abe97200476b",
+      "nome": "Dando aulas para o meu rival",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-bombeiro-bilionario-e-sua-doce-esposa-67c548f97a9797ef7d052505",
+      "nome": "O Bombeiro Bilionário e Sua Doce Esposa",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "um-encontro-predestinado-670c867e416d00529c05d792",
+      "nome": "Um Encontro Predestinado",
+      "badges": [
+        "Dublado",
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "serva-de-meu-nemesis-675686dbd4e81f932e09f5c1",
+      "nome": "Serva de meu Nêmesis",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "amor-inacessivel-6853e0137702e68651063011",
+      "nome": "Amor Inacessível",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "ola-vamos-nos-casar-677b3947f01f7b0ad60319ed",
+      "nome": "¡Olá! Vamos nos Casar?",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "voltar-ao-passado-amor-eterno-686b83cc3fb45f62a30a3e8d",
+      "nome": "Voltar ao Passado: Amor Eterno",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "verdadeiro-luna-65b846dfbcbde0cbb00e2ca5",
+      "nome": "Verdadeiro Luna",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "renascido-e-tornou-se-uma-lenda-69aa9e6b7a64ad5c52081356",
+      "nome": "Renascido e Tornou-se uma Lenda",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "o-chefe-da-mafia-exige-seus-genes-perfeitos-6a7bd6f03d951c8cb306727c",
+      "nome": "O Chefe da Máfia Exige Seus Genes Perfeitos",
+      "badges": [
+        "Novo",
+        "Tendências",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "leve-me-ao-hades-estou-morrendo-67bc1a6284be371f2f04f1c7",
+      "nome": "Leve-me ao Hades, estou morrendo",
+      "badges": [
+        "Tendências",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-bilionario-se-casou-com-uma-garota-sem-teto-68c8c9e32ca71adaa90d3206",
+      "nome": "O bilionário se casou com uma garota sem-teto",
+      "badges": [
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Popular"
+      ]
+    },
+    {
+      "slug": "nos-amaremos-novamente-65e6207a28ae3e8ff3012dfc",
+      "nome": "Nós amaremos novamente",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "um-amor-proibido-nos-hamptons-o-irmao-da-minha-bff-6823f924678252fdb0047474",
+      "nome": "Um Amor Proibido nos Hamptons: O Irmão da Minha BFF",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "acorde-o-marido-sustentado-69a50e62d5c30ea4b906135a",
+      "nome": "Acorde o marido sustentado",
+      "badges": [
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Brasileiro",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "renascida-para-voar-6853e45b444214a5e8031e7e",
+      "nome": "Renascida para Voar",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "o-retorno-do-meu-marido-mafioso-6710812ffce9cf2f04089e05",
+      "nome": "O Retorno do Meu Marido Mafioso",
+      "badges": [
+        "Dublado",
+        "Novo",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "quando-o-amor-nao-e-reciproco-697c29923d80b7798903536b",
+      "nome": "Quando o Amor Não é Recíproco",
+      "badges": [
+        "Brasileiro",
+        "Brasileiro",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "frango-frito-casamento-de-repente-675686bfd94f4aac940db1b3",
+      "nome": "Frango Frito, Casamento de Repente",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Tendências",
+        "Dublado",
+        "Popular",
+        "Popular",
+        "Dublado",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "nao-sou-mais-um-tolo-o-rei-voltou-69f7692577b2394d6305357a",
+      "nome": "Não Sou Mais um Tolo: O Rei Voltou",
+      "badges": [
+        "Dublado",
+        "Popular",
+        "Dublado",
+        "Dublado"
+      ]
+    },
+    {
+      "slug": "nunca-mais-voltaremos-a-ficar-juntos-664b9c137bc7cf21aa093872",
+      "nome": "Nunca mais voltaremos a ficar juntos",
+      "badges": [
+        "Dublado",
+        "Brasileiro",
+        "Brasileiro",
+        "Brasileiro"
+      ]
+    },
+    {
+      "slug": "para-onde-as-estrelas-foram-6a6aba350c637d637405008c",
+      "nome": "Para Onde as Estrelas Foram",
+      "badges": [
+        "Dublado",
+        "Tendências",
+        "Dublado",
+        "Dublado"
+      ]
+    }
+  ]
+}
