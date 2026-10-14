@@ -4,20 +4,18 @@
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep1.mp4",
-    "sizeBytes": 31515052,
-    "durationSeconds": 155,
-    "createdAt": "2026-10-14T02:58:44.126Z",
-    "dubbed": true
+    "sizeBytes": 31023654,
+    "durationSeconds": 154,
+    "createdAt": "2026-10-14T02:58:44.126Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep2.mp4",
-    "sizeBytes": 28051181,
+    "sizeBytes": 27652931,
     "durationSeconds": 160,
-    "createdAt": "2026-10-14T02:58:48.956Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:48.956Z"
   },
   {
     "id": "querido-irmao-seu-arrependimento-veio-tarde-demais-6ac9cf45c4988b8bda06e3f7-ep3",
@@ -51,100 +49,90 @@
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep17.mp4",
-    "sizeBytes": 22761086,
+    "sizeBytes": 22600103,
     "durationSeconds": 162,
-    "createdAt": "2026-10-14T02:58:44.434Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:44.434Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep16",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep16.mp4",
-    "sizeBytes": 12988480,
+    "sizeBytes": 12666138,
     "durationSeconds": 93,
-    "createdAt": "2026-10-14T02:58:44.729Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:44.729Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep15",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep15.mp4",
-    "sizeBytes": 27697182,
+    "sizeBytes": 27164100,
     "durationSeconds": 199,
-    "createdAt": "2026-10-14T02:58:45.041Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:45.041Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep14",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep14.mp4",
-    "sizeBytes": 12258219,
-    "durationSeconds": 86,
-    "createdAt": "2026-10-14T02:58:45.336Z",
-    "dubbed": true
+    "sizeBytes": 12046318,
+    "durationSeconds": 85,
+    "createdAt": "2026-10-14T02:58:45.336Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep13",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep13.mp4",
-    "sizeBytes": 16942408,
+    "sizeBytes": 16859815,
     "durationSeconds": 107,
-    "createdAt": "2026-10-14T02:58:45.615Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:45.615Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep12",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep12.mp4",
-    "sizeBytes": 21316362,
-    "durationSeconds": 130,
-    "createdAt": "2026-10-14T02:58:45.898Z",
-    "dubbed": true
+    "sizeBytes": 21034239,
+    "durationSeconds": 131,
+    "createdAt": "2026-10-14T02:58:45.898Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep11",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep11.mp4",
-    "sizeBytes": 16608214,
+    "sizeBytes": 16654500,
     "durationSeconds": 87,
-    "createdAt": "2026-10-14T02:58:46.193Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:46.193Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep10",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep10.mp4",
-    "sizeBytes": 11474580,
-    "durationSeconds": 66,
-    "createdAt": "2026-10-14T02:58:46.483Z",
-    "dubbed": true
+    "sizeBytes": 11503636,
+    "durationSeconds": 67,
+    "createdAt": "2026-10-14T02:58:46.483Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep9",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep9.mp4",
-    "sizeBytes": 13448996,
-    "durationSeconds": 84,
-    "createdAt": "2026-10-14T02:58:46.774Z",
-    "dubbed": true
+    "sizeBytes": 13340619,
+    "durationSeconds": 85,
+    "createdAt": "2026-10-14T02:58:46.774Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep8",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep8.mp4",
-    "sizeBytes": 19022300,
+    "sizeBytes": 18838555,
     "durationSeconds": 96,
-    "createdAt": "2026-10-14T02:58:47.108Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:47.108Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep7",
@@ -160,40 +148,36 @@
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep6.mp4",
-    "sizeBytes": 15186885,
+    "sizeBytes": 14841822,
     "durationSeconds": 79,
-    "createdAt": "2026-10-14T02:58:47.719Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:47.719Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep5",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep5.mp4",
-    "sizeBytes": 33501624,
+    "sizeBytes": 32820936,
     "durationSeconds": 157,
-    "createdAt": "2026-10-14T02:58:48.077Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:48.077Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep4",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep4.mp4",
-    "sizeBytes": 21087852,
+    "sizeBytes": 20920476,
     "durationSeconds": 83,
-    "createdAt": "2026-10-14T02:58:48.375Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:58:48.375Z"
   },
   {
     "id": "a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep3",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2/a-irma-do-bilionario-contra-ataca-6aca0b0cb7573717a203f0c2-ep3.mp4",
-    "sizeBytes": 22046494,
-    "durationSeconds": 102,
-    "createdAt": "2026-10-14T02:58:48.653Z",
-    "dubbed": true
+    "sizeBytes": 21689267,
+    "durationSeconds": 103,
+    "createdAt": "2026-10-14T02:58:48.653Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep57",
@@ -569,20 +553,18 @@
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep16.mp4",
-    "sizeBytes": 14424506,
+    "sizeBytes": 14282659,
     "durationSeconds": 100,
-    "createdAt": "2026-10-14T02:59:02.925Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:02.925Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep15",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep15.mp4",
-    "sizeBytes": 10468723,
+    "sizeBytes": 10255190,
     "durationSeconds": 74,
-    "createdAt": "2026-10-14T02:59:03.220Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:03.220Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep14",
@@ -598,129 +580,116 @@
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep13.mp4",
-    "sizeBytes": 16824580,
+    "sizeBytes": 16651059,
     "durationSeconds": 103,
-    "createdAt": "2026-10-14T02:59:03.809Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:03.809Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep12",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep12.mp4",
-    "sizeBytes": 24093128,
-    "durationSeconds": 151,
-    "createdAt": "2026-10-14T02:59:04.130Z",
-    "dubbed": true
+    "sizeBytes": 23479122,
+    "durationSeconds": 150,
+    "createdAt": "2026-10-14T02:59:04.130Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep11",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep11.mp4",
-    "sizeBytes": 15867535,
+    "sizeBytes": 15352506,
     "durationSeconds": 104,
-    "createdAt": "2026-10-14T02:59:04.421Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:04.421Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep10",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep10.mp4",
-    "sizeBytes": 18192960,
-    "durationSeconds": 98,
-    "createdAt": "2026-10-14T02:59:04.704Z",
-    "dubbed": true
+    "sizeBytes": 18298936,
+    "durationSeconds": 99,
+    "createdAt": "2026-10-14T02:59:04.704Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep9",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep9.mp4",
-    "sizeBytes": 17194362,
-    "durationSeconds": 110,
-    "createdAt": "2026-10-14T02:59:04.999Z",
-    "dubbed": true
+    "sizeBytes": 17064415,
+    "durationSeconds": 111,
+    "createdAt": "2026-10-14T02:59:04.999Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep8",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep8.mp4",
-    "sizeBytes": 16249008,
+    "sizeBytes": 15960607,
     "durationSeconds": 97,
-    "createdAt": "2026-10-14T02:59:05.307Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:05.307Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep7",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep7.mp4",
-    "sizeBytes": 18197527,
-    "durationSeconds": 137,
-    "createdAt": "2026-10-14T02:59:05.598Z",
-    "dubbed": true
+    "sizeBytes": 17978380,
+    "durationSeconds": 136,
+    "createdAt": "2026-10-14T02:59:05.598Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep6",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep6.mp4",
-    "sizeBytes": 9962956,
-    "durationSeconds": 85,
-    "createdAt": "2026-10-14T02:59:05.887Z",
-    "dubbed": true
+    "sizeBytes": 9551678,
+    "durationSeconds": 84,
+    "createdAt": "2026-10-14T02:59:05.887Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep5",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep5.mp4",
-    "sizeBytes": 17895651,
-    "durationSeconds": 119,
-    "createdAt": "2026-10-14T02:59:06.177Z",
-    "dubbed": true
+    "sizeBytes": 17613317,
+    "durationSeconds": 120,
+    "createdAt": "2026-10-14T02:59:06.177Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep4",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep4.mp4",
-    "sizeBytes": 13243918,
+    "sizeBytes": 12962056,
     "durationSeconds": 91,
-    "createdAt": "2026-10-14T02:59:06.560Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:06.560Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep3",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep3.mp4",
-    "sizeBytes": 9837903,
-    "durationSeconds": 55,
-    "createdAt": "2026-10-14T02:59:06.829Z",
-    "dubbed": true
+    "sizeBytes": 10034152,
+    "durationSeconds": 56,
+    "createdAt": "2026-10-14T02:59:06.829Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep2",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep2.mp4",
-    "sizeBytes": 25817916,
+    "sizeBytes": 25963912,
     "durationSeconds": 176,
-    "createdAt": "2026-10-14T02:59:07.119Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:07.119Z"
   },
   {
     "id": "me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep1",
     "provider": "url",
     "format": "mp4",
     "src": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/videos/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9/me-divorciei-de-um-astro-do-hoquei-e-escolhi-seu-maior-rival-6ac9cf57ecc41c3cb30378d9-ep1.mp4",
-    "sizeBytes": 27052033,
+    "sizeBytes": 26638770,
     "durationSeconds": 158,
-    "createdAt": "2026-10-14T02:59:07.415Z",
-    "dubbed": true
+    "createdAt": "2026-10-14T02:59:07.415Z"
   }
 ]
