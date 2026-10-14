@@ -98,10 +98,7 @@ if (githubFalhou) {
   process.exit(0);
 }
 
-await writeFile(path.join(DATA_DIR, "shorts.json"), JSON.stringify(shorts, null, 2));
-await writeFile(path.join(DATA_DIR, "media.json"), JSON.stringify(media, null, 2));
-
-// Merge com catálogo existente (acumula várias séries)
+// Merge com catálogo existente ANTES de escrever (não sobrescrever!)
 const shortsExistentes = await readFile(path.join(DATA_DIR, "shorts.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
 const mediaExistentes = await readFile(path.join(DATA_DIR, "media.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
 const porId = new Map(shortsExistentes.map((s) => [s.id, s]));
