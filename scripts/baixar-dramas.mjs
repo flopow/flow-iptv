@@ -125,10 +125,13 @@ async function main() {
   const escolha = argSerie ?? (await pergunta('\nDigite o número da série (ou "tudo"): ')).trim();
 
   if (escolha.toLowerCase() === "tudo") {
-    for (let i = 0; i < lista.length; i++) {
-      const slug = await slugDe(lista[i].url);
-      try { await baixarSerie(slug, i + 1, lista.length); }
-      catch (err) { console.log(`  ✗ ${slug}: ${err.message}`); }
+    // Todas as séries do sitemap (250), não só as 30 da home.
+    const sitemap = await fetchText(`${SITE}/sitemap`);
+    const slugs = [...new Set([...sitemap.matchAll(/\/pt\/serie\/([a-z0-9-]+)/g)].map((m) => m[1]))];
+    console.log(`\n${slugs.length} séries no total — baixando todas (retomável).`);
+    for (let i = 0; i < slugs.length; i++) {
+      try { await baixarSerie(slugs[i], i + 1, slugs.length); }
+      catch (err) { console.log(`  ✗ ${slugs[i]}: ${err.message}`); }
     }
   } else {
     const i = Number(escolha) - 1;

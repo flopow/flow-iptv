@@ -22,6 +22,9 @@ next-env.d.ts
 
 # trabalho temporário do importador de mídia
 /.import-work/
+# downloads locais da ferramenta
+/baixados/
+/baixados-teste/
 
 # logs / sistema
 npm-debug.log*
