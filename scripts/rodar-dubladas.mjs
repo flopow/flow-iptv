@@ -47,4 +47,15 @@ for (const slug of slugs) {
     console.log(`✗ ${slug}: ${err.message} — NÃO marcada; será retomada na próxima execução`);
   }
 }
-console.log(`\n=== FIM DO LOTE: ${feitas.length}/${slugs.length} processadas. Publique com: node scripts/publicar.mjs`);
+console.log(`\n=== FIM DO LOTE: ${feitas.length}/${slugs.length} processadas. ===`);
+
+// Publica no site automaticamente (deploy automático via git push)
+console.log("→ publicando no site (deploy automático)…");
+try {
+  await execFileP("git", ["add", "-A"], { cwd: ROOT, stdio: "inherit" });
+  await execFileP("git", ["-c", "user.name=Flow IPTV", "-c", "user.email=dev@flowiptv.local", "commit", "-m", "catalog: atualização automática (lote de séries)"], { cwd: ROOT, stdio: "inherit" });
+  await execFileP("git", ["push", "origin", "main"], { cwd: ROOT, stdio: "inherit" });
+  console.log("✔ publicado — site atualizado.");
+} catch (err) {
+  console.log(`! publicação: ${err.message.split("\n")[0]}`);
+}
