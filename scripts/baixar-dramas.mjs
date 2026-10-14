@@ -15,7 +15,7 @@
 //   DESTINO=C:/caminho (padrão: ./baixados)
 // ─────────────────────────────────────────────────────────────
 
-import { execFile } from "node:child_process";
+import { execFile, spawn } from "node:child_process";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { createInterface } from "node:readline";
@@ -29,6 +29,41 @@ const ALLOWED_HOSTS = new Set(["v-mps.crazymaplestudios.com"]);
 
 const rl = createInterface({ input: process.stdin, output: process.stdout });
 const pergunta = (q) => new Promise((r) => rl.question(q, r));
+
+async function duracaoMs(m3u8) {
+  try {
+    const { stdout } = await execFileP(FFMPEG.replace(/ffmpeg\.exe$/i, "ffprobe.exe"), [
+      "-v", "error", "-show_entries", "format=duration",
+      "-of", "default=noprint_wrappers=1:nokey=1", m3u8,
+    ], { timeout: 60_000 });
+    return Math.round(Number(stdout.trim()) * 1000);
+  } catch {
+    return null;
+  }
+}
+
+// Baixa o HLS mostrando o progresso em % no próprio episódio.
+async function hlsToMp4(m3u8, out, label) {
+  const totalMs = await duracaoMs(m3u8);
+  await new Promise((resolve, reject) => {
+    const proc = spawn(FFMPEG, ["-y", "-hide_banner", "-loglevel", "error", "-i", m3u8, "-c", "copy", "-movflags", "+faststart", "-progress", "pipe:1", out]);
+    let erro = "";
+    proc.stderr.on("data", (d) => { erro += d.toString(); });
+    const lines = createInterface({ input: proc.stdout });
+    lines.on("line", (line) => {
+      const m = /out_time_ms=(\d+)/.exec(line);
+      if (m && totalMs) {
+        const pct = Math.min(100, Math.round(Number(m[1]) / 1000 / totalMs * 100));
+        process.stdout.write(`\r  ${label}: ${pct}%`);
+      }
+    });
+    proc.on("close", (code) => {
+      if (code !== 0) reject(new Error(erro.trim().split("\n").pop() || `ffmpeg exit ${code}`));
+      else resolve();
+    });
+  });
+  process.stdout.write("\r");
+}
 
 async function fetchText(url) {
   for (let attempt = 0; attempt < 6; attempt++) {
@@ -58,10 +93,6 @@ function jsonLd(html) {
 async function slugDe(nomeOuUrl) {
   const m = /\/pt\/serie\/([a-z0-9-]+)/.exec(nomeOuUrl);
   return m ? m[1] : nomeOuUrl.trim().toLowerCase().replace(/\s+/g, "-");
-}
-
-async function hlsToMp4(m3u8, out) {
-  await execFileP(FFMPEG, ["-y", "-hide_banner", "-loglevel", "error", "-i", m3u8, "-c", "copy", "-movflags", "+faststart", out], { timeout: 900_000 });
 }
 
 function limparNome(nome) {
@@ -104,7 +135,7 @@ async function baixarSerie(slug, indice, total) {
     if (!m3u8) { console.log(`  ep ${n}: sem vídeo — pulando`); continue; }
     if (!ALLOWED_HOSTS.has(new URL(m3u8).hostname)) { console.log(`  ep ${n}: host não autorizado — pulando`); continue; }
     try {
-      await hlsToMp4(m3u8, out);
+      await hlsToMp4(m3u8, out, `ep ${n}`);
       const mb = ((await stat(out)).size / 1024 / 1024).toFixed(1);
       console.log(`  ep ${n} baixado (${mb} MB)`);
       ok++;
