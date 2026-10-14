@@ -22,7 +22,7 @@ import { createInterface } from "node:readline";
 import { promisify } from "node:util";
 
 const execFileP = promisify(execFile);
-const FFMPEG = process.env.FFMPEG ?? "ffmpeg";
+const FFMPEG = process.env.FFMPEG ?? "C:\\Users\\administrato\\AppData\\Local\\Temp\\ffmpeg\\ffmpeg-9.0.2-essentials_build\\bin\\ffmpeg.exe";
 const SITE = "https://dramavideoshow.com/pt";
 const DESTINO = path.resolve(process.env.DESTINO ?? "baixados");
 const ALLOWED_HOSTS = new Set(["v-mps.crazymaplestudios.com"]);
