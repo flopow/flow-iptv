@@ -18,6 +18,7 @@ com identidade visual própria, tema claro (branco + azul + cinza escuro), mobil
 | HLS             | `hls.js` no cliente (fallback nativo Safari)         | adaptativo quando o provider oferecer |
 | Capas/metadados | TMDB (Etapa 8) — chave em env, nunca no cliente      | importação automática autorizada |
 | Arquivos pequenos | GitHub API oficial (Etapa 9)                       | capas/backdrops + metadados JSON versionados |
+| Vídeo (dramas) | **Google Drive** via rclone (streaming `drive.usercontent.google.com`, Range) | 15–100 GB, egress grátis, sem custo |
 | Hospedagem      | Vercel (app) + CDN do provedor de mídia             | edge + builds automáticos |
 | Validação       | zod (fronteiras de dados externos)                   | shape inválido falha cedo, nunca vira tipo confiado |
 
@@ -73,12 +74,18 @@ admin informa título
 ```
 admin informa arquivo local ou URL autorizada
   → valida origem/formato/tamanho (sem carregar o arquivo inteiro na memória)
-  → upload direto/multipart p/ provider (local → MEDIA_ROOT; prod → Mux/Bunny)
+  → re-empacota HLS → MP4 (ffmpeg -c copy, sem re-encode) quando vindo de site autorizado
+  → upload p/ provider (GitHub ≤100 MB ou Google Drive via rclone)
   → registra media_files (metadados só!)  → associa a filme/série/drama
-  → player reproduz via URL assinada/rotas com Range
+  → player reproduz via URL direta (raw.githubusercontent ou drive.usercontent)
 ```
-- URLs externas: validação de domínio autorizado (`ALLOWED_VIDEO_DOMAINS`), sem SSRF.
+- URLs externas: validação de domínio autorizado, sem SSRF.
 - Vídeos grandes nunca vão para o GitHub nem para o banco.
+- **Importador de dramas** (`scripts/import-dramasite.mjs`): baixa capas/banners/
+  sinopses/episódios (áudio do idioma da página `/pt`, dublagem verificada por VOD
+  distinto por idioma), sobe capas e metadados para o GitHub e episódios MP4 para o
+  Google Drive (pasta `flow-iptv`, compartilhada "qualquer pessoa com o link",
+  streaming com Range). Dedupe por SHA/nome+tamanho — re-executar é idempotente.
 
 ## 6. Player (v1)
 

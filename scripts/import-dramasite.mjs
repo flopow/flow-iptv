@@ -218,8 +218,13 @@ async function probeDuration(mp4Path) {
 // reproduz via drive.usercontent.google.com (streaming direto, sem
 // expor nada do sistema do site de origem).
 async function driveList(dirPath) {
-  const { stdout } = await execFileP(RCLONE, ["lsjson", `gdrive:${dirPath}`], { timeout: 120_000 });
-  return JSON.parse(stdout);
+  try {
+    const { stdout } = await execFileP(RCLONE, ["lsjson", `gdrive:${dirPath}`], { timeout: 120_000 });
+    return JSON.parse(stdout);
+  } catch {
+    // Diretório ainda não existe no Drive — nada listado ainda.
+    return [];
+  }
 }
 
 async function uploadVideoDrive(localPath, drivePath) {
