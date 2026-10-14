@@ -45,8 +45,10 @@ for (const s of shorts) {
   try {
     const html = await (await fetch(`${SITE}/serie/${s.id}`, { headers: { "user-agent": "flow-iptv/0.1" } })).text();
     const srcset = /<img[^>]+srcset="([^"]+)"/.exec(html)?.[1]?.replaceAll("&amp;", "&");
-    // pega a maior largura do srcset (última opção)
-    const url = srcset?.split(",").pop()?.trim().split(/\s+/)[0];
+    // URLs nunca têm espaço; vírgulas dentro da query fazem parte da URL.
+    // Pega a ÚLTIMA URL do srcset (maior largura).
+    const urls = srcset ? [...srcset.matchAll(/https?:\/\/[^\s]+/g)].map((m) => m[0]) : [];
+    const url = urls[urls.length - 1];
     const og = /<meta property="og:image" content="([^"]+)"/.exec(html)?.[1]?.replaceAll("&amp;", "&");
     const capa = url ?? og;
     if (capa) {
