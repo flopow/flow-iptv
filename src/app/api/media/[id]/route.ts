@@ -19,8 +19,9 @@ function mediaRoot(): string {
 }
 
 // Streaming com suporte a Range (seek/scrub do player e retomada).
-// Somente arquivos registrados no catálogo como provider "local" são
-// servidos — nunca caminho arbitrário (sem traversal, sem SSRF).
+// - provider "local": arquivo do disco (MEDIA_ROOT);
+// - provider "drive": proxy do Google Drive (servidor→servidor, porque o
+//   navegador é bloqueado pelo CORS do drive.usercontent — o servidor não).
 export async function GET(
   req: Request,
   { params }: { params: Promise<{ id: string }> },
@@ -29,8 +30,38 @@ export async function GET(
 
   const catalog = await getCatalog();
   const media = await catalog.getMediaFile(id);
-  if (!media || media.provider !== "local") {
+  if (!media || (media.provider !== "local" && media.provider !== "drive")) {
     return new Response("Não encontrado", { status: 404 });
+  }
+
+  // provider "drive": repassa Range pro Google e faz streaming de volta.
+  if (media.provider === "drive") {
+    const up = new URL(media.src);
+    const range = req.headers.get("range");
+    const upstream = await fetch(up, {
+      headers: {
+        Range: range ?? "bytes=0-",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      },
+    });
+    if (!upstream.ok && upstream.status !== 206) {
+      return new Response("Falha no upstream", { status: 502 });
+    }
+    const headers = new Headers();
+    headers.set("Content-Type", upstream.headers.get("content-type") ?? "video/mp4");
+    headers.set("Cache-Control", "public, max-age=86400");
+    const contentRange = upstream.headers.get("content-range");
+    const contentLength = upstream.headers.get("content-length");
+    if (contentRange) headers.set("Content-Range", contentRange);
+    if (contentLength) headers.set("Content-Length", contentLength);
+    if (upstream.status === 206 || range) {
+      headers.set("Accept-Ranges", "bytes");
+      return new Response(upstream.body, {
+        status: range ? 206 : 200,
+        headers,
+      });
+    }
+    return new Response(upstream.body, { status: 200, headers });
   }
 
   const root = mediaRoot();

@@ -6,7 +6,7 @@ export type PublicationStatus = "draft" | "published";
 
 export type AgeRating = "L" | "10" | "12" | "14" | "16" | "18";
 
-export type MediaProviderName = "local" | "url" | "mux";
+export type MediaProviderName = "local" | "url" | "mux" | "drive";
 
 export type MediaFormat = "mp4" | "mkv" | "hls" | "webm";
 

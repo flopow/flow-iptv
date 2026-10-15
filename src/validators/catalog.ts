@@ -16,7 +16,7 @@ const nullableUrl = z.string().url().nullable();
 export const mediaFileSchema = z.array(
   z.object({
     id: z.string().min(1),
-    provider: z.enum(["local", "url", "mux"]),
+    provider: z.enum(["local", "url", "mux", "drive"]),
     format: z.enum(["mp4", "mkv", "hls", "webm"]),
     src: z.string().min(1),
     sizeBytes: z.number().int().nonnegative().nullable(),

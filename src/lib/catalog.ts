@@ -74,6 +74,10 @@ export function toPlayableUrl(media: MediaFile): string | null {
       return media.src.startsWith("https://")
         ? media.src
         : `https://stream.mux.com/${media.src}.m3u8`;
+    case "drive":
+      // O navegador NÃO acessa drive.usercontent direto (CORS bloqueado).
+      // Proxy do servidor: /api/media faz Range ao Drive e serve pro player.
+      return `/api/media/${encodeURIComponent(media.id)}`;
     default:
       return null;
   }
