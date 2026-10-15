@@ -63,45 +63,71 @@ async function completarSerie(slug) {
 }
 
 // ── publica UMA série (GitHub → Drive → catálogo) ───────────
+// GitHub via git blobs em paralelo + 1 commit único (sem corrida de ref).
+// Só registra no catálogo DEPOIS que o ref do branch aponta pros blobs
+// (validação real: se o commit não subiu, nada é registrado).
 async function publicarSerie(slug, pasta) {
   const mp4s = (await readdir(pasta)).filter((f) => f.endsWith(".mp4")).sort((a, b) =>
     Number(/ep-?(\d+)/.exec(a)?.[1]) - Number(/ep-?(\d+)/.exec(b)?.[1]));
   if (mp4s.length === 0) return { ok: false, motivo: "sem mp4" };
 
   const { readFile: rf } = await import("node:fs/promises");
-  // 1) GitHub em paralelo
-  const results = [];
+  // estado atual do repo (1 req): head + árvore p/ pular já existentes
+  const headRef = await gh("GET", `https://api.github.com/repos/${OWNER}/${REPO}/git/ref/heads/${BRANCH}`);
+  const headSha = headRef?.object?.sha;
+  const treeRes = await gh("GET", `https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${headSha}?recursive=1`);
+  const existentes = new Set((treeRes?.tree ?? []).filter((x) => x.type === "blob").map((x) => x.path));
+
   const queue = [...mp4s];
+  const blobs = new Map(); // caminho -> sha
+  const falhas = [];
   async function worker() {
     while (queue.length) {
       const f = queue.shift();
       const n = Number(/ep-?(\d+)/.exec(f)?.[1]);
+      const caminho = `videos/${slug}/${slug}-ep${n}.mp4`;
+      if (existentes.has(caminho)) continue;
       try {
-        const api = apiUrl(`videos/${slug}/${slug}-ep${n}.mp4`);
-        const existing = await gh("GET", api);
         const buf = await rf(path.join(pasta, f));
-        const body = { message: `Vídeo ${slug} ep${n}`, content: buf.toString("base64"), branch: BRANCH };
-        if (existing?.sha) {
-          if (existing.content.replace(/\n/g, "") === body.content) { results.push({ n, skip: true }); continue; }
-          body.sha = existing.sha;
-        }
-        await gh("PUT", api, body);
-        results.push({ n });
+        if (buf.length > 100 * 1024 * 1024) { falhas.push(`ep${n}: >100MB`); continue; }
+        const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/blobs`, {
+          method: "POST", headers: H, body: JSON.stringify({ content: buf.toString("base64"), encoding: "base64" }),
+        });
+        if (r.status !== 201) throw new Error(`blob ${r.status}`);
+        blobs.set(caminho, (await r.json()).sha);
       } catch (err) {
         console.log(`    ✗ ${f}: ${err.message}`);
-        results.push({ n, falhou: true });
+        falhas.push(`ep${n}: ${err.message}`);
       }
     }
   }
   await Promise.all(Array.from({ length: WORKERS }, worker));
-  if (results.some((r) => r.falhou)) return { ok: false, motivo: "github falhou parcialmente" };
+  if (falhas.length > 0) return { ok: false, motivo: `github falhou (${falhas.length}): ${falhas[0]}` };
+  if (blobs.size === 0) return { ok: true, eps: 0, ja: mp4s.length }; // tudo já no ar
+
+  // commit único — só depois disso os eps existem de verdade
+  const tree = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees`, {
+    method: "POST", headers: H,
+    body: JSON.stringify({ base_tree: treeRes.sha, tree: [...blobs.entries()].map(([p, sha]) => ({ path: p, mode: "100644", type: "blob", sha })) }),
+  });
+  if (tree.status !== 201) return { ok: false, motivo: `tree ${tree.status}` };
+  const commit = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/commits`, {
+    method: "POST", headers: H,
+    body: JSON.stringify({ message: `Vídeos ${slug} (${blobs.size} eps)`, tree: (await tree.json()).sha, parents: [headSha] }),
+  });
+  if (commit.status !== 201) return { ok: false, motivo: `commit ${commit.status}` };
+  const ref = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/refs/heads/${BRANCH}`, {
+    method: "PATCH", headers: H, body: JSON.stringify({ sha: (await commit.json()).sha, force: false }),
+  });
+  if (ref.status !== 200) return { ok: false, motivo: `ref ${ref.status} — não registrado` };
+  console.log(`    ✔ GitHub: ref ${headSha?.slice(0, 7)} → ${(await commit.json()).sha.slice(0, 7)} (${blobs.size} eps confirmados)`);
 
   // 2) Drive backup (best-effort)
   try {
     await execFileP(RCLONE, ["copy", pasta, `gdrive:flow-iptv/videos/${slug}`, "--transfers", "8", "--checkers", "16"], { timeout: 3600_000 });
   } catch { /* GitHub já garante o ar */ }
 
-  // 3) catálogo local
+  // 3) catálogo local — agora sim: ref atualizado = upload confirmado
   const info = await rf(path.join(pasta, "info.json"), "utf8").then((t) => JSON.parse(t)).catch(() => ({}));
   const DATA_DIR = path.resolve("data/catalog");
   const shorts = await rf(path.join(DATA_DIR, "shorts.json"), "utf8").then((t) => JSON.parse(t)).catch(() => []);
@@ -116,18 +142,18 @@ async function publicarSerie(slug, pasta) {
     });
   }
   const short = byId.get(slug);
-  for (const r of results) {
-    if (r.skip || r.falhou) continue;
-    const epId = `${slug}-ep${r.n}`;
+  for (const [caminho] of blobs) {
+    const n = Number(/ep(\d+)/.exec(caminho)?.[1]);
+    const epId = `${slug}-ep${n}`;
     if (!short.episodes.some((e) => e.id === epId)) {
-      short.episodes.push({ id: epId, number: r.n, title: `Episódio ${r.n}`, durationSeconds: null, thumbUrl: null, mediaFileId: epId, subtitleUrl: null });
+      short.episodes.push({ id: epId, number: n, title: `Episódio ${n}`, durationSeconds: null, thumbUrl: null, mediaFileId: epId, subtitleUrl: null });
     }
-    mediaById.set(epId, { id: epId, provider: "url", format: "mp4", src: rawUrl(`videos/${slug}/${slug}-ep${r.n}.mp4`), sizeBytes: null, durationSeconds: null, createdAt: new Date().toISOString() });
+    mediaById.set(epId, { id: epId, provider: "url", format: "mp4", src: rawUrl(`videos/${slug}/${slug}-ep${n}.mp4`), sizeBytes: null, durationSeconds: null, createdAt: new Date().toISOString() });
   }
   short.episodes.sort((a, b) => a.number - b.number);
   await writeFile(path.join(DATA_DIR, "shorts.json"), JSON.stringify([...byId.values()], null, 2));
   await writeFile(path.join(DATA_DIR, "media.json"), JSON.stringify([...mediaById.values()], null, 2));
-  return { ok: true, eps: results.length };
+  return { ok: true, eps: blobs.size };
 }
 
 // ── loop principal ───────────────────────────────────────────

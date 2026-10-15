@@ -1,32 +1,52 @@
 // ─────────────────────────────────────────────────────────────
-// FLOW IPTV — catálogo "Netflix" via TMDB (API gratuita, sem cartão,
-// milhares de req/dia). Metadados públicos: título, pôster, sinopse,
-// ano, gênero. Filtro oficial de disponibilidade por provider
-// (Netflix = provider id 8) e região (padrão BR). Sem login na
-// Netflix, sem contornar segurança.
+// FLOW IPTV — catálogo por plataforma de streaming via TMDB.
+// Metadados públicos (título, pôster, sinopse, ano, gênero), sem
+// login em nenhum serviço. Filtro oficial por provider + região BR.
 //
-// Env: TMDB_API_KEY (themoviedb.org → Settings → API → chave gratuita)
-//      NETFLIX_WATCH_REGION (padrão: BR)
+// Env: TMDB_API_KEY (themoviedb.org → API → chave gratuita, sem cartão)
+//      STREAM_WATCH_REGION (padrão: BR)
 // ─────────────────────────────────────────────────────────────
 
 import "server-only";
 
-export interface NetflixTitle {
+export type StreamPlatform =
+  | "netflix"
+  | "amazon"
+  | "apple"
+  | "disney"
+  | "max"
+  | "paramount";
+
+export interface StreamPlatformInfo {
+  id: StreamPlatform;
+  label: string;
+  tmdbProviderId: number;
+}
+
+export const STREAM_PLATFORMS: StreamPlatformInfo[] = [
+  { id: "netflix", label: "Netflix", tmdbProviderId: 8 },
+  { id: "amazon", label: "Amazon Prime Video", tmdbProviderId: 119 },
+  { id: "apple", label: "Apple TV+", tmdbProviderId: 350 },
+  { id: "disney", label: "Disney+", tmdbProviderId: 337 },
+  { id: "max", label: "Max", tmdbProviderId: 384 },
+  { id: "paramount", label: "Paramount+", tmdbProviderId: 531 },
+];
+
+export interface StreamTitle {
   id: string;
   title: string;
   synopsis: string;
   posterUrl: string | null;
   year: number | null;
   genres: string[];
-  type: "film" | "series";
+  kind: "film" | "series";
   tmdbId: number;
 }
 
 const TMDB_BASE = "https://api.themoviedb.org/3";
-const NETFLIX_PROVIDER_ID = 8;
-const WATCH_REGION = process.env.NETFLIX_WATCH_REGION ?? "BR";
+const WATCH_REGION = process.env.STREAM_WATCH_REGION ?? "BR";
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w500";
-const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6h (evita queimar cota)
+const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6h
 
 interface TmdbItem {
   id: number;
@@ -47,11 +67,11 @@ const GENRE_NAMES: Record<number, string> = {
   10752: "Guerra", 37: "Faroeste",
 };
 
-export function hasNetflixKey(): boolean {
+export function hasStreamKey(): boolean {
   return Boolean(process.env.TMDB_API_KEY);
 }
 
-let cache: { at: number; data: NetflixTitle[] } | null = null;
+let cache: { at: number; key: string; data: StreamTitle[] } | null = null;
 
 function genresOf(ids: number[] | undefined): string[] {
   if (!ids) return [];
@@ -61,40 +81,44 @@ function genresOf(ids: number[] | undefined): string[] {
     .slice(0, 3);
 }
 
-function toTitle(raw: TmdbItem, type: "film" | "series"): NetflixTitle {
+function toTitle(raw: TmdbItem, kind: "film" | "series"): StreamTitle {
   const title = (raw.title ?? raw.name ?? "").trim();
-  const year = Number((type === "film" ? raw.release_date : raw.first_air_date)?.slice(0, 4) || 0) || null;
+  const year =
+    Number((kind === "film" ? raw.release_date : raw.first_air_date)?.slice(0, 4) || 0) || null;
   return {
-    id: `netflix-${type}-${raw.id}`,
+    id: `stream-${kind}-${raw.id}`,
     title,
     synopsis: raw.overview ?? "",
     posterUrl: raw.poster_path ? `${IMAGE_BASE}${raw.poster_path}` : null,
     year,
     genres: genresOf(raw.genre_ids),
-    type,
+    kind,
     tmdbId: raw.id,
   };
 }
 
-/** Títulos disponíveis na Netflix (region) — cache 6h em memória. */
-export async function getNetflixCatalog(limit = 50): Promise<NetflixTitle[]> {
-  if (!hasNetflixKey()) {
-    throw new Error("TMDB_API_KEY ausente");
-  }
-  if (cache && Date.now() - cache.at < CACHE_TTL_MS) {
-    return cache.data.slice(0, limit);
+/** Títulos de UMA plataforma (filmes + séries, pt-BR) — cache 6h. */
+export async function getPlatformCatalog(
+  platform: StreamPlatformInfo,
+  limit = 40,
+): Promise<StreamTitle[]> {
+  if (!hasStreamKey()) throw new Error("TMDB_API_KEY ausente");
+
+  const cacheKey = `${platform.id}:${limit}`;
+  if (cache && cache.key === cacheKey && Date.now() - cache.at < CACHE_TTL_MS) {
+    return cache.data;
   }
 
-  const headers = { Authorization: `Bearer ${process.env.TMDB_API_KEY}` };
-  const fetchDiscover = async (kind: "movie" | "tv"): Promise<NetflixTitle[]> => {
+  const fetchDiscover = async (kind: "movie" | "tv"): Promise<StreamTitle[]> => {
     const url = new URL(`${TMDB_BASE}/discover/${kind}`);
-    url.searchParams.set("with_watch_providers", String(NETFLIX_PROVIDER_ID));
+    url.searchParams.set("api_key", process.env.TMDB_API_KEY!);
+    url.searchParams.set("with_watch_providers", String(platform.tmdbProviderId));
     url.searchParams.set("watch_region", WATCH_REGION);
     url.searchParams.set("sort_by", "popularity.desc");
     url.searchParams.set("with_original_language", "pt");
     url.searchParams.set("language", "pt-BR");
     url.searchParams.set("page", "1");
-    const res = await fetch(url, { headers, next: { revalidate: 21600 } });
+    const res = await fetch(url, { headers: { Accept: "application/json" }, next: { revalidate: 21600 } });
     if (!res.ok) throw new Error(`TMDB ${kind}: ${res.status}`);
     const json = (await res.json()) as { results?: TmdbItem[] };
     return (json.results ?? [])
@@ -107,6 +131,6 @@ export async function getNetflixCatalog(limit = 50): Promise<NetflixTitle[]> {
     fetchDiscover("tv"),
   ]);
   const data = [...films, ...series];
-  cache = { at: Date.now(), data };
-  return data.slice(0, limit);
+  cache = { at: Date.now(), key: cacheKey, data };
+  return data;
 }
