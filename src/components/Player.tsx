@@ -61,6 +61,7 @@ export function Player({
         setError("Seu navegador não suporta reprodução HLS.");
       }
     } else {
+      video.crossOrigin = "anonymous";
       video.src = src;
     }
 
