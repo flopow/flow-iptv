@@ -49,6 +49,9 @@ export default async function HomePage() {
   const sections = await catalog.getHomeSections();
   const featuredSection = sections.find((s) => s.items.length > 0);
   const featured = featuredSection?.items[0] ?? null;
+  // Dramas Curtos é o conteúdo principal: fica logo após o destaque.
+  const dramas = sections.find((s) => s.kind === "shorts");
+  const demais = sections.filter((s) => s.kind !== "shorts");
 
   // Filmes e séries populares do TMDB para a frontpage (metadados).
   let streamFilms: StreamTitle[] = [];
@@ -90,7 +93,16 @@ export default async function HomePage() {
           playHref={itemPlayHref(featured)}
         />
       ) : null}
-      {sections.map((section) => (
+      {dramas ? (
+        <Row
+          title={dramas.title}
+          seeAllHref={dramas.seeAllHref}
+          items={dramas.items}
+          hrefFor={itemDetailHref}
+          subtitleFor={itemSubtitle}
+        />
+      ) : null}
+      {demais.map((section) => (
         <Row
           key={section.id}
           title={section.title}

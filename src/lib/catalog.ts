@@ -13,6 +13,7 @@
 import "server-only";
 
 import { JsonAdapter } from "@/lib/adapters/json-adapter";
+import { D1Adapter } from "@/lib/adapters/d1-adapter";
 import { SupabaseAdapter } from "@/lib/adapters/supabase-adapter";
 import type {
   CatalogStats,
@@ -24,7 +25,7 @@ import type {
   ShortDrama,
 } from "@/types";
 
-export type DataSourceName = "json" | "supabase";
+export type DataSourceName = "json" | "supabase" | "d1";
 
 export interface CatalogAdapter {
   readonly name: DataSourceName;
@@ -54,6 +55,8 @@ export async function getCatalog(): Promise<CatalogAdapter> {
   const source = (process.env.DATA_SOURCE ?? "json") as DataSourceName;
   if (source === "supabase" && hasSupabaseEnv()) {
     cachedAdapter = new SupabaseAdapter();
+  } else if (source === "d1") {
+    cachedAdapter = new D1Adapter();
   } else {
     cachedAdapter = new JsonAdapter();
   }

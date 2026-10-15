@@ -48,6 +48,12 @@ export default async function AdminPage() {
         <p className="mt-1 text-sm text-muted">
           Gerencie o catálogo, importe capas e vídeos e acompanhe as integrações.
         </p>
+        <a
+          href="/api/admin/logout"
+          className="mt-3 inline-flex items-center gap-2 rounded-full bg-surface-strong px-4 py-2 text-sm font-semibold text-muted transition-colors hover:text-ink"
+        >
+          Sair
+        </a>
       </header>
 
       {/* Fonte de dados */}

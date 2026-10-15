@@ -47,3 +47,11 @@ data/drive-ls.json
 data/drive-series.txt
 data/reparo-progresso.json
 data/upar-drive-progresso.json
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
