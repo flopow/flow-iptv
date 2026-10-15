@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { href: "/filmes", label: "Filmes", match: (p: string) => p.startsWith("/filmes") },
   { href: "/series", label: "Séries", match: (p: string) => p.startsWith("/series") },
   { href: "/dramas", label: "Dramas Curtos", match: (p: string) => p.startsWith("/dramas") },
+  { href: "/animes", label: "Animes", match: (p: string) => p.startsWith("/animes") },
 ];
 
 function Logo() {
