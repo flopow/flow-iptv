@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
+import { SourceToggle } from "@/components/admin/SourceToggle";
 import { getCatalog, hasSupabaseEnv } from "@/lib/catalog";
+import { getSources, SOURCE_LABELS } from "@/lib/sources";
 
 export const metadata: Metadata = { title: "Painel administrativo" };
 
@@ -23,6 +25,7 @@ export default async function AdminPage() {
   const catalog = await getCatalog();
   const stats = await catalog.getStats();
   const source = catalog.name;
+  const sources = await getSources();
 
   const envChecks: EnvStatus[] = [
     {
@@ -30,7 +33,8 @@ export default async function AdminPage() {
       label: "Supabase (URL + chave anon)",
       ok: hasSupabaseEnv(),
     },
-    { key: "TMDB_API_KEY", label: "TMDB — importação de capas", ok: Boolean(process.env.TMDB_API_KEY) },
+    { key: "TMDB_API_KEY", label: "TMDB — catálogo externo e capas", ok: Boolean(process.env.TMDB_API_KEY) },
+    { key: "OMDB_API_KEY", label: "OMDb — busca extra de filmes/séries", ok: Boolean(process.env.OMDB_API_KEY) },
     { key: "GITHUB_TOKEN", label: "GitHub — repositório de mídias", ok: Boolean(process.env.GITHUB_TOKEN) },
     { key: "GITHUB_REPO", label: "GitHub — proprietário/repositório", ok: Boolean(process.env.GITHUB_REPO) },
   ];
@@ -82,6 +86,26 @@ export default async function AdminPage() {
             </p>
           </div>
         ))}
+      </section>
+
+      {/* Fontes de catálogo */}
+      <section className="mt-6 rounded-2xl border border-line bg-surface p-6">
+        <h2 className="text-sm font-black uppercase tracking-wide text-muted">
+          Fontes de catálogo
+        </h2>
+        <p className="mt-1 text-xs text-muted">
+          Ative/desative cada fonte. A alteração é persistida e publicada (commit + deploy).
+        </p>
+        <ul className="mt-4 space-y-3">
+          {(Object.keys(SOURCE_LABELS) as (keyof typeof SOURCE_LABELS)[]).map((name) => (
+            <SourceToggle
+              key={name}
+              name={name}
+              label={SOURCE_LABELS[name]}
+              active={sources[name]}
+            />
+          ))}
+        </ul>
       </section>
 
       {/* Integrações */}

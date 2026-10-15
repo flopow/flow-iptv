@@ -4,11 +4,18 @@ interface SearchBarProps {
   defaultValue?: string;
   autoFocus?: boolean;
   className?: string;
+  /** rota do form (busca dentro da aba: "/filmes", "/series", …) */
+  action?: string;
 }
 
-export function SearchBar({ defaultValue = "", autoFocus = false, className = "" }: SearchBarProps) {
+export function SearchBar({
+  defaultValue = "",
+  autoFocus = false,
+  className = "",
+  action = "/busca",
+}: SearchBarProps) {
   return (
-    <form action="/busca" method="get" className={`relative ${className}`} role="search">
+    <form action={action} method="get" className={`relative ${className}`} role="search">
       <SearchIcon className="pointer-events-none absolute left-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-muted" />
       <input
         type="search"

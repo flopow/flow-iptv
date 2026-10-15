@@ -1,62 +1,70 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { PlatformSidebar } from "@/components/ui/PlatformSidebar";
 import { PosterCard } from "@/components/ui/PosterCard";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { getCatalog } from "@/lib/catalog";
-import { getPlatformCatalog, hasStreamKey, STREAM_PLATFORMS } from "@/lib/stream";
-import type { Film } from "@/types";
+import { getPlatformCatalog, getPopularCatalog, hasStreamKey, STREAM_PLATFORMS } from "@/lib/stream";
+import { hasOmdbKey, omdbSearch } from "@/lib/omdb";
+import { isSourceActive } from "@/lib/sources";
 
 export const metadata: Metadata = { title: "Filmes" };
 
 interface FilmesPageProps {
-  searchParams: Promise<{ q?: string; genero?: string; ordem?: string; plataforma?: string }>;
+  searchParams: Promise<{ q?: string; plataforma?: string }>;
 }
 
 export default async function FilmesPage({ searchParams }: FilmesPageProps) {
   const sp = await searchParams;
   const plataforma = sp.plataforma ?? "";
   const platform = STREAM_PLATFORMS.find((p) => p.id === plataforma);
+  const q = (sp.q ?? "").trim().toLowerCase();
 
   const catalog = await getCatalog();
-  const films = await catalog.listFilms();
-  const genres = [...new Set(films.flatMap((f) => f.genres))].sort((a, b) =>
-    a.localeCompare(b, "pt-BR"),
-  );
+  const films = await catalog.listFilms(); // catálogo local publicado (vazio hoje)
 
-  // modo plataforma (TMDB): mostra títulos disponíveis no serviço
-  let streamTitles: Awaited<ReturnType<typeof getPlatformCatalog>> | null = null;
+  // Fonte exibida:
+  // - plataforma selecionada → TMDB filtrado por provider;
+  // - "Todos" → TMDB popular (se catálogo local estiver vazio).
+  let items: Awaited<ReturnType<typeof getPopularCatalog>> = [];
   let streamError: string | null = null;
-  if (platform) {
-    if (!hasStreamKey()) streamError = "TMDB_API_KEY não configurada";
-    else {
-      try {
-        streamTitles = await getPlatformCatalog(platform, 40);
-      } catch (err) {
-        streamError = err instanceof Error ? err.message : "erro ao buscar";
-      }
+  const useLocal = films.length > 0;
+  const [tmdbOn, omdbOn] = await Promise.all([isSourceActive("tmdb"), isSourceActive("omdb")]);
+  if (useLocal && !platform) {
+    items = films.map((f) => ({
+      id: `local-${f.id}`,
+      title: f.title,
+      synopsis: f.synopsis,
+      posterUrl: f.posterUrl,
+      year: f.year,
+      genres: f.genres,
+      kind: "film" as const,
+      tmdbId: 0,
+    }));
+  } else if (tmdbOn && hasStreamKey()) {
+    try {
+      items = platform
+        ? (await getPlatformCatalog(platform, 40)).filter((t) => t.kind === "film")
+        : (await getPopularCatalog(40)).filter((t) => t.kind === "film");
+    } catch (err) {
+      streamError = err instanceof Error ? err.message : "erro ao buscar";
+    }
+  } else if (!useLocal && (!tmdbOn || !hasStreamKey())) {
+    streamError = tmdbOn ? "TMDB_API_KEY não configurada" : "Fonte TMDB desativada";
+  }
+
+  const filtered = q ? items.filter((t) => t.title.toLowerCase().includes(q)) : items;
+
+  // Busca extra via OMDb quando há termo (mais resultados além do TMDB).
+  let omdbItems: Awaited<ReturnType<typeof omdbSearch>> = [];
+  if (q && omdbOn && hasOmdbKey()) {
+    try {
+      omdbItems = (await omdbSearch(q, 12)).filter((t) => t.kind === "film");
+    } catch {
+      omdbItems = [];
     }
   }
-
-  const q = (sp.q ?? "").trim().toLowerCase();
-  const genero = sp.genero ?? "";
-
-  let filtered = films;
-  if (q) filtered = filtered.filter((f) => f.title.toLowerCase().includes(q));
-  if (genero) filtered = filtered.filter((f) => f.genres.includes(genero));
-  switch (sp.ordem) {
-    case "ano":
-      filtered = filtered.slice().sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
-      break;
-    case "titulo":
-      filtered = filtered.slice().sort((a, b) => a.title.localeCompare(b.title, "pt-BR"));
-      break;
-    default:
-      filtered = filtered.slice().sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-  }
-
-  const streamFilms = streamTitles?.filter((t) => t.kind === "film") ?? [];
+  const allItems = [...filtered, ...omdbItems.filter((o) => !filtered.some((f) => f.id === o.id))];
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
@@ -65,102 +73,42 @@ export default async function FilmesPage({ searchParams }: FilmesPageProps) {
         <p className="mt-1 text-sm text-muted">
           {platform
             ? `Disponíveis na ${platform.label}`
-            : `${filtered.length} ${filtered.length === 1 ? "título" : "títulos"}${genero ? ` em ${genero}` : ""}`}
+            : `${allItems.length} ${allItems.length === 1 ? "título" : "títulos"}`}
         </p>
-        {!platform ? <SearchBar defaultValue={sp.q ?? ""} className="mt-4 max-w-md" /> : null}
+        <SearchBar
+          defaultValue={sp.q ?? ""}
+          className="mt-4 max-w-md"
+          action={platform ? `/filmes?plataforma=${platform.id}` : "/filmes"}
+        />
       </header>
 
       <div className="flex flex-col gap-8 md:flex-row">
         <PlatformSidebar baseHref="/filmes" active={platform ? platform.id : null} />
 
         <div className="min-w-0 flex-1">
-          {platform ? (
-            streamError ? (
-              <div className="rounded-2xl border border-line bg-surface py-16 text-center">
-                <p className="text-sm text-muted">{streamError}</p>
-              </div>
-            ) : streamFilms.length === 0 ? (
-              <div className="rounded-2xl border border-line bg-surface py-16 text-center">
-                <p className="text-sm text-muted">Nenhum filme retornado para esta plataforma.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {streamFilms.map((item) => (
-                  <PosterCard
-                    key={item.id}
-                    href="#"
-                    title={item.title}
-                    posterUrl={item.posterUrl}
-                    badge="Filme"
-                    subtitle={[item.year, item.genres[0]].filter(Boolean).join(" · ")}
-                  />
-                ))}
-              </div>
-            )
+          {streamError ? (
+            <div className="rounded-2xl border border-line bg-surface py-16 text-center">
+              <p className="text-sm text-muted">{streamError}</p>
+            </div>
+          ) : allItems.length === 0 ? (
+            <div className="rounded-2xl border border-line bg-surface py-16 text-center">
+              <p className="text-sm text-muted">
+                {q ? `Nenhum filme encontrado para "${sp.q}".` : "Nenhum filme encontrado."}
+              </p>
+            </div>
           ) : (
-            <>
-              <div className="mb-8 flex flex-wrap items-center gap-2">
-                <Link
-                  href="/filmes"
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-                    !genero ? "bg-accent text-white" : "bg-surface-strong text-muted hover:text-ink"
-                  }`}
-                >
-                  Todos
-                </Link>
-                {genres.map((genre) => (
-                  <Link
-                    key={genre}
-                    href={`/filmes?genero=${encodeURIComponent(genre)}`}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold capitalize transition-colors ${
-                      genero === genre ? "bg-accent text-white" : "bg-surface-strong text-muted hover:text-ink"
-                    }`}
-                  >
-                    {genre}
-                  </Link>
-                ))}
-                <form action="/filmes" method="get" className="ml-auto flex items-center gap-2">
-                  {genero ? <input type="hidden" name="genero" value={genero} /> : null}
-                  {q ? <input type="hidden" name="q" value={sp.q ?? ""} /> : null}
-                  <select
-                    name="ordem"
-                    defaultValue={sp.ordem ?? "novidades"}
-                    className="rounded-full border border-line bg-surface px-4 py-2 text-sm font-semibold text-foreground focus:border-accent focus:outline-none"
-                  >
-                    <option value="novidades">Novidades</option>
-                    <option value="ano">Ano</option>
-                    <option value="titulo">Título</option>
-                  </select>
-                  <button
-                    type="submit"
-                    className="rounded-full bg-accent px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-accent-strong"
-                  >
-                    Ordenar
-                  </button>
-                </form>
-              </div>
-
-              {filtered.length === 0 ? (
-                <div className="rounded-2xl border border-line bg-surface py-20 text-center">
-                  <p className="text-sm text-muted">
-                    Nenhum filme encontrado{q ? ` para "${q}"` : ""}.
-                  </p>
-                </div>
-              ) : (
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {filtered.map((film: Film) => (
-                    <PosterCard
-                      key={film.id}
-                      href={`/filmes/${film.id}`}
-                      title={film.title}
-                      posterUrl={film.posterUrl}
-                      badge={film.year ? String(film.year) : undefined}
-                      subtitle={film.genres[0]}
-                    />
-                  ))}
-                </div>
-              )}
-            </>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+              {allItems.map((item) => (
+                <PosterCard
+                  key={item.id}
+                  href={item.tmdbId ? `/filmes/${item.id}` : "#"}
+                  title={item.title}
+                  posterUrl={item.posterUrl}
+                  badge={item.kind === "film" ? "Filme" : "Série"}
+                  subtitle={[item.year, item.genres[0]].filter(Boolean).join(" · ")}
+                />
+              ))}
+            </div>
           )}
         </div>
       </div>

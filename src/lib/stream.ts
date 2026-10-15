@@ -97,40 +97,85 @@ function toTitle(raw: TmdbItem, kind: "film" | "series"): StreamTitle {
   };
 }
 
+async function fetchDiscover(
+  kind: "movie" | "tv",
+  platform: StreamPlatformInfo | null,
+  limit: number,
+): Promise<StreamTitle[]> {
+  const url = new URL(`${TMDB_BASE}/discover/${kind}`);
+  url.searchParams.set("api_key", process.env.TMDB_API_KEY!);
+  url.searchParams.set("sort_by", "popularity.desc");
+  url.searchParams.set("with_original_language", "pt");
+  url.searchParams.set("language", "pt-BR");
+  url.searchParams.set("page", "1");
+  if (platform) {
+    url.searchParams.set("with_watch_providers", String(platform.tmdbProviderId));
+    url.searchParams.set("watch_region", WATCH_REGION);
+  }
+  const res = await fetch(url, { headers: { Accept: "application/json" }, next: { revalidate: 21600 } });
+  if (!res.ok) throw new Error(`TMDB ${kind}: ${res.status}`);
+  const json = (await res.json()) as { results?: TmdbItem[] };
+  return (json.results ?? [])
+    .filter((r) => r.title ?? r.name)
+    .slice(0, limit)
+    .map((r) => toTitle(r, kind === "movie" ? "film" : "series"));
+}
+
 /** Títulos de UMA plataforma (filmes + séries, pt-BR) — cache 6h. */
 export async function getPlatformCatalog(
   platform: StreamPlatformInfo,
   limit = 40,
 ): Promise<StreamTitle[]> {
   if (!hasStreamKey()) throw new Error("TMDB_API_KEY ausente");
-
   const cacheKey = `${platform.id}:${limit}`;
   if (cache && cache.key === cacheKey && Date.now() - cache.at < CACHE_TTL_MS) {
     return cache.data;
   }
-
-  const fetchDiscover = async (kind: "movie" | "tv"): Promise<StreamTitle[]> => {
-    const url = new URL(`${TMDB_BASE}/discover/${kind}`);
-    url.searchParams.set("api_key", process.env.TMDB_API_KEY!);
-    url.searchParams.set("with_watch_providers", String(platform.tmdbProviderId));
-    url.searchParams.set("watch_region", WATCH_REGION);
-    url.searchParams.set("sort_by", "popularity.desc");
-    url.searchParams.set("with_original_language", "pt");
-    url.searchParams.set("language", "pt-BR");
-    url.searchParams.set("page", "1");
-    const res = await fetch(url, { headers: { Accept: "application/json" }, next: { revalidate: 21600 } });
-    if (!res.ok) throw new Error(`TMDB ${kind}: ${res.status}`);
-    const json = (await res.json()) as { results?: TmdbItem[] };
-    return (json.results ?? [])
-      .filter((r) => r.title ?? r.name)
-      .map((r) => toTitle(r, kind === "movie" ? "film" : "series"));
-  };
-
   const [films, series] = await Promise.all([
-    fetchDiscover("movie"),
-    fetchDiscover("tv"),
+    fetchDiscover("movie", platform, limit),
+    fetchDiscover("tv", platform, limit),
   ]);
   const data = [...films, ...series];
   cache = { at: Date.now(), key: cacheKey, data };
   return data;
+}
+
+/** Populares (todas as plataformas) — usado em "Todos" e na home. */
+export async function getPopularCatalog(limit = 40): Promise<StreamTitle[]> {
+  if (!hasStreamKey()) throw new Error("TMDB_API_KEY ausente");
+  const cacheKey = `all:${limit}`;
+  if (cache && cache.key === cacheKey && Date.now() - cache.at < CACHE_TTL_MS) {
+    return cache.data;
+  }
+  const [films, series] = await Promise.all([
+    fetchDiscover("movie", null, limit),
+    fetchDiscover("tv", null, limit),
+  ]);
+  const data = [...films, ...series];
+  cache = { at: Date.now(), key: cacheKey, data };
+  return data;
+}
+
+/** Título único pelo id `stream-<kind>-<tmdbId>` — usado na página de detalhe. */
+export async function getStreamTitleById(id: string): Promise<StreamTitle | null> {
+  if (!hasStreamKey()) throw new Error("TMDB_API_KEY ausente");
+  const match = /^stream-(film|series)-(\d+)$/.exec(id);
+  if (!match) return null;
+  const [, kindRaw, idStr] = match;
+  const kind: "film" | "series" = kindRaw === "film" ? "film" : "series";
+  const tmdbKind = kind === "film" ? "movie" : "tv";
+  const url = new URL(`${TMDB_BASE}/${tmdbKind}/${idStr}`);
+  url.searchParams.set("api_key", process.env.TMDB_API_KEY!);
+  url.searchParams.set("language", "pt-BR");
+  const res = await fetch(url, { headers: { Accept: "application/json" }, next: { revalidate: 21600 } });
+  if (!res.ok) return null;
+  const raw = (await res.json()) as TmdbItem;
+  if (!(raw.title ?? raw.name)) return null;
+  return toTitle(raw, kind);
+}
+
+/** Link "onde assistir" do TMDB (página oficial com providers). */
+export function streamWatchUrl(title: StreamTitle): string {
+  const tmdbKind = title.kind === "film" ? "movie" : "tv";
+  return `https://www.themoviedb.org/${tmdbKind}/${title.tmdbId}/watch?language=pt-BR`;
 }
