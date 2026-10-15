@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 
+import { LiveChannelToggle } from "@/components/admin/LiveChannelToggle";
 import { SourceToggle } from "@/components/admin/SourceToggle";
 import { getCatalog, hasSupabaseEnv } from "@/lib/catalog";
+import { listChannels } from "@/lib/live";
 import { getSources, SOURCE_LABELS } from "@/lib/sources";
 
 export const metadata: Metadata = { title: "Painel administrativo" };
@@ -26,6 +28,7 @@ export default async function AdminPage() {
   const stats = await catalog.getStats();
   const source = catalog.name;
   const sources = await getSources();
+  const liveChannels = await listChannels().catch(() => []);
 
   const envChecks: EnvStatus[] = [
     {
@@ -108,6 +111,39 @@ export default async function AdminPage() {
               name={name}
               label={SOURCE_LABELS[name]}
               active={sources[name]}
+            />
+          ))}
+        </ul>
+      </section>
+
+      {/* Canais ao vivo */}
+      <section className="mt-6 rounded-2xl border border-line bg-surface p-6">
+        <h2 className="text-sm font-black uppercase tracking-wide text-muted">
+          Canais ao vivo
+        </h2>
+        <p className="mt-1 text-xs text-muted">
+          Ative/desative cada canal. A alteração é persistida e publicada (commit + deploy).
+        </p>
+        <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+          <span className="rounded-full bg-emerald-100 px-3 py-1 font-black text-emerald-800">
+            {liveChannels.filter((c) => c.enabled).length} ativos
+          </span>
+          <span className="rounded-full bg-surface-strong px-3 py-1 font-black text-muted">
+            {liveChannels.filter((c) => !c.enabled).length} desativados
+          </span>
+          <span className="rounded-full bg-accent-soft px-3 py-1 font-black text-accent-strong">
+            {liveChannels.length} total
+          </span>
+        </div>
+        <ul className="mt-4 grid gap-3 lg:grid-cols-2">
+          {liveChannels.map((channel) => (
+            <LiveChannelToggle
+              key={channel.id}
+              id={channel.id}
+              name={channel.name}
+              category={channel.category}
+              src={channel.src}
+              active={channel.enabled}
             />
           ))}
         </ul>

@@ -25,15 +25,16 @@ export function checkCredentials(user: string, pass: string): boolean {
 }
 
 export function createSessionToken(): string {
-  const payload = `${Date.now()}.${randomBytes(8).toString("hex")}`;
+  // payload sem "." interno: o "." separa payload|assinatura no cookie
+  const payload = `${Date.now()}-${randomBytes(8).toString("hex")}`;
   return `${payload}.${sign(payload)}`;
 }
 
 export function verifySession(token: string | null | undefined): boolean {
   if (!token) return false;
   const parts = token.split(".");
-  if (parts.length !== 3) return false;
-  const [payload, , sig] = parts;
+  if (parts.length !== 2) return false;
+  const [payload, sig] = parts;
   const expected = sign(payload);
   const a = Buffer.from(expected);
   const b = Buffer.from(sig);

@@ -44,8 +44,11 @@ export function Player({
     setError(null);
     setEnded(false);
 
+    const isYouTube = src.includes("youtube.com/embed/") || src.includes("youtube-nocookie.com/embed/");
     const isHls = src.includes(".m3u8");
-    if (isHls) {
+    if (isYouTube) {
+      // embed YouTube renderizado como iframe — nada a fazer no <video>
+    } else if (isHls) {
       if (Hls.isSupported()) {
         hls = new Hls({ enableWorker: false, capLevelToPlayerSize: true });
         hls.loadSource(src);
@@ -105,6 +108,8 @@ export function Player({
     );
   }
 
+  const isYouTube = (src ?? "").includes("youtube.com/embed/") || (src ?? "").includes("youtube-nocookie.com/embed/");
+
   return (
     <div className="w-full">
       <div
@@ -112,7 +117,17 @@ export function Player({
           vertical ? "mx-auto aspect-[9/16] max-h-[75vh]" : "aspect-video"
         }`}
       >
-        <video
+        {isYouTube ? (
+          <iframe
+            src={src ?? undefined}
+            title={title ?? "Player"}
+            className="h-full w-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        ) : (
+          <video
           ref={videoRef}
           controls
           playsInline
@@ -130,7 +145,8 @@ export function Player({
               default
             />
           ) : null}
-        </video>
+          </video>
+        )}
 
         {error ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ink/85 px-6 text-center backdrop-blur">

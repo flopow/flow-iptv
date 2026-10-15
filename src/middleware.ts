@@ -5,8 +5,8 @@ import { NextRequest, NextResponse } from "next/server";
 async function verifyToken(token: string | null | undefined): Promise<boolean> {
   if (!token) return false;
   const parts = token.split(".");
-  if (parts.length !== 3) return false;
-  const [payload, , sig] = parts;
+  if (parts.length !== 2) return false;
+  const [payload, sig] = parts;
   const secret = process.env.ADMIN_SECRET ?? "flow-iptv-admin-dev-secret";
   const enc = new TextEncoder();
   const key = await crypto.subtle.importKey(
