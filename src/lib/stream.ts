@@ -179,3 +179,25 @@ export function streamWatchUrl(title: StreamTitle): string {
   const tmdbKind = title.kind === "film" ? "movie" : "tv";
   return `https://www.themoviedb.org/${tmdbKind}/${title.tmdbId}/watch?language=pt-BR`;
 }
+
+/** Trailer oficial (YouTube) do título — TMDB /{kind}/{id}/videos. */
+export async function getStreamTrailer(
+  tmdbId: number,
+  kind: "film" | "series",
+): Promise<{ youtubeId: string; name: string } | null> {
+  if (!hasStreamKey()) return null;
+  const tmdbKind = kind === "film" ? "movie" : "tv";
+  const url = new URL(`${TMDB_BASE}/${tmdbKind}/${tmdbId}/videos`);
+  url.searchParams.set("api_key", process.env.TMDB_API_KEY!);
+  url.searchParams.set("language", "pt-BR");
+  const res = await fetch(url, { headers: { Accept: "application/json" }, next: { revalidate: 86400 } });
+  if (!res.ok) return null;
+  const json = (await res.json()) as {
+    results?: { site?: string; type?: string; key?: string; name?: string }[];
+  };
+  const trailer = (json.results ?? []).find(
+    (v) => v.site === "YouTube" && (v.type === "Trailer" || v.type === "Teaser"),
+  );
+  if (!trailer?.key) return null;
+  return { youtubeId: trailer.key, name: trailer.name ?? "Trailer" };
+}

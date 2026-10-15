@@ -4,9 +4,10 @@ import { notFound } from "next/navigation";
 
 import { PosterCard } from "@/components/ui/PosterCard";
 import { PlayIcon } from "@/components/ui/icons";
+import { TrailerButton } from "@/components/ui/TrailerButton";
 import { getCatalog, toPlayableUrl } from "@/lib/catalog";
 import { filmPlayHref } from "@/lib/nav";
-import { getStreamTitleById, streamWatchUrl } from "@/lib/stream";
+import { getStreamTitleById, getStreamTrailer, streamWatchUrl } from "@/lib/stream";
 
 interface FilmDetailProps {
   params: Promise<{ id: string }>;
@@ -48,6 +49,7 @@ export default async function FilmDetailPage({ params }: FilmDetailProps) {
     const title = await getStreamTitleById(id).catch(() => null);
     if (!title) notFound();
     const watchUrl = streamWatchUrl(title);
+    const trailer = await getStreamTrailer(title.tmdbId, title.kind).catch(() => null);
     return (
       <article className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
         <div className="relative -mx-4 mb-8 h-48 overflow-hidden rounded-none bg-gradient-to-br from-accent-soft via-surface-strong to-surface sm:-mx-6 sm:h-64 sm:rounded-2xl">
@@ -117,6 +119,9 @@ export default async function FilmDetailPage({ params }: FilmDetailProps) {
               Título exibido via TMDB (metadados públicos). A reprodução acontece na plataforma
               oficial onde ele está disponível.
             </p>
+            {trailer ? (
+              <TrailerButton youtubeId={trailer.youtubeId} label={trailer.name} />
+            ) : null}
           </div>
         </div>
       </article>
