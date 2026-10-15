@@ -1,0 +1,1318 @@
+[
+  {
+    "id": "canal-0",
+    "name": "+MaisUm",
+    "category": "Variedades",
+    "logo": "https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png",
+    "src": "https://stream.ichibansys.com:3230/hybrid/play.m3u8"
+  },
+  {
+    "id": "canal-1",
+    "name": "A&E Latin America Brazil",
+    "category": "Variedades",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+    "src": "http://170.83.16.50/AeE/index.m3u8"
+  },
+  {
+    "id": "canal-2",
+    "name": "Adesso TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/KgetM8j.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8"
+  },
+  {
+    "id": "canal-3",
+    "name": "Adrenalina Pura TV Brazil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/Pvid2iH.png",
+    "src": "https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8"
+  },
+  {
+    "id": "canal-4",
+    "name": "AgroCanal",
+    "category": "Religioso",
+    "logo": "https://i.imgur.com/5XyopHf.png",
+    "src": "http://45.162.64.114/AGRO_CANAL/index.m3u8"
+  },
+  {
+    "id": "canal-5",
+    "name": "AgroMais",
+    "category": "Religioso",
+    "logo": "https://i.imgur.com/sFcOZeo.png",
+    "src": "http://45.162.64.114/AGROMAIS/index.m3u8"
+  },
+  {
+    "id": "canal-6",
+    "name": "Amazon Sat",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/7rjCS5i.png",
+    "src": "https://amazonsat.brasilstream.com.br/hls/amazonsat/index.m3u8"
+  },
+  {
+    "id": "canal-7",
+    "name": "AMC Latin America Brazil",
+    "category": "Variedades",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "src": "http://170.83.49.66:8083/AMCHD/index.m3u8"
+  },
+  {
+    "id": "canal-8",
+    "name": "Angel TV Portuguese",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/qKLEGU7.png",
+    "src": "https://janya-digimix.akamaized.net/vglive-sk-382409/portuese/ngrp:angelportuguese_all/playlist.m3u8"
+  },
+  {
+    "id": "canal-9",
+    "name": "Araruna TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/jl39ula.png",
+    "src": "https://video05.logicahost.com.br/ararunatv/ararunatv/playlist.m3u8"
+  },
+  {
+    "id": "canal-10",
+    "name": "Aratu On",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/Ht4jCab.png",
+    "src": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8"
+  },
+  {
+    "id": "canal-11",
+    "name": "Arte 1",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/Ivnk7A6.png",
+    "src": "http://45.162.64.114/ARTE1/index.m3u8"
+  },
+  {
+    "id": "canal-12",
+    "name": "Avatar: A lenda de Aang",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/6759eeb1bd523200083b4f29/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6759eeb1bd523200083b4f29.m3u8"
+  },
+  {
+    "id": "canal-13",
+    "name": "AXN (Brazil)",
+    "category": "Variedades",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "src": "http://170.83.16.50/AXN/index.m3u8"
+  },
+  {
+    "id": "canal-14",
+    "name": "BET Pluto TV BR",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png",
+    "src": "https://jmp2.uk/plu-5ff768b6a4c8b80008498610.m3u8"
+  },
+  {
+    "id": "canal-15",
+    "name": "Blitstv",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/FO4QTRf.jpeg",
+    "src": "https://stmv1.transmissaodigital.com/blitstv/blitstv/playlist.m3u8"
+  },
+  {
+    "id": "canal-16",
+    "name": "BM&C News",
+    "category": "Notícias",
+    "logo": "https://i.imgur.com/pOUY2Uz.png",
+    "src": "https://jmp2.uk/plu-666c9c60a7efd40008f552f0.m3u8"
+  },
+  {
+    "id": "canal-17",
+    "name": "Bob Esponja Calca Quadrada",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/62545c0b002f4b0007688b61/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8"
+  },
+  {
+    "id": "canal-18",
+    "name": "Box Kids TV",
+    "category": "Infantil",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",
+    "src": "http://170.83.49.66:8083/BOXKIDSHD/index.m3u8"
+  },
+  {
+    "id": "canal-19",
+    "name": "Canal do Boi",
+    "category": "Religioso",
+    "logo": "https://i.imgur.com/pVM5MhS.png",
+    "src": "http://45.162.64.114/CANAL_DO_BOI/index.m3u8"
+  },
+  {
+    "id": "canal-20",
+    "name": "Canal Educacao",
+    "category": "Notícias",
+    "logo": "https://i.imgur.com/OOB7nrS.png",
+    "src": "http://45.162.64.114/CANAL_EDUCACAO/index.m3u8"
+  },
+  {
+    "id": "canal-21",
+    "name": "Canal FDR",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/7SE4CkE.png",
+    "src": "https://v-us-01.wisestream.io/memfs/e4ade538-7924-4359-81ef-b9d4dd229e91.m3u8"
+  },
+  {
+    "id": "canal-22",
+    "name": "Canal Futura",
+    "category": "Notícias",
+    "logo": "https://i.imgur.com/LgynEBC.png",
+    "src": "http://45.162.64.114/FUTURA/index.m3u8"
+  },
+  {
+    "id": "canal-23",
+    "name": "Canal Gov",
+    "category": "Notícias",
+    "logo": "https://i.imgur.com/rHPY0Yv.png",
+    "src": "http://45.177.114.115/TV_BRASIL_2/index.m3u8"
+  },
+  {
+    "id": "canal-24",
+    "name": "Canal Metropolitano de Noticias",
+    "category": "Notícias",
+    "logo": "https://i.imgur.com/G0x4xqa.png",
+    "src": "https://stmv5.samcast.com.br/claudio8701/claudio8701/playlist.m3u8"
+  },
+  {
+    "id": "canal-25",
+    "name": "Canal UOL",
+    "category": "Variedades",
+    "logo": "https://conteudo.imguol.com.br/c/play/logo_canaluol_2024.svg",
+    "src": "https://video24.mais.uol.com.br/live/6146.m3u8"
+  },
+  {
+    "id": "canal-26",
+    "name": "Catve FM",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/w89yw36.png",
+    "src": "https://5b33b873179a2.streamlock.net:1443/radiocamera/livestream/playlist.m3u8"
+  },
+  {
+    "id": "canal-27",
+    "name": "Catve Master TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/4m7Iazm.png",
+    "src": "https://5b33b873179a2.streamlock.net:1443/mastertv/livestream/playlist.m3u8"
+  },
+  {
+    "id": "canal-28",
+    "name": "Catve2",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/qiVfsfB.png",
+    "src": "https://5b33b873179a2.streamlock.net:1443/catve2/catve2/playlist.m3u8"
+  },
+  {
+    "id": "canal-29",
+    "name": "Chroma TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/SnaIMgj.png",
+    "src": "https://5c483b9d1019c.streamlock.net/8054/8054/playlist.m3u8"
+  },
+  {
+    "id": "canal-30",
+    "name": "Cine Terror BR",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f12111c9e6c2c00078ef3bb/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f12111c9e6c2c00078ef3bb.m3u8"
+  },
+  {
+    "id": "canal-31",
+    "name": "Cinturao Verde",
+    "category": "Variedades",
+    "logo": "https://eswqkrogupaisirwcsys.supabase.co/storage/v1/object/public/mbc-media/canais/1775688612576-u0628igjimf.png",
+    "src": "https://play.redecinturaoverde.com.br/playlist.m3u8"
+  },
+  {
+    "id": "canal-32",
+    "name": "Classique TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/rHxcraT.png",
+    "src": "https://stmv1.srvif.com/classique/classique/playlist.m3u8"
+  },
+  {
+    "id": "canal-33",
+    "name": "CNN Brasil",
+    "category": "Notícias",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/CNN_Brasil.svg/960px-CNN_Brasil.svg.png",
+    "src": "https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8"
+  },
+  {
+    "id": "canal-34",
+    "name": "COM Brasil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/GrjGwKM.png",
+    "src": "https://dfr80qz435crc.cloudfront.net/EFGH/Amagi/NewCo/New_Brasil_BR/New_Brasil.m3u8"
+  },
+  {
+    "id": "canal-35",
+    "name": "Comedy Central Brasil",
+    "category": "Variedades",
+    "logo": "https://comcastadvertising.com/wp-content/uploads/2021/10/Comedy-Central-White.png",
+    "src": "https://stmv2.srvif.com/gafeab/gafeab/playlist.m3u8"
+  },
+  {
+    "id": "canal-36",
+    "name": "Comedy Central Pluto TV BR",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f357e91b18f0b00073583d2/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f357e91b18f0b00073583d2.m3u8"
+  },
+  {
+    "id": "canal-37",
+    "name": "Comedy Central South Park",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/609ae66b359b270007869ff1/colorLogoPNG_1733160636316.png",
+    "src": "https://jmp2.uk/plu-609ae66b359b270007869ff1.m3u8"
+  },
+  {
+    "id": "canal-38",
+    "name": "Conecta Mais TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/qHwTWlz.png",
+    "src": "https://adylnet.streampool.net/10324/live/hls/Conecta/index.m3u8"
+  },
+  {
+    "id": "canal-39",
+    "name": "ConecTV Brasil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/XN6jjMR.png",
+    "src": "https://stream01.msolutionbrasil.com.br/hls/conectv/live.m3u8"
+  },
+  {
+    "id": "canal-40",
+    "name": "CSI: Miami BR",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/63eb9c5351f5d000085e8d7e/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-63eb9c5351f5d000085e8d7e.m3u8"
+  },
+  {
+    "id": "canal-41",
+    "name": "Cultura Fast",
+    "category": "Variedades",
+    "logo": "https://eitv6.cdn.broadpeak.io/account351-i1438/channel/53/quadrada_-3-_pequeno-1723832301.png",
+    "src": "https://fpa-gateway.tvcultura.com.br:8181/memfs/606caef0-a290-413d-9f1f-8fcdb3a73831.m3u8"
+  },
+  {
+    "id": "canal-42",
+    "name": "Despertar TV",
+    "category": "Variedades",
+    "logo": "https://res.cloudinary.com/dpkehkbpv/image/upload/v1721839192/logo/mixtv/despertar_tv_ieb2l3.png",
+    "src": "https://br.conectmy.com.br/DespertarTV/index.m3u8"
+  },
+  {
+    "id": "canal-43",
+    "name": "Detetives Medicos",
+    "category": "Documentários",
+    "logo": "https://images.pluto.tv/channels/638df93ae2f2a3000737c168/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-638df93ae2f2a3000737c168.m3u8"
+  },
+  {
+    "id": "canal-44",
+    "name": "Diff'rent Strokes Arnold",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/jkmouY3.png",
+    "src": "https://jmp2.uk/plu-61f1d27a189ed10007b7393e.m3u8"
+  },
+  {
+    "id": "canal-45",
+    "name": "DumDum",
+    "category": "Variedades",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",
+    "src": "http://45.162.64.114/ZOOMOO_KIDS/index.m3u8"
+  },
+  {
+    "id": "canal-46",
+    "name": "ESPN (Brazil)",
+    "category": "Esportes",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/960px-ESPN_wordmark.svg.png",
+    "src": "http://181.78.197.59:8000/play/a07z/index.m3u8"
+  },
+  {
+    "id": "canal-47",
+    "name": "ESPN 4 (Brazil)",
+    "category": "Esportes",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ESPN_4_logo.svg/960px-ESPN_4_logo.svg.png",
+    "src": "http://181.78.197.59:8000/play/a07n/index.m3u8"
+  },
+  {
+    "id": "canal-48",
+    "name": "EUTV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/8PxpamC.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8"
+  },
+  {
+    "id": "canal-49",
+    "name": "FailArmy Brazil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/VIpQJxL.png",
+    "src": "https://jmp2.uk/plu-5f5141c1605ddf000748eb1b.m3u8"
+  },
+  {
+    "id": "canal-50",
+    "name": "FIFA+ Portuguese",
+    "category": "Esportes",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "src": "https://e3be9ac5.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctYnJfRklGQVBsdXNQb3J0dWd1ZXNlX0hMUw/playlist.m3u8"
+  },
+  {
+    "id": "canal-51",
+    "name": "Filmes Suspense",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f171d3442a0500007362f22/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f171d3442a0500007362f22.m3u8"
+  },
+  {
+    "id": "canal-52",
+    "name": "Fonte TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/7q2BmNc.png",
+    "src": "https://59fb88a1b1108.streamlock.net/fonte/_definst_/fontetv/chunklist_w1224511652.m3u8"
+  },
+  {
+    "id": "canal-53",
+    "name": "ge Fast",
+    "category": "Variedades",
+    "logo": "https://i.ibb.co/WGXHDnF/logo-ge-fast.png",
+    "src": "https://amg00716-globo-amg00716c1-tcl-br-9495.playouts.now.amagi.tv/playlist.m3u8"
+  },
+  {
+    "id": "canal-54",
+    "name": "Gospel Cartoon",
+    "category": "Infantil",
+    "logo": "https://i.imgur.com/yxjPno5.png",
+    "src": "https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8"
+  },
+  {
+    "id": "canal-55",
+    "name": "Gospel Movie TV",
+    "category": "Religioso",
+    "logo": "https://i.imgur.com/cQN3nWt.png",
+    "src": "https://stmv1.srvif.com/gospelf/gospelf/playlist.m3u8"
+  },
+  {
+    "id": "canal-56",
+    "name": "History (Brazil)",
+    "category": "Documentários",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png",
+    "src": "http://45.177.114.114/HISTORY/index.m3u8"
+  },
+  {
+    "id": "canal-57",
+    "name": "History 2 Latin America Brazil",
+    "category": "Documentários",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/History2_logo_%282022%29.svg/500px-History2_logo_%282022%29.svg.png",
+    "src": "http://45.177.114.114/HISTORY_2/index.m3u8"
+  },
+  {
+    "id": "canal-58",
+    "name": "iCarly (United States)",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/620ff46e0a576e0007dc2f89/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-620ff46e0a576e0007dc2f89.m3u8"
+  },
+  {
+    "id": "canal-59",
+    "name": "ISTV (Brazil)",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/RUKVrOH.png",
+    "src": "https://stmv1.srvstm.com/sistema7933/sistema7933/playlist.m3u8"
+  },
+  {
+    "id": "canal-60",
+    "name": "J3NEWS TV",
+    "category": "Notícias",
+    "logo": "https://i.imgur.com/lezIQyL.png",
+    "src": "https://video01.brascast.com/d92ebb4f/d92ebb4f/playlist.m3u8"
+  },
+  {
+    "id": "canal-61",
+    "name": "Jornada nas Estrelas: A Nova Geracao",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/69162ad79505d0f3b1ebf07d/colorLogoPNG_1766066212478.png",
+    "src": "https://jmp2.uk/plu-69162ad79505d0f3b1ebf07d.m3u8"
+  },
+  {
+    "id": "canal-62",
+    "name": "Jornada nas Estrelas: Deep Space Nine",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/69162af591700f4c4c135c95/colorLogoPNG_1766066526851.png",
+    "src": "https://jmp2.uk/plu-69162af591700f4c4c135c95.m3u8"
+  },
+  {
+    "id": "canal-63",
+    "name": "Jornada nas Estrelas: Voyager",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/69162b1ef189e235142b17ab/colorLogoPNG_1766150123044.png",
+    "src": "https://jmp2.uk/plu-69162b1ef189e235142b17ab.m3u8"
+  },
+  {
+    "id": "canal-64",
+    "name": "Jovem Pan News",
+    "category": "Notícias",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/960px-Jovem_Pan_logo_2018.svg.png",
+    "src": "http://170.83.49.66:8083/JOVEMPANNEWSHD/index.m3u8"
+  },
+  {
+    "id": "canal-65",
+    "name": "Kenan & Kel BR",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5ffcc5130fd98c0007f2e216/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5ffcc5130fd98c0007f2e216.m3u8"
+  },
+  {
+    "id": "canal-66",
+    "name": "Kuriakos Kids",
+    "category": "Infantil",
+    "logo": "https://i.imgur.com/SRX6EPY.png",
+    "src": "https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8"
+  },
+  {
+    "id": "canal-67",
+    "name": "Laboral TV",
+    "category": "Variedades",
+    "logo": "https://tv.laboralsst.com.br/logo.png",
+    "src": "https://tv.laboralsst.com.br/hls/stream.m3u8"
+  },
+  {
+    "id": "canal-68",
+    "name": "Lamore Rock Show WebTV",
+    "category": "Música",
+    "logo": "https://www.lamorerockshowwebtv.com.br/wp-content/uploads/2024/11/logo_rockshow.avif",
+    "src": "https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8"
+  },
+  {
+    "id": "canal-69",
+    "name": "Loading",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/R0aflu1.png",
+    "src": "https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8"
+  },
+  {
+    "id": "canal-70",
+    "name": "MacGyver (United States)",
+    "category": "Documentários",
+    "logo": "https://images.pluto.tv/channels/63eb9dc84e83e70008abea92/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-63eb9dc84e83e70008abea92.m3u8"
+  },
+  {
+    "id": "canal-71",
+    "name": "MasterChef",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/lOuySbz.png",
+    "src": "https://jmp2.uk/plu-6077045b6031bd00078de127.m3u8"
+  },
+  {
+    "id": "canal-72",
+    "name": "MTV Are you the One?",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/5f6108d8cc331900075e98e4/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f6108d8cc331900075e98e4.m3u8"
+  },
+  {
+    "id": "canal-73",
+    "name": "MTV Biggest Pop BR",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/6047fbdbbb776a0007e7f2ff/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8"
+  },
+  {
+    "id": "canal-74",
+    "name": "MTV Catfish (United States) BR",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/626c2a3502d84a0007cec817/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-626c2a3502d84a0007cec817.m3u8"
+  },
+  {
+    "id": "canal-75",
+    "name": "MTV Classic BR",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/66a01dcb8561260008b0a41d/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8"
+  },
+  {
+    "id": "canal-76",
+    "name": "MTV Com o Ex",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/61a528267e1b8b0007357920/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-61a528267e1b8b0007357920.m3u8"
+  },
+  {
+    "id": "canal-77",
+    "name": "MTV Dating (United States)",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/6851bb3426beced4f2f67ee6/colorLogoPNG_1750686926779.png",
+    "src": "https://jmp2.uk/plu-6851bb3426beced4f2f67ee6.m3u8"
+  },
+  {
+    "id": "canal-78",
+    "name": "MTV Drag",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/645111f1d8436e00081bb2bd/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-645111f1d8436e00081bb2bd.m3u8"
+  },
+  {
+    "id": "canal-79",
+    "name": "MTV Jovens e Maes",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/620fdc7d8a36fc000710e3ba/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-620fdc7d8a36fc000710e3ba.m3u8"
+  },
+  {
+    "id": "canal-80",
+    "name": "MTV Pluto TV BR",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png",
+    "src": "https://jmp2.uk/plu-5f1212fb81e85c00077ae9ef.m3u8"
+  },
+  {
+    "id": "canal-81",
+    "name": "MTV Reality (United States)",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/6493f4f566e485000853d640/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6851bdfc9ac48fde5e07f5ae.m3u8"
+  },
+  {
+    "id": "canal-82",
+    "name": "MTV Rocks",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/66a01e07d2d50d0008100d6a/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-66a01e07d2d50d0008100d6a.m3u8"
+  },
+  {
+    "id": "canal-83",
+    "name": "MTV Shore",
+    "category": "Música",
+    "logo": "https://images.pluto.tv/channels/625463563b8ddc0007134aeb/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-625463563b8ddc0007134aeb.m3u8"
+  },
+  {
+    "id": "canal-84",
+    "name": "Naruto Brazil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/M8X3Kvc.png",
+    "src": "https://jmp2.uk/plu-5f6df5a173d7340007c559f7.m3u8"
+  },
+  {
+    "id": "canal-85",
+    "name": "NCIS (United States)",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/63eb9fdda995710008991c54/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-63eb9fdda995710008991c54.m3u8"
+  },
+  {
+    "id": "canal-86",
+    "name": "Nick Jr. Club (United States) BR",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/5f121460b73ac6000719fbaf/colorLogoPNG_1748348856602.png",
+    "src": "https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8"
+  },
+  {
+    "id": "canal-87",
+    "name": "Nickelodeon Classico",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/5f12151794c1800007a8ae63/colorLogoPNG_1750157164414.png",
+    "src": "https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8"
+  },
+  {
+    "id": "canal-88",
+    "name": "Nickelodeon Teen",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/60f5fabf0721880007cd50e3/colorLogoPNG_1767888207915.png",
+    "src": "https://jmp2.uk/plu-60f5fabf0721880007cd50e3.m3u8"
+  },
+  {
+    "id": "canal-89",
+    "name": "Nickelodeon Toons",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/645951c0e94c38000802d2cb/colorLogoPNG_1767888119852.png",
+    "src": "https://jmp2.uk/plu-645951c0e94c38000802d2cb.m3u8"
+  },
+  {
+    "id": "canal-90",
+    "name": "Numbers (United States)",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/67f960c5441853fe50e7afc1/colorLogoPNG_1747430170532.png",
+    "src": "https://jmp2.uk/plu-67f960c5441853fe50e7afc1.m3u8"
+  },
+  {
+    "id": "canal-91",
+    "name": "O Encantador de Caes",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/sQn6vvh.png",
+    "src": "https://jmp2.uk/plu-61099df8cee03b00074b2ecf.m3u8"
+  },
+  {
+    "id": "canal-92",
+    "name": "O Reino Infantil",
+    "category": "Infantil",
+    "logo": "https://i.imgur.com/qoVxc13.png",
+    "src": "https://jmp2.uk/plu-5f5c216df68f920007888315.m3u8"
+  },
+  {
+    "id": "canal-93",
+    "name": "Oggy e as Baratas Tontas",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/63221bafdc6e110007b50270/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-63221bafdc6e110007b50270.m3u8"
+  },
+  {
+    "id": "canal-94",
+    "name": "One Piece BR",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/XsvbAWR.png",
+    "src": "https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8"
+  },
+  {
+    "id": "canal-95",
+    "name": "Plena TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/lH4RT7b.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-9591/LVW9591_PmXtgATnaS/playlist.m3u8"
+  },
+  {
+    "id": "canal-96",
+    "name": "Pluto TV Aliens",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/6806d65e84f24b70109485fa/colorLogoPNG_1746817107468.png",
+    "src": "https://jmp2.uk/plu-6806d65e84f24b70109485fa.m3u8"
+  },
+  {
+    "id": "canal-97",
+    "name": "Pluto TV Animais",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/6474aa984cfc2c0008883a92/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6474aa984cfc2c0008883a92.m3u8"
+  },
+  {
+    "id": "canal-98",
+    "name": "Pluto TV Anime Acao",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/604b79c558393100078faeef/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-604b79c558393100078faeef.m3u8"
+  },
+  {
+    "id": "canal-99",
+    "name": "Pluto TV Anime BR",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png",
+    "src": "https://jmp2.uk/plu-5f12136385bccc00070142ed.m3u8"
+  },
+  {
+    "id": "canal-100",
+    "name": "Pluto TV Bang Bang",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/663b9dc7cb3ea10008f1a0ce/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-663b9dc7cb3ea10008f1a0ce.m3u8"
+  },
+  {
+    "id": "canal-101",
+    "name": "Pluto TV Canal UOL",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/64b9370b409629000802d32b/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-64b9370b409629000802d32b.m3u8"
+  },
+  {
+    "id": "canal-102",
+    "name": "Pluto TV Cine Classicos",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5fa1612a669ba0000702017b/colorLogoPNG_1733440556804.png",
+    "src": "https://jmp2.uk/plu-5fa1612a669ba0000702017b.m3u8"
+  },
+  {
+    "id": "canal-103",
+    "name": "Pluto TV Cine Comedia (United States) BR",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f12101f0b12f00007844c7c/colorLogoPNG_1732662798298.png",
+    "src": "https://jmp2.uk/plu-5f12101f0b12f00007844c7c.m3u8"
+  },
+  {
+    "id": "canal-104",
+    "name": "Pluto TV Cine Comedia Romantica",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/62545ed3dab4380007582f7c/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-62545ed3dab4380007582f7c.m3u8"
+  },
+  {
+    "id": "canal-105",
+    "name": "Pluto TV Cine Crime",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/6479ff764f5ba5000878dfe2/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6479ff764f5ba5000878dfe2.m3u8"
+  },
+  {
+    "id": "canal-106",
+    "name": "Pluto TV Cine Drama",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f1210d14ae1f80007bafb1d/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f1210d14ae1f80007bafb1d.m3u8"
+  },
+  {
+    "id": "canal-107",
+    "name": "Pluto TV Cine Familia",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f171f032cd22e0007f17f3d/colorLogoPNG_1732045254120.png",
+    "src": "https://jmp2.uk/plu-5f171f032cd22e0007f17f3d.m3u8"
+  },
+  {
+    "id": "canal-108",
+    "name": "Pluto TV Cine Inspiracao",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5fa991b1f09e020007e78626/colorLogoPNG_1748874366972.png",
+    "src": "https://jmp2.uk/plu-5fa991b1f09e020007e78626.m3u8"
+  },
+  {
+    "id": "canal-109",
+    "name": "Pluto TV Cine Romance",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f171f988ab9780007fa95ea/colorLogoPNG_1771344977802.png",
+    "src": "https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8"
+  },
+  {
+    "id": "canal-110",
+    "name": "Pluto TV Cine Sucessos",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f120e94a5714d00074576a1/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f120e94a5714d00074576a1.m3u8"
+  },
+  {
+    "id": "canal-111",
+    "name": "Pluto TV Cozinha",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f1ef23020a5ac0007e5e8ea/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f1ef23020a5ac0007e5e8ea.m3u8"
+  },
+  {
+    "id": "canal-112",
+    "name": "Pluto TV Desenhos Classicos",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/655e5c4d2c46f3000877a54b/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-655e5c4d2c46f3000877a54b.m3u8"
+  },
+  {
+    "id": "canal-113",
+    "name": "Pluto TV Esportes",
+    "category": "Esportes",
+    "logo": "https://images.pluto.tv/channels/5f32d2db0af67400077f29c4/colorLogoSVG_1780355759776.svg",
+    "src": "https://jmp2.uk/plu-5f32d2db0af67400077f29c4.m3u8"
+  },
+  {
+    "id": "canal-114",
+    "name": "Pluto TV Ficcao Cientifica",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5fa15ad6367e170007cdd098/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5fa15ad6367e170007cdd098.m3u8"
+  },
+  {
+    "id": "canal-115",
+    "name": "Pluto TV Filmes Acao",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f120f41b7d403000783a6d6/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f120f41b7d403000783a6d6.m3u8"
+  },
+  {
+    "id": "canal-116",
+    "name": "Pluto TV Filmes Aventura",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/66c79a4262e5510008ff68a5/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-66c79a4262e5510008ff68a5.m3u8"
+  },
+  {
+    "id": "canal-117",
+    "name": "Pluto TV Filmes de Luta",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/6806d62369aec5b19cd628c0/colorLogoPNG_1746817781806.png",
+    "src": "https://jmp2.uk/plu-6806d62369aec5b19cd628c0.m3u8"
+  },
+  {
+    "id": "canal-118",
+    "name": "Pluto TV Filmes Nacionais",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/5f5a545d0dbf7f0007c09408/colorLogoPNG_1732044719987.png",
+    "src": "https://jmp2.uk/plu-5f5a545d0dbf7f0007c09408.m3u8"
+  },
+  {
+    "id": "canal-119",
+    "name": "Pluto TV Historia (United States)",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f1ef1a8cec6be00072a7ac9/colorLogoPNG_1754405659295.png",
+    "src": "https://jmp2.uk/plu-5f1ef1a8cec6be00072a7ac9.m3u8"
+  },
+  {
+    "id": "canal-120",
+    "name": "Pluto TV Investigacao",
+    "category": "Filmes e Séries",
+    "logo": "https://i.imgur.com/JlQq0YJ.png",
+    "src": "https://jmp2.uk/plu-5f32cf37c9ff2b00082adbc8.m3u8"
+  },
+  {
+    "id": "canal-121",
+    "name": "Pluto TV Junior",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/5f12141b146d760007934ea7/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f12141b146d760007934ea7.m3u8"
+  },
+  {
+    "id": "canal-122",
+    "name": "Pluto TV KFOOD",
+    "category": "Documentários",
+    "logo": "https://images.pluto.tv/channels/633ee9ba83c08f00076b60a6/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-633ee9ba83c08f00076b60a6.m3u8"
+  },
+  {
+    "id": "canal-123",
+    "name": "Pluto TV Kids",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/5f1214a637c6fd00079c652f/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f1214a637c6fd00079c652f.m3u8"
+  },
+  {
+    "id": "canal-124",
+    "name": "Pluto TV Kids Club (United States)",
+    "category": "Infantil",
+    "logo": "https://images.pluto.tv/channels/66c8cae7fed35b0008580ec0/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-66c8cae7fed35b0008580ec0.m3u8"
+  },
+  {
+    "id": "canal-125",
+    "name": "Pluto TV Misterios",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5fac52f142044f00078e2a51/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5fac52f142044f00078e2a51.m3u8"
+  },
+  {
+    "id": "canal-126",
+    "name": "Pluto TV Natureza",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f1213ba0ecebc00070e170f/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f1213ba0ecebc00070e170f.m3u8"
+  },
+  {
+    "id": "canal-127",
+    "name": "Pluto TV Negocio Fechado",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/64ad7394798def00087b2bfe/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-64ad7394798def00087b2bfe.m3u8"
+  },
+  {
+    "id": "canal-128",
+    "name": "Pluto TV Netmovies",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/663b9de4f999220008230fa8/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-663b9de4f999220008230fa8.m3u8"
+  },
+  {
+    "id": "canal-129",
+    "name": "Pluto TV Novelas BR",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f512365abe1f50007d3ff56/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f512365abe1f50007d3ff56.m3u8"
+  },
+  {
+    "id": "canal-130",
+    "name": "Pluto TV Paisagens por Stingray",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/604a8dedbca75b0007b1c753/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-604a8dedbca75b0007b1c753.m3u8"
+  },
+  {
+    "id": "canal-131",
+    "name": "Pluto TV Policial",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/678fdf9e3de7c8cf948e8824/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-678fdf9e3de7c8cf948e8824.m3u8"
+  },
+  {
+    "id": "canal-132",
+    "name": "Pluto TV Record News",
+    "category": "Notícias",
+    "logo": "https://images.pluto.tv/channels/6102e04e9ab1db0007a980a1/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6102e04e9ab1db0007a980a1.m3u8"
+  },
+  {
+    "id": "canal-133",
+    "name": "Pluto TV Retro",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/wztO3GM.png",
+    "src": "https://jmp2.uk/plu-5f1212ad1728050007a523b8.m3u8"
+  },
+  {
+    "id": "canal-134",
+    "name": "Pluto TV Series Acao",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/6474ab1da51cb80008bfb5f4/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6474ab1da51cb80008bfb5f4.m3u8"
+  },
+  {
+    "id": "canal-135",
+    "name": "Pluto TV Series Comedia",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/655e5bc94261ca000810cb17/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-655e5bc94261ca000810cb17.m3u8"
+  },
+  {
+    "id": "canal-136",
+    "name": "Pluto TV Series Criminais",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/6474ab5cdc7a760008745008/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6474ab5cdc7a760008745008.m3u8"
+  },
+  {
+    "id": "canal-137",
+    "name": "Pluto TV Series Drama",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/65f060d84e01740008d7421f/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-65f060d84e01740008d7421f.m3u8"
+  },
+  {
+    "id": "canal-138",
+    "name": "Pluto TV Series Novelescas",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/691627e4a29a6123e400b3e0/colorLogoPNG_1764878235665.png",
+    "src": "https://jmp2.uk/plu-691627e4a29a6123e400b3e0.m3u8"
+  },
+  {
+    "id": "canal-139",
+    "name": "Pluto TV Series Sci-Fi (United States)",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/63d2ba2f60bc8f0008981a0e/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-63d2ba2f60bc8f0008981a0e.m3u8"
+  },
+  {
+    "id": "canal-140",
+    "name": "Pluto TV Shows por Stingray",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/604b91e0692f770007d9f33f/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-604b91e0692f770007d9f33f.m3u8"
+  },
+  {
+    "id": "canal-141",
+    "name": "Pluto TV Terror Trash",
+    "category": "Filmes e Séries",
+    "logo": "https://images.pluto.tv/channels/66aa67493a4ad2000806d91b/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-66aa67493a4ad2000806d91b.m3u8"
+  },
+  {
+    "id": "canal-142",
+    "name": "Pluto TV Turbo",
+    "category": "Documentários",
+    "logo": "https://images.pluto.tv/channels/6014761dfb91870008ea6463/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6014761dfb91870008ea6463.m3u8"
+  },
+  {
+    "id": "canal-143",
+    "name": "Pluto TV Viagens",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f32d432d612e50007e56133/colorLogoPNG_1769016717502.png",
+    "src": "https://jmp2.uk/plu-5f32d432d612e50007e56133.m3u8"
+  },
+  {
+    "id": "canal-144",
+    "name": "Pluto TV Vida Real",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5f32d4d9ec194100070c7449/colorLogoPNG_1732044921019.png",
+    "src": "https://jmp2.uk/plu-5f32d4d9ec194100070c7449.m3u8"
+  },
+  {
+    "id": "canal-145",
+    "name": "Primer TV",
+    "category": "Filmes e Séries",
+    "logo": "https://i.imgur.com/PMptSP3.png",
+    "src": "http://200.194.238.229:8383/live/primer/playlist.m3u8"
+  },
+  {
+    "id": "canal-146",
+    "name": "Pronto-socorro: Historias De Emergencia",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/0PkyJ3U.png",
+    "src": "https://jmp2.uk/plu-61bb72a7bf8c520007a8fd27.m3u8"
+  },
+  {
+    "id": "canal-147",
+    "name": "RBATV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/ZWFxlU1.png",
+    "src": "https://cdn.live.br1.jmvstream.com/w/LVW-15748/LVW15748_Yed7yzLuRC/playlist.m3u8"
+  },
+  {
+    "id": "canal-148",
+    "name": "Rede Gospel",
+    "category": "Religioso",
+    "logo": "https://i.imgur.com/mttSwgO.png",
+    "src": "https://cdn.live.br1.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8"
+  },
+  {
+    "id": "canal-149",
+    "name": "Rede TV! Mais",
+    "category": "Variedades",
+    "logo": "https://i.ibb.co/F0Tm2WP/2103f4c07b851d64b4c96955765a9a95.png",
+    "src": "https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8"
+  },
+  {
+    "id": "canal-150",
+    "name": "SBT Interior",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/IkZfa4j.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8"
+  },
+  {
+    "id": "canal-151",
+    "name": "SBT Nacional",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/tc1ALuu.png",
+    "src": "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8"
+  },
+  {
+    "id": "canal-152",
+    "name": "Smithsonian Channel Pluto TV",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/6298bd10d88ef000073f16b7/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-6298bd10d88ef000073f16b7.m3u8"
+  },
+  {
+    "id": "canal-153",
+    "name": "South Park: Colecao Cartman",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/65df71008b24c80008f04281/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-65df71008b24c80008f04281.m3u8"
+  },
+  {
+    "id": "canal-154",
+    "name": "South Park: Colecao Kenny",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/65df704366eec8000898e32f/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-65df704366eec8000898e32f.m3u8"
+  },
+  {
+    "id": "canal-155",
+    "name": "South Park: Colecao Kyle",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/65df713dec9fda0008b7a81d/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-65df713dec9fda0008b7a81d.m3u8"
+  },
+  {
+    "id": "canal-156",
+    "name": "South Park: Colecao Stan",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/65df70b0f7f0af0008c3b316/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-65df70b0f7f0af0008c3b316.m3u8"
+  },
+  {
+    "id": "canal-157",
+    "name": "Star Trek",
+    "category": "Variedades",
+    "logo": "https://images.pluto.tv/channels/5efbd39f8c4ce900075d7698/colorLogoPNG.png",
+    "src": "https://jmp2.uk/plu-5f99ac4fded33000078f29ab.m3u8"
+  },
+  {
+    "id": "canal-158",
+    "name": "Studio Universal Latin America Brazil",
+    "category": "Variedades",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+    "src": "http://187.102.210.46/universo/index.m3u8"
+  },
+  {
+    "id": "canal-159",
+    "name": "STZ TV",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/SeF2I7q.png",
+    "src": "https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8"
+  },
+  {
+    "id": "canal-160",
+    "name": "Tastemade Brasil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/FPy4zF4.png",
+    "src": "https://jmp2.uk/plu-5fd1419a3b4f4b000773ba85.m3u8"
+  },
+  {
+    "id": "canal-161",
+    "name": "The Pet Collective Brazil",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/yH7n2dF.png",
+    "src": "https://jmp2.uk/plu-5f515ebac01c0f00080e8439.m3u8"
+  },
+  {
+    "id": "canal-162",
+    "name": "Tokusato",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/tWpjXtl.png",
+    "src": "https://jmp2.uk/plu-5ff609de50ab210008025c1b.m3u8"
+  },
+  {
+    "id": "canal-163",
+    "name": "Turma da Monica",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/nrvPPrW.png",
+    "src": "https://jmp2.uk/plu-5f997e44949bc70007a6941e.m3u8"
+  },
+  {
+    "id": "canal-164",
+    "name": "TV A Critica",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/j51rBro.png",
+    "src": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8"
+  },
+  {
+    "id": "canal-165",
+    "name": "TV Alternativa",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/wM9xXhc.png",
+    "src": "https://stmv5.samcast.com.br/wagner7919/wagner7919/playlist.m3u8"
+  },
+  {
+    "id": "canal-166",
+    "name": "TV Aparecida",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/kxrja0X.png",
+    "src": "http://45.162.64.114/TV_APARECIDA/index.m3u8"
+  },
+  {
+    "id": "canal-167",
+    "name": "TV Brasil",
+    "category": "Variedades",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/960px-TvBrasil2023.png",
+    "src": "http://45.162.64.114/TV_BRASIL/index.m3u8"
+  },
+  {
+    "id": "canal-168",
+    "name": "TV Cancao Nova",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/OaM9hkH.png",
+    "src": "http://45.162.64.114/CANCAO_NOVA/index.m3u8"
+  },
+  {
+    "id": "canal-169",
+    "name": "TV Clube",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/CpXjcyE.png",
+    "src": "https://5c483b9d1019c.streamlock.net/8186/8186/playlist.m3u8"
+  },
+  {
+    "id": "canal-170",
+    "name": "TV Cultura",
+    "category": "Variedades",
+    "logo": "https://i.ibb.co/nm0jXMM/cultura-3x.png",
+    "src": "http://45.162.64.114/TV_CULTURA/index.m3u8"
+  },
+  {
+    "id": "canal-171",
+    "name": "TV Curuca",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/JdCKNZ4.png",
+    "src": "https://stmv1.srvif.com/tvcurucasp/tvcurucasp/playlist.m3u8"
+  },
+  {
+    "id": "canal-172",
+    "name": "TV Evangelizar",
+    "category": "Religioso",
+    "logo": "https://i.imgur.com/IrYR7Kp.png",
+    "src": "http://45.162.64.114/EVANGELIZAR/index.m3u8"
+  },
+  {
+    "id": "canal-173",
+    "name": "TV Gazeta",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/0sksWse.png",
+    "src": "http://45.162.64.114/GAZETA/index.m3u8"
+  },
+  {
+    "id": "canal-174",
+    "name": "TV Justica",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/rOQKiMO.png",
+    "src": "http://45.162.64.114/TV_JUSTICA/index.m3u8"
+  },
+  {
+    "id": "canal-175",
+    "name": "TV Natal",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/wqQmQml.png",
+    "src": "http://185.228.163.146:8000/play/a01y/index.m3u8"
+  },
+  {
+    "id": "canal-176",
+    "name": "TV Pai Eterno",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/iuoXchN.png",
+    "src": "http://45.162.64.114/TV_PAI_ETERNO/index.m3u8"
+  },
+  {
+    "id": "canal-177",
+    "name": "TV Parana Turismo",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/I6pKoBd.png",
+    "src": "http://200.189.113.201/hls/tve.m3u8"
+  },
+  {
+    "id": "canal-178",
+    "name": "TV Passo Fundo",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/QFE6TiV.png",
+    "src": "https://5a57bda70564a.streamlock.net/tvpasso/tvpasso.sdp/playlist.m3u8"
+  },
+  {
+    "id": "canal-179",
+    "name": "TV Ra Tim Bum",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/JIQwz0w.png",
+    "src": "http://45.177.114.115/TV_RA_TIM_BUM/index.m3u8"
+  },
+  {
+    "id": "canal-180",
+    "name": "TV Senado (Brazil)",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/duy6waL.png",
+    "src": "http://45.162.64.114/TV_SENADO/index.m3u8"
+  },
+  {
+    "id": "canal-181",
+    "name": "TV Series",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/Ff5mj0o.png",
+    "src": "https://stmv1.srvif.com/tvserie/tvserie/playlist.m3u8"
+  },
+  {
+    "id": "canal-182",
+    "name": "TV Vila Real",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/Z1uWe7g.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-10841/LVW10841_mT77z9o2cP/playlist.m3u8"
+  },
+  {
+    "id": "canal-183",
+    "name": "TV Zoom",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/jCGrjf5.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-9730/LVW9730_LmUwslM8jt/playlist.m3u8"
+  },
+  {
+    "id": "canal-184",
+    "name": "TV+Pet",
+    "category": "Variedades",
+    "logo": "https://www.tvmaispet.com.br/images/tvpet-logo.png",
+    "src": "https://stmv5.samcast.com.br/tvmaispet6354/tvmaispet6354/playlist.m3u8"
+  },
+  {
+    "id": "canal-185",
+    "name": "TVitape",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/XeqcwKe.png",
+    "src": "https://stream01.msolutionbrasil.com.br/hls/tvitape/live.m3u8"
+  },
+  {
+    "id": "canal-186",
+    "name": "TVNBN",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/zoHBxn1.png",
+    "src": "https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8"
+  },
+  {
+    "id": "canal-187",
+    "name": "WooHoo",
+    "category": "Variedades",
+    "logo": "https://i.imgur.com/me622pa.png",
+    "src": "http://45.162.64.114/WOOHOO/index.m3u8"
+  }
+]
