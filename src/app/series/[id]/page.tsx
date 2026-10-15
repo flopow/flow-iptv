@@ -17,6 +17,13 @@ export async function generateMetadata({ params }: SeriesDetailProps): Promise<M
   const { id } = await params;
   const catalog = await getCatalog();
   const serie = await catalog.getSeries(id);
+  if (!serie && id.startsWith("stream-")) {
+    const title = await getStreamTitleById(id).catch(() => null);
+    return {
+      title: title?.title ?? "Série não encontrada",
+      description: title?.synopsis,
+    };
+  }
   return {
     title: serie && serie.status === "published" ? serie.title : "Série não encontrada",
     description: serie?.synopsis,

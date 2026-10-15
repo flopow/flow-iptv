@@ -16,6 +16,13 @@ export async function generateMetadata({ params }: FilmDetailProps): Promise<Met
   const { id } = await params;
   const catalog = await getCatalog();
   const film = await catalog.getFilm(id);
+  if (!film && id.startsWith("stream-")) {
+    const title = await getStreamTitleById(id).catch(() => null);
+    return {
+      title: title?.title ?? "Filme não encontrado",
+      description: title?.synopsis,
+    };
+  }
   return {
     title: film && film.status === "published" ? film.title : "Filme não encontrado",
     description: film?.synopsis,
