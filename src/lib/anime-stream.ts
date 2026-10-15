@@ -106,7 +106,7 @@ function toAnimeTitle(raw: Record<string, unknown>, provider: AnimeProvider): An
   const rawId = typeof raw.id === "string" ? raw.id : title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   return {
-    id: `${provider}:${rawId}`,
+    id: `${provider}~${rawId}`,
     provider,
     title,
     type,
@@ -150,8 +150,8 @@ export async function searchAnime(query: string, limit = 30): Promise<AnimeTitle
       searchCache = { key, at: Date.now(), data: results };
       return results;
     }
-  } catch {
-    // ambos fora do ar
+  } catch (err) {
+    console.error("[anime-stream] fallback AnimeUnity falhou:", err instanceof Error ? err.message : String(err));
   }
 
   searchCache = { key, at: Date.now(), data: [] };
@@ -207,7 +207,7 @@ export function animeTypeLabel(type: string | null): string {
 
 /** Detalhe com episódios (o id já carrega o provider). */
 export async function getAnimeById(id: string): Promise<AnimeDetail | null> {
-  const [providerRaw, rawId] = id.split(":");
+  const [providerRaw, rawId] = id.split("~");
   if (!providerRaw || !rawId) return null;
 
   const provider = providerRaw as AnimeProvider;
