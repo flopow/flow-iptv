@@ -14,9 +14,9 @@ export default async function NetflixPage() {
       <div className="mx-auto max-w-7xl px-4 py-24 text-center sm:px-6">
         <h1 className="text-2xl font-bold text-ink">Catálogo Netflix</h1>
         <p className="mx-auto mt-3 max-w-md text-sm text-muted">
-          A chave da API (uNoGS) ainda não foi configurada. Defina
-          <code className="mx-1 rounded bg-surface px-1.5 py-0.5 text-xs">NETFLIX_RAPIDAPI_KEY</code>
-          no ambiente do deploy.
+          A chave da API (TMDB) ainda não foi configurada. Defina
+          <code className="mx-1 rounded bg-surface px-1.5 py-0.5 text-xs">TMDB_API_KEY</code>
+          no ambiente do deploy (themoviedb.org → API → chave gratuita, sem cartão).
         </p>
       </div>
     );

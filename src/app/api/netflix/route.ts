@@ -10,7 +10,7 @@ export async function GET(req: Request): Promise<Response> {
 
   if (!hasNetflixKey()) {
     return NextResponse.json(
-      { error: "NETFLIX_RAPIDAPI_KEY não configurada", items: [] },
+      { error: "TMDB_API_KEY não configurada", items: [] },
       { status: 503 },
     );
   }
