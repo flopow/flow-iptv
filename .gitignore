@@ -41,3 +41,9 @@ Thumbs.db
 *.log
 
 .vercel
+# arquivos temporários de diagnóstico/processo (não são catálogo)
+data/comparacao.json
+data/drive-ls.json
+data/drive-series.txt
+data/reparo-progresso.json
+data/upar-drive-progresso.json
