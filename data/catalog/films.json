@@ -1,50 +1,20 @@
 [
   {
-    "id": "o-projeto-turbo",
-    "title": "O Projeto Turbo",
-    "synopsis": "Uma equipe de engenharia corre contra o tempo para entregar um motor revolucionário antes que a concorrência o copie.",
-    "posterUrl": null,
-    "backdropUrl": null,
-    "year": 2024,
-    "genres": ["ação", "aventura"],
-    "durationMinutes": 96,
-    "ageRating": "14",
-    "language": "pt-BR",
-    "subtitles": ["pt-BR", "en"],
-    "mediaFileId": null,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-10T12:00:00.000Z"
-  },
-  {
-    "id": "cidade-neon",
-    "title": "Cidade Neon",
-    "synopsis": "Numa metrópole coberta de hologramas, uma detetive investiga o desaparecimento de androides com memórias roubadas.",
-    "posterUrl": null,
-    "backdropUrl": null,
-    "year": 2023,
-    "genres": ["ficção científica", "suspense"],
-    "durationMinutes": 118,
-    "ageRating": "16",
-    "language": "pt-BR",
-    "subtitles": ["pt-BR"],
-    "mediaFileId": null,
-    "status": "published",
-    "featured": false,
-    "createdAt": "2026-10-08T09:00:00.000Z"
-  },
-  {
     "id": "risada-geral",
     "title": "Risada Geral",
     "synopsis": "Três amigos abrem uma comédia de stand-up no interior e descobrem que rir do próprio fracasso é o melhor negócio.",
     "posterUrl": null,
     "backdropUrl": null,
     "year": 2025,
-    "genres": ["comédia"],
+    "genres": [
+      "comédia"
+    ],
     "durationMinutes": 92,
     "ageRating": "L",
     "language": "pt-BR",
-    "subtitles": ["pt-BR"],
+    "subtitles": [
+      "pt-BR"
+    ],
     "mediaFileId": null,
     "status": "draft",
     "featured": false,

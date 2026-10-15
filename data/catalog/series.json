@@ -1,67 +1,21 @@
 [
   {
-    "id": "a-escada",
-    "title": "A Escada",
-    "synopsis": "Uma família herda um prédio antigo e descobre que o elevador para em um andar que não existe no projeto.",
-    "posterUrl": null,
-    "backdropUrl": null,
-    "year": 2025,
-    "genres": ["drama", "mistério"],
-    "ageRating": "12",
-    "language": "pt-BR",
-    "subtitles": ["pt-BR"],
-    "mediaFileId": null,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-09T15:00:00.000Z",
-    "seasons": [
-      {
-        "id": "a-escada-t1",
-        "number": 1,
-        "title": "Temporada 1",
-        "episodes": [
-          {
-            "id": "a-escada-t1e1",
-            "number": 1,
-            "title": "O Andar Extra",
-            "synopsis": "A família assina a compra e, na primeira noite, ouve o elevador parar em um andar a mais.",
-            "durationMinutes": 42,
-            "thumbUrl": null,
-            "mediaFileId": null
-          },
-          {
-            "id": "a-escada-t1e2",
-            "number": 2,
-            "title": "Plantas Antigas",
-            "synopsis": "Achados nos arquivos da prefeitura mudam o que todos acreditavam sobre o prédio.",
-            "durationMinutes": 40,
-            "thumbUrl": null,
-            "mediaFileId": null
-          },
-          {
-            "id": "a-escada-t1e3",
-            "number": 3,
-            "title": "O Inquilino",
-            "synopsis": "Um morador antigo reaparece com uma proposta que ninguém esperava.",
-            "durationMinutes": 45,
-            "thumbUrl": null,
-            "mediaFileId": null
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "linha-do-tempo",
     "title": "Linha do Tempo",
     "synopsis": "Um jornalista recebe e-mails enviados do próprio futuro e tenta evitar um acidente que ainda não aconteceu.",
     "posterUrl": null,
     "backdropUrl": null,
     "year": 2024,
-    "genres": ["ficção científica", "suspense"],
+    "genres": [
+      "ficção científica",
+      "suspense"
+    ],
     "ageRating": "14",
     "language": "pt-BR",
-    "subtitles": ["pt-BR", "en"],
+    "subtitles": [
+      "pt-BR",
+      "en"
+    ],
     "mediaFileId": null,
     "status": "draft",
     "featured": false,
