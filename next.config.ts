@@ -16,8 +16,13 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "image.tmdb.org" },
       // Capas servidas pelo Google Drive (drive.usercontent.google.com).
       { protocol: "https", hostname: "drive.usercontent.google.com" },
+      // Pôsteres de animes (Anime-Offline-Database).
+      { protocol: "https", hostname: "cdn.anidb.net" },
+      { protocol: "https", hostname: "cdn.myanimelist.net" },
     ],
   },
 };
 
 export default nextConfig;
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
