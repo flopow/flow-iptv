@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Player } from "@/components/Player";
 import { ChevronLeftIcon, ChevronRightIcon } from "@/components/ui/icons";
 import { getCatalog, toPlayableUrl } from "@/lib/catalog";
-import { animeTypeLabel, getAnimeById, resolveEpisodeStream } from "@/lib/anime-stream";
+import { getAnimeById } from "@/lib/anime";
 import { episodeNeighbors, shortNeighbors } from "@/lib/nav";
 
 interface PlayerPageProps {
@@ -71,21 +71,30 @@ async function resolveConfig(
     };
   }
 
-  // anime — stream HLS resolvido na hora (provider via id prefixado)
+  // anime — episódios importados, vídeo via catálogo (GitHub/Drive)
   if (kind === "anime") {
     const anime = await getAnimeById(id);
     if (!anime) return null;
-    const current = anime.episodes.find((e) => e.id === ep) ?? anime.episodes[0];
-    if (!current) return null;
-    const src = await resolveEpisodeStream(anime.provider, current.id);
+    const current =
+      anime.episodes.find((e) => e.id === ep && e.mediaFileId) ??
+      anime.episodes.find((e) => e.mediaFileId);
+    if (!current?.mediaFileId) return null;
+    const media = await catalog.getMediaFile(current.mediaFileId);
     const index = anime.episodes.indexOf(current);
-    const next = index >= 0 && index < anime.episodes.length - 1 ? anime.episodes[index + 1] : null;
+    const next =
+      index >= 0
+        ? anime.episodes.slice(index + 1).find((e) => e.mediaFileId)
+        : null;
+    const nextMedia = next?.mediaFileId ? await catalog.getMediaFile(next.mediaFileId) : null;
     return {
       title: `${anime.title} · E${current.number} — ${current.title}`,
-      subtitle: animeTypeLabel(anime.type),
-      src,
+      subtitle: "Anime",
+      src: media ? toPlayableUrl(media) : null,
       vertical: false,
-      nextHref: next ? `/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(next.id)}` : null,
+      nextHref:
+        next && nextMedia
+          ? `/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(next.id)}`
+          : null,
       nextLabel: next ? `E${next.number} · ${next.title}` : null,
       subtitleUrl: null,
       backHref: `/animes/${encodeURIComponent(anime.id)}`,

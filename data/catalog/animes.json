@@ -1,0 +1,33 @@
+[
+  {
+    "id": "405-erased",
+    "title": "ERASED",
+    "synopsis": "La storia segue le vicende quotidiane di un ragazzo, Satoru Fujinuma, un autore di manga che non riesce ad esprimersi come vorrebbe. In seguito ad un misterioso accadimento, la sua routine viene tuttavia completamente sconvolta. Egli ottiene il talento soprannaturale di “notare le cose”, talento che lo costringe ad aiutare le persone. Satoru ha un dono che gli altri non hanno: riportare indietro il tempo e prevenire delle morti, ma allo stesso tempo è costretto a ripetere gli stessi avvenimenti fino al compimento della missione. Dopo l’omicidio della madre, si ritroverà ai tempi della scuola elementare, poco prima della sparizione della sua compagna di classe Kayo. La suspense sarà al centro dell’intrigo…",
+    "posterUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/posters/405-erased.webp",
+    "backdropUrl": "https://raw.githubusercontent.com/flopow/flow-iptv-media/main/backdrops/405-erased.webp",
+    "year": null,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Seinen",
+      "Supernatural",
+      "Thriller"
+    ],
+    "ageRating": null,
+    "language": "pt-BR",
+    "status": "published",
+    "featured": false,
+    "createdAt": "2026-10-15T19:55:47.277Z",
+    "episodes": [
+      {
+        "id": "405-erased-ep1",
+        "number": 1,
+        "title": "Episódio 1",
+        "durationSeconds": 1372,
+        "thumbUrl": null,
+        "mediaFileId": "405-erased-ep1"
+      }
+    ]
+  }
+]

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { PlayIcon } from "@/components/ui/icons";
-import { animeTypeLabel, getAnimeById } from "@/lib/anime-stream";
+import { getAnimeById } from "@/lib/anime";
 
 interface AnimeDetailProps {
   params: Promise<{ id: string }>;
@@ -29,7 +29,7 @@ export default async function AnimeDetailPage({ params }: AnimeDetailProps) {
   const anime = await getAnimeById(id).catch(() => null);
   if (!anime) notFound();
 
-  const firstEpisode = anime.episodes[0];
+  const firstEpisode = anime.episodes.find((e) => e.mediaFileId) ?? anime.episodes[0];
 
   return (
     <article className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
@@ -76,7 +76,7 @@ export default async function AnimeDetailPage({ params }: AnimeDetailProps) {
               <MetaItem label="Episódios" value={String(anime.episodes.length)} />
             ) : null}
             <MetaItem label="Status" value={anime.status} />
-            <MetaItem label="Tipo" value={animeTypeLabel(anime.type)} />
+            <MetaItem label="Idioma" value={anime.language ?? "pt-BR"} />
           </dl>
 
           {anime.synopsis ? (
@@ -98,7 +98,7 @@ export default async function AnimeDetailPage({ params }: AnimeDetailProps) {
             </div>
           ) : null}
 
-          {firstEpisode ? (
+          {firstEpisode?.mediaFileId ? (
             <div className="mt-8">
               <Link
                 href={`/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(firstEpisode.id)}`}
@@ -118,8 +118,16 @@ export default async function AnimeDetailPage({ params }: AnimeDetailProps) {
             {anime.episodes.map((episode) => (
               <li key={episode.id}>
                 <Link
-                  href={`/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(episode.id)}`}
-                  className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-sm transition-colors hover:border-accent-line"
+                  href={
+                    episode.mediaFileId
+                      ? `/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(episode.id)}`
+                      : "#"
+                  }
+                  className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-sm transition-colors ${
+                    episode.mediaFileId
+                      ? "border-line bg-surface hover:border-accent-line"
+                      : "cursor-default border-line bg-surface-strong opacity-60"
+                  }`}
                 >
                   <span className="flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-accent-soft text-xs font-black text-accent">
                     {episode.number}
