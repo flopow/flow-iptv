@@ -96,3 +96,23 @@ export async function searchAnime(query: string, limit = 40): Promise<AnimeTitle
   if (!q) return [];
   return all.filter((a) => a.title.toLowerCase().includes(q)).slice(0, limit);
 }
+
+/** Título único por id (`anime-<index>`). */
+export async function getAnimeById(id: string): Promise<AnimeTitle | null> {
+  const all = await loadAll();
+  const index = Number(/^anime-(\d+)$/.exec(id)?.[1]);
+  if (Number.isNaN(index) || index < 0 || index >= all.length) return null;
+  return all[index];
+}
+
+/** Sites oficiais de referência presentes nos sources (pra "onde assistir"). */
+export function animeWatchLinks(sources: string[]): { label: string; url: string }[] {
+  const links: { label: string; url: string }[] = [];
+  for (const url of sources) {
+    if (url.includes("myanimelist.net")) links.push({ label: "MyAnimeList", url });
+    else if (url.includes("anilist.co")) links.push({ label: "AniList", url });
+    else if (url.includes("kitsu.app")) links.push({ label: "Kitsu", url });
+    else if (url.includes("anime-planet.com")) links.push({ label: "Anime-Planet", url });
+  }
+  return links;
+}

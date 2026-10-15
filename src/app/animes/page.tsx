@@ -87,7 +87,7 @@ export default async function AnimesPage({ searchParams }: AnimesPageProps) {
           {items.map((anime) => (
             <PosterCard
               key={anime.id}
-              href="#"
+              href={`/animes/${anime.id}`}
               title={anime.title}
               posterUrl={anime.posterUrl}
               badge="Anime"
