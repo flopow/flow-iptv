@@ -239,11 +239,11 @@ async function importAnime(animeId) {
 
       const mp4Path = `videos/${slug}/${mediaId}.mp4`;
       let url;
-      let provider = "url";
+      let mediaProvider = "url";
       if (backend === "drive") {
         const fileId = await uploadVideoDrive(localMp4, `flow-iptv/${mp4Path}`);
         url = driveStreamUrl(fileId);
-        provider = "drive";
+        mediaProvider = "drive";
       } else {
         url = await uploadFile(mp4Path, await readFile(localMp4), `Adiciona episódio ${epNumber} de ${title}`);
         uploadedBytes += bytes;
@@ -260,7 +260,7 @@ async function importAnime(animeId) {
       });
       mediaEntries.push({
         id: mediaId,
-        provider,
+        provider: mediaProvider,
         format: "mp4",
         src: url,
         sizeBytes: bytes,
