@@ -5,7 +5,6 @@ import { PosterCard } from "@/components/ui/PosterCard";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { getCatalog } from "@/lib/catalog";
 import { getPlatformCatalog, getPopularCatalog, hasStreamKey, STREAM_PLATFORMS } from "@/lib/stream";
-import { hasOmdbKey, omdbSearch } from "@/lib/omdb";
 import { isSourceActive } from "@/lib/sources";
 
 export const metadata: Metadata = { title: "Filmes" };
@@ -29,7 +28,7 @@ export default async function FilmesPage({ searchParams }: FilmesPageProps) {
   let items: Awaited<ReturnType<typeof getPopularCatalog>> = [];
   let streamError: string | null = null;
   const useLocal = films.length > 0;
-  const [tmdbOn, omdbOn] = await Promise.all([isSourceActive("tmdb"), isSourceActive("omdb")]);
+  const [tmdbOn] = await Promise.all([isSourceActive("tmdb")]);
   if (useLocal && !platform) {
     items = films.map((f) => ({
       id: `local-${f.id}`,
@@ -53,18 +52,7 @@ export default async function FilmesPage({ searchParams }: FilmesPageProps) {
     streamError = tmdbOn ? "TMDB_API_KEY não configurada" : "Fonte TMDB desativada";
   }
 
-  const filtered = q ? items.filter((t) => t.title.toLowerCase().includes(q)) : items;
-
-  // Busca extra via OMDb quando há termo (mais resultados além do TMDB).
-  let omdbItems: Awaited<ReturnType<typeof omdbSearch>> = [];
-  if (q && omdbOn && hasOmdbKey()) {
-    try {
-      omdbItems = (await omdbSearch(q, 12)).filter((t) => t.kind === "film");
-    } catch {
-      omdbItems = [];
-    }
-  }
-  const allItems = [...filtered, ...omdbItems.filter((o) => !filtered.some((f) => f.id === o.id))];
+  const allItems = q ? items.filter((t) => t.title.toLowerCase().includes(q)) : items;
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">

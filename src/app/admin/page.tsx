@@ -34,7 +34,6 @@ export default async function AdminPage() {
       ok: hasSupabaseEnv(),
     },
     { key: "TMDB_API_KEY", label: "TMDB — catálogo externo e capas", ok: Boolean(process.env.TMDB_API_KEY) },
-    { key: "OMDB_API_KEY", label: "OMDb — busca extra de filmes/séries", ok: Boolean(process.env.OMDB_API_KEY) },
     { key: "GITHUB_TOKEN", label: "GitHub — repositório de mídias", ok: Boolean(process.env.GITHUB_TOKEN) },
     { key: "GITHUB_REPO", label: "GitHub — proprietário/repositório", ok: Boolean(process.env.GITHUB_REPO) },
   ];

@@ -5,10 +5,11 @@ import { notFound } from "next/navigation";
 import { Player } from "@/components/Player";
 import { ChevronLeftIcon, ChevronRightIcon } from "@/components/ui/icons";
 import { getCatalog, toPlayableUrl } from "@/lib/catalog";
+import { animeTypeLabel, getAnimeById, resolveEpisodeStream } from "@/lib/anime-stream";
 import { episodeNeighbors, shortNeighbors } from "@/lib/nav";
 
 interface PlayerPageProps {
-  params: Promise<{ kind: "filme" | "serie" | "drama"; id: string }>;
+  params: Promise<{ kind: "filme" | "serie" | "drama" | "anime"; id: string }>;
   searchParams: Promise<{ ep?: string }>;
 }
 
@@ -26,7 +27,7 @@ type PlayerConfig = {
 export const metadata: Metadata = { title: "Player" };
 
 async function resolveConfig(
-  kind: "filme" | "serie" | "drama",
+  kind: "filme" | "serie" | "drama" | "anime",
   id: string,
   ep?: string,
 ): Promise<PlayerConfig | null> {
@@ -67,6 +68,27 @@ async function resolveConfig(
       nextLabel: neighbors.next?.label ?? null,
       subtitleUrl: current.subtitleUrl ?? null,
       backHref: `/series/${serie.id}`,
+    };
+  }
+
+  // anime — stream HLS resolvido na hora (provider via id prefixado)
+  if (kind === "anime") {
+    const anime = await getAnimeById(id);
+    if (!anime) return null;
+    const current = anime.episodes.find((e) => e.id === ep) ?? anime.episodes[0];
+    if (!current) return null;
+    const src = await resolveEpisodeStream(anime.provider, current.id);
+    const index = anime.episodes.indexOf(current);
+    const next = index >= 0 && index < anime.episodes.length - 1 ? anime.episodes[index + 1] : null;
+    return {
+      title: `${anime.title} · E${current.number} — ${current.title}`,
+      subtitle: animeTypeLabel(anime.type),
+      src,
+      vertical: false,
+      nextHref: next ? `/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(next.id)}` : null,
+      nextLabel: next ? `E${next.number} · ${next.title}` : null,
+      subtitleUrl: null,
+      backHref: `/animes/${encodeURIComponent(anime.id)}`,
     };
   }
 

@@ -10,18 +10,16 @@ import "server-only";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-export type SourceName = "tmdb" | "omdb" | "github" | "drive";
+export type SourceName = "tmdb" | "github" | "drive";
 
 export const DEFAULT_SOURCES: Record<SourceName, boolean> = {
   tmdb: true,
-  omdb: true,
   github: true,
   drive: true,
 };
 
 export const SOURCE_LABELS: Record<SourceName, string> = {
   tmdb: "TMDB (capas e catálogo externo)",
-  omdb: "OMDb (busca extra de filmes/séries)",
   github: "GitHub raw (dramas antigos)",
   drive: "Google Drive via proxy (dramas novos)",
 };

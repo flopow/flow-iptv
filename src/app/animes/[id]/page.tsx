@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { PlayIcon } from "@/components/ui/icons";
-import { animeWatchLinks, getAnimeById } from "@/lib/anime";
+import { animeTypeLabel, getAnimeById } from "@/lib/anime-stream";
 
 interface AnimeDetailProps {
   params: Promise<{ id: string }>;
@@ -28,15 +29,15 @@ export default async function AnimeDetailPage({ params }: AnimeDetailProps) {
   const anime = await getAnimeById(id).catch(() => null);
   if (!anime) notFound();
 
-  const watchLinks = animeWatchLinks(anime.sources);
+  const firstEpisode = anime.episodes[0];
 
   return (
     <article className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
       <div className="relative -mx-4 mb-8 h-48 overflow-hidden rounded-none bg-gradient-to-br from-accent-soft via-surface-strong to-surface sm:-mx-6 sm:h-64 sm:rounded-2xl">
-        {anime.posterUrl ? (
+        {anime.backdropUrl ?? anime.posterUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={anime.posterUrl}
+            src={anime.backdropUrl ?? anime.posterUrl!}
             alt=""
             className="h-full w-full object-cover opacity-30"
             loading="lazy"
@@ -71,40 +72,67 @@ export default async function AnimeDetailPage({ params }: AnimeDetailProps) {
         <div className="flex-1">
           <dl className="mt-2 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {anime.year ? <MetaItem label="Ano" value={String(anime.year)} /> : null}
-            {anime.episodes ? (
-              <MetaItem label="Episódios" value={String(anime.episodes)} />
+            {anime.episodes.length > 0 ? (
+              <MetaItem label="Episódios" value={String(anime.episodes.length)} />
             ) : null}
             <MetaItem label="Status" value={anime.status} />
-            <MetaItem label="Tipo" value={anime.type} />
+            <MetaItem label="Tipo" value={animeTypeLabel(anime.type)} />
           </dl>
 
-          <div className="mt-8">
-            <p className="max-w-md text-xs text-muted">
-              Este título é exibido como catálogo (metadados públicos). A reprodução acontece nas
-              plataformas oficiais onde ele está disponível.
+          {anime.synopsis ? (
+            <p className="mt-6 max-w-prose text-sm leading-relaxed text-foreground">
+              {anime.synopsis}
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {watchLinks.length > 0 ? (
-                watchLinks.map((link) => (
-                  <a
-                    key={link.url}
-                    href={link.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-white shadow transition-transform hover:scale-[1.02] hover:bg-accent-strong active:scale-[0.98]"
-                  >
-                    <PlayIcon className="h-5 w-5" /> Assistir — {link.label}
-                  </a>
-                ))
-              ) : (
-                <span className="inline-flex items-center rounded-full bg-surface-strong px-7 py-3.5 text-sm font-bold text-muted">
-                  Sem link oficial disponível
+          ) : null}
+
+          {anime.genres.length > 0 ? (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {anime.genres.map((g) => (
+                <span
+                  key={g}
+                  className="rounded-full bg-surface-strong px-3 py-1 text-xs font-semibold text-muted"
+                >
+                  {g}
                 </span>
-              )}
+              ))}
             </div>
-          </div>
+          ) : null}
+
+          {firstEpisode ? (
+            <div className="mt-8">
+              <Link
+                href={`/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(firstEpisode.id)}`}
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-white shadow transition-transform hover:scale-[1.02] hover:bg-accent-strong active:scale-[0.98]"
+              >
+                <PlayIcon className="h-5 w-5" /> Assistir agora
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
+
+      {anime.episodes.length > 0 ? (
+        <section className="mt-12" aria-label="Episódios">
+          <h2 className="mb-4 text-lg font-bold text-ink">Episódios</h2>
+          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {anime.episodes.map((episode) => (
+              <li key={episode.id}>
+                <Link
+                  href={`/player/anime/${encodeURIComponent(anime.id)}?ep=${encodeURIComponent(episode.id)}`}
+                  className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-sm transition-colors hover:border-accent-line"
+                >
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-accent-soft text-xs font-black text-accent">
+                    {episode.number}
+                  </span>
+                  <span className="truncate font-semibold text-foreground">
+                    {episode.title}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </article>
   );
 }

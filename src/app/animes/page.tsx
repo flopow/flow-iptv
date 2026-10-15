@@ -3,19 +3,11 @@ import Link from "next/link";
 
 import { PosterCard } from "@/components/ui/PosterCard";
 import { SearchBar } from "@/components/ui/SearchBar";
-import { animeCategories, listAnimeByType } from "@/lib/anime";
+import { animeCategories, animeTypeLabel, listAnimeByType } from "@/lib/anime-stream";
 
 export const metadata: Metadata = { title: "Animes" };
 
 export const revalidate = 1800; // 30min
-
-const TYPE_LABELS: Record<string, string> = {
-  TV: "Séries TV",
-  MOVIE: "Filmes",
-  OVA: "OVA",
-  ONA: "ONA",
-  SPECIAL: "Especiais",
-};
 
 interface AnimesPageProps {
   searchParams: Promise<{ q?: string; tipo?: string }>;
@@ -28,17 +20,16 @@ export default async function AnimesPage({ searchParams }: AnimesPageProps) {
 
   let items: Awaited<ReturnType<typeof listAnimeByType>> = [];
   let error: string | null = null;
+  let categorias: Awaited<ReturnType<typeof animeCategories>> = [];
   try {
-    const [cats, titles] = await Promise.all([
+    [categorias, items] = await Promise.all([
       animeCategories(),
       listAnimeByType(tipo, q, 60),
     ]);
-    items = titles;
   } catch (err) {
+    console.error("[animes] erro ao carregar:", err);
     error = err instanceof Error ? err.message : "erro ao carregar animes";
   }
-
-  const categorias = await animeCategories().catch(() => []);
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
@@ -47,7 +38,7 @@ export default async function AnimesPage({ searchParams }: AnimesPageProps) {
         <p className="mt-1 text-sm text-muted">
           {error
             ? "Catálogo de animes indisponível."
-            : `${items.length} ${items.length === 1 ? "título" : "títulos"} — ${TYPE_LABELS[tipo] ?? tipo}`}
+            : `${items.length} ${items.length === 1 ? "título" : "títulos"} — ${animeTypeLabel(tipo)}`}
         </p>
         <SearchBar defaultValue={sp.q ?? ""} className="mt-4 max-w-md" action="/animes" />
       </header>
@@ -66,7 +57,8 @@ export default async function AnimesPage({ searchParams }: AnimesPageProps) {
                   : "bg-surface-strong text-muted hover:text-ink"
               }`}
             >
-              {TYPE_LABELS[cat.type] ?? cat.type} · {cat.count}
+              {animeTypeLabel(cat.type)}
+              {cat.count !== null ? ` · ${cat.count}` : ""}
             </Link>
           );
         })}
@@ -91,7 +83,7 @@ export default async function AnimesPage({ searchParams }: AnimesPageProps) {
               title={anime.title}
               posterUrl={anime.posterUrl}
               badge="Anime"
-              subtitle={[anime.year, anime.episodes ? `${anime.episodes} eps` : null]
+              subtitle={[anime.year, anime.episodeCount ? `${anime.episodeCount} eps` : null]
                 .filter(Boolean)
                 .join(" · ")}
             />
